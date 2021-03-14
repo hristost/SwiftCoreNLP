@@ -22,8 +22,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 ///
 /// An enumeration for the valid languages allowed in CoreNLP
-enum Edu_Stanford_Nlp_Pipeline_Language: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Edu_Stanford_Nlp_Pipeline_Language: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknown // = 0
   case any // = 1
   case arabic // = 2
@@ -36,11 +36,11 @@ enum Edu_Stanford_Nlp_Pipeline_Language: SwiftProtobuf.Enum {
   case universalEnglish // = 9
   case universalChinese // = 10
 
-  init() {
+  public init() {
     self = .unknown
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknown
     case 1: self = .any
@@ -57,7 +57,7 @@ enum Edu_Stanford_Nlp_Pipeline_Language: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknown: return 0
     case .any: return 1
@@ -85,19 +85,19 @@ extension Edu_Stanford_Nlp_Pipeline_Language: CaseIterable {
 
 ///
 /// An enumeration of valid sentiment values for the sentiment classifier.
-enum Edu_Stanford_Nlp_Pipeline_Sentiment: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Edu_Stanford_Nlp_Pipeline_Sentiment: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case strongNegative // = 0
   case weakNegative // = 1
   case neutral // = 2
   case weakPositive // = 3
   case strongPositive // = 4
 
-  init() {
+  public init() {
     self = .strongNegative
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .strongNegative
     case 1: self = .weakNegative
@@ -108,7 +108,7 @@ enum Edu_Stanford_Nlp_Pipeline_Sentiment: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .strongNegative: return 0
     case .weakNegative: return 1
@@ -130,8 +130,8 @@ extension Edu_Stanford_Nlp_Pipeline_Sentiment: CaseIterable {
 
 ///
 /// The seven informative Natural Logic relations
-enum Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case equivalence // = 0
   case forwardEntailment // = 1
   case reverseEntailment // = 2
@@ -140,11 +140,11 @@ enum Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation: SwiftProtobuf.Enum {
   case cover // = 5
   case independence // = 6
 
-  init() {
+  public init() {
     self = .equivalence
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .equivalence
     case 1: self = .forwardEntailment
@@ -157,7 +157,7 @@ enum Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .equivalence: return 0
     case .forwardEntailment: return 1
@@ -181,1448 +181,1448 @@ extension Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation: CaseIterable {
 
 ///
 /// A document; that is, the equivalent of an Annotation.
-struct Edu_Stanford_Nlp_Pipeline_Document: SwiftProtobuf.ExtensibleMessage {
+public struct Edu_Stanford_Nlp_Pipeline_Document: SwiftProtobuf.ExtensibleMessage {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var text: String {
+  public var text: String {
     get {return _storage._text ?? String()}
     set {_uniqueStorage()._text = newValue}
   }
   /// Returns true if `text` has been explicitly set.
-  var hasText: Bool {return _storage._text != nil}
+  public var hasText: Bool {return _storage._text != nil}
   /// Clears the value of `text`. Subsequent reads from it will return its default value.
-  mutating func clearText() {_uniqueStorage()._text = nil}
+  public mutating func clearText() {_uniqueStorage()._text = nil}
 
-  var sentence: [Edu_Stanford_Nlp_Pipeline_Sentence] {
+  public var sentence: [Edu_Stanford_Nlp_Pipeline_Sentence] {
     get {return _storage._sentence}
     set {_uniqueStorage()._sentence = newValue}
   }
 
-  var corefChain: [Edu_Stanford_Nlp_Pipeline_CorefChain] {
+  public var corefChain: [Edu_Stanford_Nlp_Pipeline_CorefChain] {
     get {return _storage._corefChain}
     set {_uniqueStorage()._corefChain = newValue}
   }
 
-  var docID: String {
+  public var docID: String {
     get {return _storage._docID ?? String()}
     set {_uniqueStorage()._docID = newValue}
   }
   /// Returns true if `docID` has been explicitly set.
-  var hasDocID: Bool {return _storage._docID != nil}
+  public var hasDocID: Bool {return _storage._docID != nil}
   /// Clears the value of `docID`. Subsequent reads from it will return its default value.
-  mutating func clearDocID() {_uniqueStorage()._docID = nil}
+  public mutating func clearDocID() {_uniqueStorage()._docID = nil}
 
-  var docDate: String {
+  public var docDate: String {
     get {return _storage._docDate ?? String()}
     set {_uniqueStorage()._docDate = newValue}
   }
   /// Returns true if `docDate` has been explicitly set.
-  var hasDocDate: Bool {return _storage._docDate != nil}
+  public var hasDocDate: Bool {return _storage._docDate != nil}
   /// Clears the value of `docDate`. Subsequent reads from it will return its default value.
-  mutating func clearDocDate() {_uniqueStorage()._docDate = nil}
+  public mutating func clearDocDate() {_uniqueStorage()._docDate = nil}
 
-  var calendar: UInt64 {
+  public var calendar: UInt64 {
     get {return _storage._calendar ?? 0}
     set {_uniqueStorage()._calendar = newValue}
   }
   /// Returns true if `calendar` has been explicitly set.
-  var hasCalendar: Bool {return _storage._calendar != nil}
+  public var hasCalendar: Bool {return _storage._calendar != nil}
   /// Clears the value of `calendar`. Subsequent reads from it will return its default value.
-  mutating func clearCalendar() {_uniqueStorage()._calendar = nil}
+  public mutating func clearCalendar() {_uniqueStorage()._calendar = nil}
 
   ///*
   /// A peculiar field, for the corner case when a Document is
   /// serialized without any sentences. Otherwise
-  var sentencelessToken: [Edu_Stanford_Nlp_Pipeline_Token] {
+  public var sentencelessToken: [Edu_Stanford_Nlp_Pipeline_Token] {
     get {return _storage._sentencelessToken}
     set {_uniqueStorage()._sentencelessToken = newValue}
   }
 
-  var character: [Edu_Stanford_Nlp_Pipeline_Token] {
+  public var character: [Edu_Stanford_Nlp_Pipeline_Token] {
     get {return _storage._character}
     set {_uniqueStorage()._character = newValue}
   }
 
-  var quote: [Edu_Stanford_Nlp_Pipeline_Quote] {
+  public var quote: [Edu_Stanford_Nlp_Pipeline_Quote] {
     get {return _storage._quote}
     set {_uniqueStorage()._quote = newValue}
   }
 
   ///*
   /// This field is for entity mentions across the document.
-  var mentions: [Edu_Stanford_Nlp_Pipeline_NERMention] {
+  public var mentions: [Edu_Stanford_Nlp_Pipeline_NERMention] {
     get {return _storage._mentions}
     set {_uniqueStorage()._mentions = newValue}
   }
 
   /// used to differentiate between null and empty list
-  var hasEntityMentionsAnnotation_p: Bool {
+  public var hasEntityMentionsAnnotation_p: Bool {
     get {return _storage._hasEntityMentionsAnnotation_p ?? false}
     set {_uniqueStorage()._hasEntityMentionsAnnotation_p = newValue}
   }
   /// Returns true if `hasEntityMentionsAnnotation_p` has been explicitly set.
-  var hasHasEntityMentionsAnnotation_p: Bool {return _storage._hasEntityMentionsAnnotation_p != nil}
+  public var hasHasEntityMentionsAnnotation_p: Bool {return _storage._hasEntityMentionsAnnotation_p != nil}
   /// Clears the value of `hasEntityMentionsAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasEntityMentionsAnnotation_p() {_uniqueStorage()._hasEntityMentionsAnnotation_p = nil}
+  public mutating func clearHasEntityMentionsAnnotation_p() {_uniqueStorage()._hasEntityMentionsAnnotation_p = nil}
 
   ///*
   /// xml information
-  var xmlDoc: Bool {
+  public var xmlDoc: Bool {
     get {return _storage._xmlDoc ?? false}
     set {_uniqueStorage()._xmlDoc = newValue}
   }
   /// Returns true if `xmlDoc` has been explicitly set.
-  var hasXmlDoc: Bool {return _storage._xmlDoc != nil}
+  public var hasXmlDoc: Bool {return _storage._xmlDoc != nil}
   /// Clears the value of `xmlDoc`. Subsequent reads from it will return its default value.
-  mutating func clearXmlDoc() {_uniqueStorage()._xmlDoc = nil}
+  public mutating func clearXmlDoc() {_uniqueStorage()._xmlDoc = nil}
 
-  var sections: [Edu_Stanford_Nlp_Pipeline_Section] {
+  public var sections: [Edu_Stanford_Nlp_Pipeline_Section] {
     get {return _storage._sections}
     set {_uniqueStorage()._sections = newValue}
   }
 
   ///* coref mentions for entire document *
-  var mentionsForCoref: [Edu_Stanford_Nlp_Pipeline_Mention] {
+  public var mentionsForCoref: [Edu_Stanford_Nlp_Pipeline_Mention] {
     get {return _storage._mentionsForCoref}
     set {_uniqueStorage()._mentionsForCoref = newValue}
   }
 
-  var hasCorefMentionAnnotation_p: Bool {
+  public var hasCorefMentionAnnotation_p: Bool {
     get {return _storage._hasCorefMentionAnnotation_p ?? false}
     set {_uniqueStorage()._hasCorefMentionAnnotation_p = newValue}
   }
   /// Returns true if `hasCorefMentionAnnotation_p` has been explicitly set.
-  var hasHasCorefMentionAnnotation_p: Bool {return _storage._hasCorefMentionAnnotation_p != nil}
+  public var hasHasCorefMentionAnnotation_p: Bool {return _storage._hasCorefMentionAnnotation_p != nil}
   /// Clears the value of `hasCorefMentionAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasCorefMentionAnnotation_p() {_uniqueStorage()._hasCorefMentionAnnotation_p = nil}
+  public mutating func clearHasCorefMentionAnnotation_p() {_uniqueStorage()._hasCorefMentionAnnotation_p = nil}
 
-  var hasCorefAnnotation_p: Bool {
+  public var hasCorefAnnotation_p: Bool {
     get {return _storage._hasCorefAnnotation_p ?? false}
     set {_uniqueStorage()._hasCorefAnnotation_p = newValue}
   }
   /// Returns true if `hasCorefAnnotation_p` has been explicitly set.
-  var hasHasCorefAnnotation_p: Bool {return _storage._hasCorefAnnotation_p != nil}
+  public var hasHasCorefAnnotation_p: Bool {return _storage._hasCorefAnnotation_p != nil}
   /// Clears the value of `hasCorefAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasCorefAnnotation_p() {_uniqueStorage()._hasCorefAnnotation_p = nil}
+  public mutating func clearHasCorefAnnotation_p() {_uniqueStorage()._hasCorefAnnotation_p = nil}
 
-  var corefMentionToEntityMentionMappings: [Int32] {
+  public var corefMentionToEntityMentionMappings: [Int32] {
     get {return _storage._corefMentionToEntityMentionMappings}
     set {_uniqueStorage()._corefMentionToEntityMentionMappings = newValue}
   }
 
-  var entityMentionToCorefMentionMappings: [Int32] {
+  public var entityMentionToCorefMentionMappings: [Int32] {
     get {return _storage._entityMentionToCorefMentionMappings}
     set {_uniqueStorage()._entityMentionToCorefMentionMappings = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
-  var _protobuf_extensionFieldValues = SwiftProtobuf.ExtensionFieldValueSet()
+  public var _protobuf_extensionFieldValues = SwiftProtobuf.ExtensionFieldValueSet()
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 ///
 /// The serialized version of a CoreMap representing a sentence.
-struct Edu_Stanford_Nlp_Pipeline_Sentence: SwiftProtobuf.ExtensibleMessage {
+public struct Edu_Stanford_Nlp_Pipeline_Sentence: SwiftProtobuf.ExtensibleMessage {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var token: [Edu_Stanford_Nlp_Pipeline_Token] {
+  public var token: [Edu_Stanford_Nlp_Pipeline_Token] {
     get {return _storage._token}
     set {_uniqueStorage()._token = newValue}
   }
 
-  var tokenOffsetBegin: UInt32 {
+  public var tokenOffsetBegin: UInt32 {
     get {return _storage._tokenOffsetBegin ?? 0}
     set {_uniqueStorage()._tokenOffsetBegin = newValue}
   }
   /// Returns true if `tokenOffsetBegin` has been explicitly set.
-  var hasTokenOffsetBegin: Bool {return _storage._tokenOffsetBegin != nil}
+  public var hasTokenOffsetBegin: Bool {return _storage._tokenOffsetBegin != nil}
   /// Clears the value of `tokenOffsetBegin`. Subsequent reads from it will return its default value.
-  mutating func clearTokenOffsetBegin() {_uniqueStorage()._tokenOffsetBegin = nil}
+  public mutating func clearTokenOffsetBegin() {_uniqueStorage()._tokenOffsetBegin = nil}
 
-  var tokenOffsetEnd: UInt32 {
+  public var tokenOffsetEnd: UInt32 {
     get {return _storage._tokenOffsetEnd ?? 0}
     set {_uniqueStorage()._tokenOffsetEnd = newValue}
   }
   /// Returns true if `tokenOffsetEnd` has been explicitly set.
-  var hasTokenOffsetEnd: Bool {return _storage._tokenOffsetEnd != nil}
+  public var hasTokenOffsetEnd: Bool {return _storage._tokenOffsetEnd != nil}
   /// Clears the value of `tokenOffsetEnd`. Subsequent reads from it will return its default value.
-  mutating func clearTokenOffsetEnd() {_uniqueStorage()._tokenOffsetEnd = nil}
+  public mutating func clearTokenOffsetEnd() {_uniqueStorage()._tokenOffsetEnd = nil}
 
-  var sentenceIndex: UInt32 {
+  public var sentenceIndex: UInt32 {
     get {return _storage._sentenceIndex ?? 0}
     set {_uniqueStorage()._sentenceIndex = newValue}
   }
   /// Returns true if `sentenceIndex` has been explicitly set.
-  var hasSentenceIndex: Bool {return _storage._sentenceIndex != nil}
+  public var hasSentenceIndex: Bool {return _storage._sentenceIndex != nil}
   /// Clears the value of `sentenceIndex`. Subsequent reads from it will return its default value.
-  mutating func clearSentenceIndex() {_uniqueStorage()._sentenceIndex = nil}
+  public mutating func clearSentenceIndex() {_uniqueStorage()._sentenceIndex = nil}
 
-  var characterOffsetBegin: UInt32 {
+  public var characterOffsetBegin: UInt32 {
     get {return _storage._characterOffsetBegin ?? 0}
     set {_uniqueStorage()._characterOffsetBegin = newValue}
   }
   /// Returns true if `characterOffsetBegin` has been explicitly set.
-  var hasCharacterOffsetBegin: Bool {return _storage._characterOffsetBegin != nil}
+  public var hasCharacterOffsetBegin: Bool {return _storage._characterOffsetBegin != nil}
   /// Clears the value of `characterOffsetBegin`. Subsequent reads from it will return its default value.
-  mutating func clearCharacterOffsetBegin() {_uniqueStorage()._characterOffsetBegin = nil}
+  public mutating func clearCharacterOffsetBegin() {_uniqueStorage()._characterOffsetBegin = nil}
 
-  var characterOffsetEnd: UInt32 {
+  public var characterOffsetEnd: UInt32 {
     get {return _storage._characterOffsetEnd ?? 0}
     set {_uniqueStorage()._characterOffsetEnd = newValue}
   }
   /// Returns true if `characterOffsetEnd` has been explicitly set.
-  var hasCharacterOffsetEnd: Bool {return _storage._characterOffsetEnd != nil}
+  public var hasCharacterOffsetEnd: Bool {return _storage._characterOffsetEnd != nil}
   /// Clears the value of `characterOffsetEnd`. Subsequent reads from it will return its default value.
-  mutating func clearCharacterOffsetEnd() {_uniqueStorage()._characterOffsetEnd = nil}
+  public mutating func clearCharacterOffsetEnd() {_uniqueStorage()._characterOffsetEnd = nil}
 
-  var parseTree: Edu_Stanford_Nlp_Pipeline_ParseTree {
+  public var parseTree: Edu_Stanford_Nlp_Pipeline_ParseTree {
     get {return _storage._parseTree ?? Edu_Stanford_Nlp_Pipeline_ParseTree()}
     set {_uniqueStorage()._parseTree = newValue}
   }
   /// Returns true if `parseTree` has been explicitly set.
-  var hasParseTree: Bool {return _storage._parseTree != nil}
+  public var hasParseTree: Bool {return _storage._parseTree != nil}
   /// Clears the value of `parseTree`. Subsequent reads from it will return its default value.
-  mutating func clearParseTree() {_uniqueStorage()._parseTree = nil}
+  public mutating func clearParseTree() {_uniqueStorage()._parseTree = nil}
 
-  var binarizedParseTree: Edu_Stanford_Nlp_Pipeline_ParseTree {
+  public var binarizedParseTree: Edu_Stanford_Nlp_Pipeline_ParseTree {
     get {return _storage._binarizedParseTree ?? Edu_Stanford_Nlp_Pipeline_ParseTree()}
     set {_uniqueStorage()._binarizedParseTree = newValue}
   }
   /// Returns true if `binarizedParseTree` has been explicitly set.
-  var hasBinarizedParseTree: Bool {return _storage._binarizedParseTree != nil}
+  public var hasBinarizedParseTree: Bool {return _storage._binarizedParseTree != nil}
   /// Clears the value of `binarizedParseTree`. Subsequent reads from it will return its default value.
-  mutating func clearBinarizedParseTree() {_uniqueStorage()._binarizedParseTree = nil}
+  public mutating func clearBinarizedParseTree() {_uniqueStorage()._binarizedParseTree = nil}
 
-  var annotatedParseTree: Edu_Stanford_Nlp_Pipeline_ParseTree {
+  public var annotatedParseTree: Edu_Stanford_Nlp_Pipeline_ParseTree {
     get {return _storage._annotatedParseTree ?? Edu_Stanford_Nlp_Pipeline_ParseTree()}
     set {_uniqueStorage()._annotatedParseTree = newValue}
   }
   /// Returns true if `annotatedParseTree` has been explicitly set.
-  var hasAnnotatedParseTree: Bool {return _storage._annotatedParseTree != nil}
+  public var hasAnnotatedParseTree: Bool {return _storage._annotatedParseTree != nil}
   /// Clears the value of `annotatedParseTree`. Subsequent reads from it will return its default value.
-  mutating func clearAnnotatedParseTree() {_uniqueStorage()._annotatedParseTree = nil}
+  public mutating func clearAnnotatedParseTree() {_uniqueStorage()._annotatedParseTree = nil}
 
-  var sentiment: String {
+  public var sentiment: String {
     get {return _storage._sentiment ?? String()}
     set {_uniqueStorage()._sentiment = newValue}
   }
   /// Returns true if `sentiment` has been explicitly set.
-  var hasSentiment: Bool {return _storage._sentiment != nil}
+  public var hasSentiment: Bool {return _storage._sentiment != nil}
   /// Clears the value of `sentiment`. Subsequent reads from it will return its default value.
-  mutating func clearSentiment() {_uniqueStorage()._sentiment = nil}
+  public mutating func clearSentiment() {_uniqueStorage()._sentiment = nil}
 
-  var kBestParseTrees: [Edu_Stanford_Nlp_Pipeline_ParseTree] {
+  public var kBestParseTrees: [Edu_Stanford_Nlp_Pipeline_ParseTree] {
     get {return _storage._kBestParseTrees}
     set {_uniqueStorage()._kBestParseTrees = newValue}
   }
 
-  var basicDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var basicDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _storage._basicDependencies ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_uniqueStorage()._basicDependencies = newValue}
   }
   /// Returns true if `basicDependencies` has been explicitly set.
-  var hasBasicDependencies: Bool {return _storage._basicDependencies != nil}
+  public var hasBasicDependencies: Bool {return _storage._basicDependencies != nil}
   /// Clears the value of `basicDependencies`. Subsequent reads from it will return its default value.
-  mutating func clearBasicDependencies() {_uniqueStorage()._basicDependencies = nil}
+  public mutating func clearBasicDependencies() {_uniqueStorage()._basicDependencies = nil}
 
-  var collapsedDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var collapsedDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _storage._collapsedDependencies ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_uniqueStorage()._collapsedDependencies = newValue}
   }
   /// Returns true if `collapsedDependencies` has been explicitly set.
-  var hasCollapsedDependencies: Bool {return _storage._collapsedDependencies != nil}
+  public var hasCollapsedDependencies: Bool {return _storage._collapsedDependencies != nil}
   /// Clears the value of `collapsedDependencies`. Subsequent reads from it will return its default value.
-  mutating func clearCollapsedDependencies() {_uniqueStorage()._collapsedDependencies = nil}
+  public mutating func clearCollapsedDependencies() {_uniqueStorage()._collapsedDependencies = nil}
 
-  var collapsedCcprocessedDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var collapsedCcprocessedDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _storage._collapsedCcprocessedDependencies ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_uniqueStorage()._collapsedCcprocessedDependencies = newValue}
   }
   /// Returns true if `collapsedCcprocessedDependencies` has been explicitly set.
-  var hasCollapsedCcprocessedDependencies: Bool {return _storage._collapsedCcprocessedDependencies != nil}
+  public var hasCollapsedCcprocessedDependencies: Bool {return _storage._collapsedCcprocessedDependencies != nil}
   /// Clears the value of `collapsedCcprocessedDependencies`. Subsequent reads from it will return its default value.
-  mutating func clearCollapsedCcprocessedDependencies() {_uniqueStorage()._collapsedCcprocessedDependencies = nil}
+  public mutating func clearCollapsedCcprocessedDependencies() {_uniqueStorage()._collapsedCcprocessedDependencies = nil}
 
-  var alternativeDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var alternativeDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _storage._alternativeDependencies ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_uniqueStorage()._alternativeDependencies = newValue}
   }
   /// Returns true if `alternativeDependencies` has been explicitly set.
-  var hasAlternativeDependencies: Bool {return _storage._alternativeDependencies != nil}
+  public var hasAlternativeDependencies: Bool {return _storage._alternativeDependencies != nil}
   /// Clears the value of `alternativeDependencies`. Subsequent reads from it will return its default value.
-  mutating func clearAlternativeDependencies() {_uniqueStorage()._alternativeDependencies = nil}
+  public mutating func clearAlternativeDependencies() {_uniqueStorage()._alternativeDependencies = nil}
 
   /// The OpenIE triples in the sentence
-  var openieTriple: [Edu_Stanford_Nlp_Pipeline_RelationTriple] {
+  public var openieTriple: [Edu_Stanford_Nlp_Pipeline_RelationTriple] {
     get {return _storage._openieTriple}
     set {_uniqueStorage()._openieTriple = newValue}
   }
 
   /// The KBP triples in this sentence
-  var kbpTriple: [Edu_Stanford_Nlp_Pipeline_RelationTriple] {
+  public var kbpTriple: [Edu_Stanford_Nlp_Pipeline_RelationTriple] {
     get {return _storage._kbpTriple}
     set {_uniqueStorage()._kbpTriple = newValue}
   }
 
   /// The entailed sentences, by natural logic
-  var entailedSentence: [Edu_Stanford_Nlp_Pipeline_SentenceFragment] {
+  public var entailedSentence: [Edu_Stanford_Nlp_Pipeline_SentenceFragment] {
     get {return _storage._entailedSentence}
     set {_uniqueStorage()._entailedSentence = newValue}
   }
 
   /// The entailed clauses, by natural logic
-  var entailedClause: [Edu_Stanford_Nlp_Pipeline_SentenceFragment] {
+  public var entailedClause: [Edu_Stanford_Nlp_Pipeline_SentenceFragment] {
     get {return _storage._entailedClause}
     set {_uniqueStorage()._entailedClause = newValue}
   }
 
-  var enhancedDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var enhancedDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _storage._enhancedDependencies ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_uniqueStorage()._enhancedDependencies = newValue}
   }
   /// Returns true if `enhancedDependencies` has been explicitly set.
-  var hasEnhancedDependencies: Bool {return _storage._enhancedDependencies != nil}
+  public var hasEnhancedDependencies: Bool {return _storage._enhancedDependencies != nil}
   /// Clears the value of `enhancedDependencies`. Subsequent reads from it will return its default value.
-  mutating func clearEnhancedDependencies() {_uniqueStorage()._enhancedDependencies = nil}
+  public mutating func clearEnhancedDependencies() {_uniqueStorage()._enhancedDependencies = nil}
 
-  var enhancedPlusPlusDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var enhancedPlusPlusDependencies: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _storage._enhancedPlusPlusDependencies ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_uniqueStorage()._enhancedPlusPlusDependencies = newValue}
   }
   /// Returns true if `enhancedPlusPlusDependencies` has been explicitly set.
-  var hasEnhancedPlusPlusDependencies: Bool {return _storage._enhancedPlusPlusDependencies != nil}
+  public var hasEnhancedPlusPlusDependencies: Bool {return _storage._enhancedPlusPlusDependencies != nil}
   /// Clears the value of `enhancedPlusPlusDependencies`. Subsequent reads from it will return its default value.
-  mutating func clearEnhancedPlusPlusDependencies() {_uniqueStorage()._enhancedPlusPlusDependencies = nil}
+  public mutating func clearEnhancedPlusPlusDependencies() {_uniqueStorage()._enhancedPlusPlusDependencies = nil}
 
-  var character: [Edu_Stanford_Nlp_Pipeline_Token] {
+  public var character: [Edu_Stanford_Nlp_Pipeline_Token] {
     get {return _storage._character}
     set {_uniqueStorage()._character = newValue}
   }
 
-  var paragraph: UInt32 {
+  public var paragraph: UInt32 {
     get {return _storage._paragraph ?? 0}
     set {_uniqueStorage()._paragraph = newValue}
   }
   /// Returns true if `paragraph` has been explicitly set.
-  var hasParagraph: Bool {return _storage._paragraph != nil}
+  public var hasParagraph: Bool {return _storage._paragraph != nil}
   /// Clears the value of `paragraph`. Subsequent reads from it will return its default value.
-  mutating func clearParagraph() {_uniqueStorage()._paragraph = nil}
+  public mutating func clearParagraph() {_uniqueStorage()._paragraph = nil}
 
   /// Only needed if we're only saving the sentence.
-  var text: String {
+  public var text: String {
     get {return _storage._text ?? String()}
     set {_uniqueStorage()._text = newValue}
   }
   /// Returns true if `text` has been explicitly set.
-  var hasText: Bool {return _storage._text != nil}
+  public var hasText: Bool {return _storage._text != nil}
   /// Clears the value of `text`. Subsequent reads from it will return its default value.
-  mutating func clearText() {_uniqueStorage()._text = nil}
+  public mutating func clearText() {_uniqueStorage()._text = nil}
 
-  var lineNumber: UInt32 {
+  public var lineNumber: UInt32 {
     get {return _storage._lineNumber ?? 0}
     set {_uniqueStorage()._lineNumber = newValue}
   }
   /// Returns true if `lineNumber` has been explicitly set.
-  var hasLineNumber: Bool {return _storage._lineNumber != nil}
+  public var hasLineNumber: Bool {return _storage._lineNumber != nil}
   /// Clears the value of `lineNumber`. Subsequent reads from it will return its default value.
-  mutating func clearLineNumber() {_uniqueStorage()._lineNumber = nil}
+  public mutating func clearLineNumber() {_uniqueStorage()._lineNumber = nil}
 
   /// Fields set by other annotators in CoreNLP
-  var hasRelationAnnotations_p: Bool {
+  public var hasRelationAnnotations_p: Bool {
     get {return _storage._hasRelationAnnotations_p ?? false}
     set {_uniqueStorage()._hasRelationAnnotations_p = newValue}
   }
   /// Returns true if `hasRelationAnnotations_p` has been explicitly set.
-  var hasHasRelationAnnotations_p: Bool {return _storage._hasRelationAnnotations_p != nil}
+  public var hasHasRelationAnnotations_p: Bool {return _storage._hasRelationAnnotations_p != nil}
   /// Clears the value of `hasRelationAnnotations_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasRelationAnnotations_p() {_uniqueStorage()._hasRelationAnnotations_p = nil}
+  public mutating func clearHasRelationAnnotations_p() {_uniqueStorage()._hasRelationAnnotations_p = nil}
 
-  var entity: [Edu_Stanford_Nlp_Pipeline_Entity] {
+  public var entity: [Edu_Stanford_Nlp_Pipeline_Entity] {
     get {return _storage._entity}
     set {_uniqueStorage()._entity = newValue}
   }
 
-  var relation: [Edu_Stanford_Nlp_Pipeline_Relation] {
+  public var relation: [Edu_Stanford_Nlp_Pipeline_Relation] {
     get {return _storage._relation}
     set {_uniqueStorage()._relation = newValue}
   }
 
-  var hasNumerizedTokensAnnotation_p: Bool {
+  public var hasNumerizedTokensAnnotation_p: Bool {
     get {return _storage._hasNumerizedTokensAnnotation_p ?? false}
     set {_uniqueStorage()._hasNumerizedTokensAnnotation_p = newValue}
   }
   /// Returns true if `hasNumerizedTokensAnnotation_p` has been explicitly set.
-  var hasHasNumerizedTokensAnnotation_p: Bool {return _storage._hasNumerizedTokensAnnotation_p != nil}
+  public var hasHasNumerizedTokensAnnotation_p: Bool {return _storage._hasNumerizedTokensAnnotation_p != nil}
   /// Clears the value of `hasNumerizedTokensAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasNumerizedTokensAnnotation_p() {_uniqueStorage()._hasNumerizedTokensAnnotation_p = nil}
+  public mutating func clearHasNumerizedTokensAnnotation_p() {_uniqueStorage()._hasNumerizedTokensAnnotation_p = nil}
 
-  var mentions: [Edu_Stanford_Nlp_Pipeline_NERMention] {
+  public var mentions: [Edu_Stanford_Nlp_Pipeline_NERMention] {
     get {return _storage._mentions}
     set {_uniqueStorage()._mentions = newValue}
   }
 
-  var mentionsForCoref: [Edu_Stanford_Nlp_Pipeline_Mention] {
+  public var mentionsForCoref: [Edu_Stanford_Nlp_Pipeline_Mention] {
     get {return _storage._mentionsForCoref}
     set {_uniqueStorage()._mentionsForCoref = newValue}
   }
 
-  var hasCorefMentionsAnnotation_p: Bool {
+  public var hasCorefMentionsAnnotation_p: Bool {
     get {return _storage._hasCorefMentionsAnnotation_p ?? false}
     set {_uniqueStorage()._hasCorefMentionsAnnotation_p = newValue}
   }
   /// Returns true if `hasCorefMentionsAnnotation_p` has been explicitly set.
-  var hasHasCorefMentionsAnnotation_p: Bool {return _storage._hasCorefMentionsAnnotation_p != nil}
+  public var hasHasCorefMentionsAnnotation_p: Bool {return _storage._hasCorefMentionsAnnotation_p != nil}
   /// Clears the value of `hasCorefMentionsAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasCorefMentionsAnnotation_p() {_uniqueStorage()._hasCorefMentionsAnnotation_p = nil}
+  public mutating func clearHasCorefMentionsAnnotation_p() {_uniqueStorage()._hasCorefMentionsAnnotation_p = nil}
 
   /// Useful when storing sentences (e.g. ForEach)
-  var sentenceID: String {
+  public var sentenceID: String {
     get {return _storage._sentenceID ?? String()}
     set {_uniqueStorage()._sentenceID = newValue}
   }
   /// Returns true if `sentenceID` has been explicitly set.
-  var hasSentenceID: Bool {return _storage._sentenceID != nil}
+  public var hasSentenceID: Bool {return _storage._sentenceID != nil}
   /// Clears the value of `sentenceID`. Subsequent reads from it will return its default value.
-  mutating func clearSentenceID() {_uniqueStorage()._sentenceID = nil}
+  public mutating func clearSentenceID() {_uniqueStorage()._sentenceID = nil}
 
   /// date of section
-  var sectionDate: String {
+  public var sectionDate: String {
     get {return _storage._sectionDate ?? String()}
     set {_uniqueStorage()._sectionDate = newValue}
   }
   /// Returns true if `sectionDate` has been explicitly set.
-  var hasSectionDate: Bool {return _storage._sectionDate != nil}
+  public var hasSectionDate: Bool {return _storage._sectionDate != nil}
   /// Clears the value of `sectionDate`. Subsequent reads from it will return its default value.
-  mutating func clearSectionDate() {_uniqueStorage()._sectionDate = nil}
+  public mutating func clearSectionDate() {_uniqueStorage()._sectionDate = nil}
 
   /// section index for this sentence's section
-  var sectionIndex: UInt32 {
+  public var sectionIndex: UInt32 {
     get {return _storage._sectionIndex ?? 0}
     set {_uniqueStorage()._sectionIndex = newValue}
   }
   /// Returns true if `sectionIndex` has been explicitly set.
-  var hasSectionIndex: Bool {return _storage._sectionIndex != nil}
+  public var hasSectionIndex: Bool {return _storage._sectionIndex != nil}
   /// Clears the value of `sectionIndex`. Subsequent reads from it will return its default value.
-  mutating func clearSectionIndex() {_uniqueStorage()._sectionIndex = nil}
+  public mutating func clearSectionIndex() {_uniqueStorage()._sectionIndex = nil}
 
   /// name of section
-  var sectionName: String {
+  public var sectionName: String {
     get {return _storage._sectionName ?? String()}
     set {_uniqueStorage()._sectionName = newValue}
   }
   /// Returns true if `sectionName` has been explicitly set.
-  var hasSectionName: Bool {return _storage._sectionName != nil}
+  public var hasSectionName: Bool {return _storage._sectionName != nil}
   /// Clears the value of `sectionName`. Subsequent reads from it will return its default value.
-  mutating func clearSectionName() {_uniqueStorage()._sectionName = nil}
+  public mutating func clearSectionName() {_uniqueStorage()._sectionName = nil}
 
   /// author of section
-  var sectionAuthor: String {
+  public var sectionAuthor: String {
     get {return _storage._sectionAuthor ?? String()}
     set {_uniqueStorage()._sectionAuthor = newValue}
   }
   /// Returns true if `sectionAuthor` has been explicitly set.
-  var hasSectionAuthor: Bool {return _storage._sectionAuthor != nil}
+  public var hasSectionAuthor: Bool {return _storage._sectionAuthor != nil}
   /// Clears the value of `sectionAuthor`. Subsequent reads from it will return its default value.
-  mutating func clearSectionAuthor() {_uniqueStorage()._sectionAuthor = nil}
+  public mutating func clearSectionAuthor() {_uniqueStorage()._sectionAuthor = nil}
 
   /// doc id
-  var docID: String {
+  public var docID: String {
     get {return _storage._docID ?? String()}
     set {_uniqueStorage()._docID = newValue}
   }
   /// Returns true if `docID` has been explicitly set.
-  var hasDocID: Bool {return _storage._docID != nil}
+  public var hasDocID: Bool {return _storage._docID != nil}
   /// Clears the value of `docID`. Subsequent reads from it will return its default value.
-  mutating func clearDocID() {_uniqueStorage()._docID = nil}
+  public mutating func clearDocID() {_uniqueStorage()._docID = nil}
 
   /// is this sentence in an xml quote in a post
-  var sectionQuoted: Bool {
+  public var sectionQuoted: Bool {
     get {return _storage._sectionQuoted ?? false}
     set {_uniqueStorage()._sectionQuoted = newValue}
   }
   /// Returns true if `sectionQuoted` has been explicitly set.
-  var hasSectionQuoted: Bool {return _storage._sectionQuoted != nil}
+  public var hasSectionQuoted: Bool {return _storage._sectionQuoted != nil}
   /// Clears the value of `sectionQuoted`. Subsequent reads from it will return its default value.
-  mutating func clearSectionQuoted() {_uniqueStorage()._sectionQuoted = nil}
+  public mutating func clearSectionQuoted() {_uniqueStorage()._sectionQuoted = nil}
 
   /// check if there are entity mentions
-  var hasEntityMentionsAnnotation_p: Bool {
+  public var hasEntityMentionsAnnotation_p: Bool {
     get {return _storage._hasEntityMentionsAnnotation_p ?? false}
     set {_uniqueStorage()._hasEntityMentionsAnnotation_p = newValue}
   }
   /// Returns true if `hasEntityMentionsAnnotation_p` has been explicitly set.
-  var hasHasEntityMentionsAnnotation_p: Bool {return _storage._hasEntityMentionsAnnotation_p != nil}
+  public var hasHasEntityMentionsAnnotation_p: Bool {return _storage._hasEntityMentionsAnnotation_p != nil}
   /// Clears the value of `hasEntityMentionsAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasEntityMentionsAnnotation_p() {_uniqueStorage()._hasEntityMentionsAnnotation_p = nil}
+  public mutating func clearHasEntityMentionsAnnotation_p() {_uniqueStorage()._hasEntityMentionsAnnotation_p = nil}
 
   /// check if there are KBP triples
-  var hasKbptriplesAnnotation_p: Bool {
+  public var hasKbptriplesAnnotation_p: Bool {
     get {return _storage._hasKbptriplesAnnotation_p ?? false}
     set {_uniqueStorage()._hasKbptriplesAnnotation_p = newValue}
   }
   /// Returns true if `hasKbptriplesAnnotation_p` has been explicitly set.
-  var hasHasKbptriplesAnnotation_p: Bool {return _storage._hasKbptriplesAnnotation_p != nil}
+  public var hasHasKbptriplesAnnotation_p: Bool {return _storage._hasKbptriplesAnnotation_p != nil}
   /// Clears the value of `hasKbptriplesAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasKbptriplesAnnotation_p() {_uniqueStorage()._hasKbptriplesAnnotation_p = nil}
+  public mutating func clearHasKbptriplesAnnotation_p() {_uniqueStorage()._hasKbptriplesAnnotation_p = nil}
 
   /// check if there are OpenIE triples
-  var hasOpenieTriplesAnnotation_p: Bool {
+  public var hasOpenieTriplesAnnotation_p: Bool {
     get {return _storage._hasOpenieTriplesAnnotation_p ?? false}
     set {_uniqueStorage()._hasOpenieTriplesAnnotation_p = newValue}
   }
   /// Returns true if `hasOpenieTriplesAnnotation_p` has been explicitly set.
-  var hasHasOpenieTriplesAnnotation_p: Bool {return _storage._hasOpenieTriplesAnnotation_p != nil}
+  public var hasHasOpenieTriplesAnnotation_p: Bool {return _storage._hasOpenieTriplesAnnotation_p != nil}
   /// Clears the value of `hasOpenieTriplesAnnotation_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasOpenieTriplesAnnotation_p() {_uniqueStorage()._hasOpenieTriplesAnnotation_p = nil}
+  public mutating func clearHasOpenieTriplesAnnotation_p() {_uniqueStorage()._hasOpenieTriplesAnnotation_p = nil}
 
   /// quote stuff
-  var chapterIndex: UInt32 {
+  public var chapterIndex: UInt32 {
     get {return _storage._chapterIndex ?? 0}
     set {_uniqueStorage()._chapterIndex = newValue}
   }
   /// Returns true if `chapterIndex` has been explicitly set.
-  var hasChapterIndex: Bool {return _storage._chapterIndex != nil}
+  public var hasChapterIndex: Bool {return _storage._chapterIndex != nil}
   /// Clears the value of `chapterIndex`. Subsequent reads from it will return its default value.
-  mutating func clearChapterIndex() {_uniqueStorage()._chapterIndex = nil}
+  public mutating func clearChapterIndex() {_uniqueStorage()._chapterIndex = nil}
 
-  var paragraphIndex: UInt32 {
+  public var paragraphIndex: UInt32 {
     get {return _storage._paragraphIndex ?? 0}
     set {_uniqueStorage()._paragraphIndex = newValue}
   }
   /// Returns true if `paragraphIndex` has been explicitly set.
-  var hasParagraphIndex: Bool {return _storage._paragraphIndex != nil}
+  public var hasParagraphIndex: Bool {return _storage._paragraphIndex != nil}
   /// Clears the value of `paragraphIndex`. Subsequent reads from it will return its default value.
-  mutating func clearParagraphIndex() {_uniqueStorage()._paragraphIndex = nil}
+  public mutating func clearParagraphIndex() {_uniqueStorage()._paragraphIndex = nil}
 
   /// the quote annotator can soometimes add merged sentences
-  var enhancedSentence: Edu_Stanford_Nlp_Pipeline_Sentence {
+  public var enhancedSentence: Edu_Stanford_Nlp_Pipeline_Sentence {
     get {return _storage._enhancedSentence ?? Edu_Stanford_Nlp_Pipeline_Sentence()}
     set {_uniqueStorage()._enhancedSentence = newValue}
   }
   /// Returns true if `enhancedSentence` has been explicitly set.
-  var hasEnhancedSentence: Bool {return _storage._enhancedSentence != nil}
+  public var hasEnhancedSentence: Bool {return _storage._enhancedSentence != nil}
   /// Clears the value of `enhancedSentence`. Subsequent reads from it will return its default value.
-  mutating func clearEnhancedSentence() {_uniqueStorage()._enhancedSentence = nil}
+  public mutating func clearEnhancedSentence() {_uniqueStorage()._enhancedSentence = nil}
 
   /// speaker stuff
-  var speaker: String {
+  public var speaker: String {
     get {return _storage._speaker ?? String()}
     set {_uniqueStorage()._speaker = newValue}
   }
   /// Returns true if `speaker` has been explicitly set.
-  var hasSpeaker: Bool {return _storage._speaker != nil}
+  public var hasSpeaker: Bool {return _storage._speaker != nil}
   /// Clears the value of `speaker`. Subsequent reads from it will return its default value.
-  mutating func clearSpeaker() {_uniqueStorage()._speaker = nil}
+  public mutating func clearSpeaker() {_uniqueStorage()._speaker = nil}
 
   /// The type of speaker speaking this sentence
-  var speakerType: String {
+  public var speakerType: String {
     get {return _storage._speakerType ?? String()}
     set {_uniqueStorage()._speakerType = newValue}
   }
   /// Returns true if `speakerType` has been explicitly set.
-  var hasSpeakerType: Bool {return _storage._speakerType != nil}
+  public var hasSpeakerType: Bool {return _storage._speakerType != nil}
   /// Clears the value of `speakerType`. Subsequent reads from it will return its default value.
-  mutating func clearSpeakerType() {_uniqueStorage()._speakerType = nil}
+  public mutating func clearSpeakerType() {_uniqueStorage()._speakerType = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
-  var _protobuf_extensionFieldValues = SwiftProtobuf.ExtensionFieldValueSet()
+  public var _protobuf_extensionFieldValues = SwiftProtobuf.ExtensionFieldValueSet()
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 ///
 /// The serialized version of a Token (a CoreLabel).
-struct Edu_Stanford_Nlp_Pipeline_Token: SwiftProtobuf.ExtensibleMessage {
+public struct Edu_Stanford_Nlp_Pipeline_Token: SwiftProtobuf.ExtensibleMessage {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Fields set by the default annotators [new CoreNLP(new Properties())]
-  var word: String {
+  public var word: String {
     get {return _storage._word ?? String()}
     set {_uniqueStorage()._word = newValue}
   }
   /// Returns true if `word` has been explicitly set.
-  var hasWord: Bool {return _storage._word != nil}
+  public var hasWord: Bool {return _storage._word != nil}
   /// Clears the value of `word`. Subsequent reads from it will return its default value.
-  mutating func clearWord() {_uniqueStorage()._word = nil}
+  public mutating func clearWord() {_uniqueStorage()._word = nil}
 
   /// The word's part of speech tag
-  var pos: String {
+  public var pos: String {
     get {return _storage._pos ?? String()}
     set {_uniqueStorage()._pos = newValue}
   }
   /// Returns true if `pos` has been explicitly set.
-  var hasPos: Bool {return _storage._pos != nil}
+  public var hasPos: Bool {return _storage._pos != nil}
   /// Clears the value of `pos`. Subsequent reads from it will return its default value.
-  mutating func clearPos() {_uniqueStorage()._pos = nil}
+  public mutating func clearPos() {_uniqueStorage()._pos = nil}
 
   /// The word's 'value', (e.g., parse tree node)
-  var value: String {
+  public var value: String {
     get {return _storage._value ?? String()}
     set {_uniqueStorage()._value = newValue}
   }
   /// Returns true if `value` has been explicitly set.
-  var hasValue: Bool {return _storage._value != nil}
+  public var hasValue: Bool {return _storage._value != nil}
   /// Clears the value of `value`. Subsequent reads from it will return its default value.
-  mutating func clearValue() {_uniqueStorage()._value = nil}
+  public mutating func clearValue() {_uniqueStorage()._value = nil}
 
   /// The word's 'category' (e.g., parse tree node)
-  var category: String {
+  public var category: String {
     get {return _storage._category ?? String()}
     set {_uniqueStorage()._category = newValue}
   }
   /// Returns true if `category` has been explicitly set.
-  var hasCategory: Bool {return _storage._category != nil}
+  public var hasCategory: Bool {return _storage._category != nil}
   /// Clears the value of `category`. Subsequent reads from it will return its default value.
-  mutating func clearCategory() {_uniqueStorage()._category = nil}
+  public mutating func clearCategory() {_uniqueStorage()._category = nil}
 
   /// The whitespace/xml before the token
-  var before: String {
+  public var before: String {
     get {return _storage._before ?? String()}
     set {_uniqueStorage()._before = newValue}
   }
   /// Returns true if `before` has been explicitly set.
-  var hasBefore: Bool {return _storage._before != nil}
+  public var hasBefore: Bool {return _storage._before != nil}
   /// Clears the value of `before`. Subsequent reads from it will return its default value.
-  mutating func clearBefore() {_uniqueStorage()._before = nil}
+  public mutating func clearBefore() {_uniqueStorage()._before = nil}
 
   /// The whitespace/xml after the token
-  var after: String {
+  public var after: String {
     get {return _storage._after ?? String()}
     set {_uniqueStorage()._after = newValue}
   }
   /// Returns true if `after` has been explicitly set.
-  var hasAfter: Bool {return _storage._after != nil}
+  public var hasAfter: Bool {return _storage._after != nil}
   /// Clears the value of `after`. Subsequent reads from it will return its default value.
-  mutating func clearAfter() {_uniqueStorage()._after = nil}
+  public mutating func clearAfter() {_uniqueStorage()._after = nil}
 
   /// The original text for this token
-  var originalText: String {
+  public var originalText: String {
     get {return _storage._originalText ?? String()}
     set {_uniqueStorage()._originalText = newValue}
   }
   /// Returns true if `originalText` has been explicitly set.
-  var hasOriginalText: Bool {return _storage._originalText != nil}
+  public var hasOriginalText: Bool {return _storage._originalText != nil}
   /// Clears the value of `originalText`. Subsequent reads from it will return its default value.
-  mutating func clearOriginalText() {_uniqueStorage()._originalText = nil}
+  public mutating func clearOriginalText() {_uniqueStorage()._originalText = nil}
 
   /// The word's NER tag
-  var ner: String {
+  public var ner: String {
     get {return _storage._ner ?? String()}
     set {_uniqueStorage()._ner = newValue}
   }
   /// Returns true if `ner` has been explicitly set.
-  var hasNer: Bool {return _storage._ner != nil}
+  public var hasNer: Bool {return _storage._ner != nil}
   /// Clears the value of `ner`. Subsequent reads from it will return its default value.
-  mutating func clearNer() {_uniqueStorage()._ner = nil}
+  public mutating func clearNer() {_uniqueStorage()._ner = nil}
 
   /// The word's coarse NER tag
-  var coarseNer: String {
+  public var coarseNer: String {
     get {return _storage._coarseNer ?? String()}
     set {_uniqueStorage()._coarseNer = newValue}
   }
   /// Returns true if `coarseNer` has been explicitly set.
-  var hasCoarseNer: Bool {return _storage._coarseNer != nil}
+  public var hasCoarseNer: Bool {return _storage._coarseNer != nil}
   /// Clears the value of `coarseNer`. Subsequent reads from it will return its default value.
-  mutating func clearCoarseNer() {_uniqueStorage()._coarseNer = nil}
+  public mutating func clearCoarseNer() {_uniqueStorage()._coarseNer = nil}
 
   /// The word's fine-grained NER tag
-  var fineGrainedNer: String {
+  public var fineGrainedNer: String {
     get {return _storage._fineGrainedNer ?? String()}
     set {_uniqueStorage()._fineGrainedNer = newValue}
   }
   /// Returns true if `fineGrainedNer` has been explicitly set.
-  var hasFineGrainedNer: Bool {return _storage._fineGrainedNer != nil}
+  public var hasFineGrainedNer: Bool {return _storage._fineGrainedNer != nil}
   /// Clears the value of `fineGrainedNer`. Subsequent reads from it will return its default value.
-  mutating func clearFineGrainedNer() {_uniqueStorage()._fineGrainedNer = nil}
+  public mutating func clearFineGrainedNer() {_uniqueStorage()._fineGrainedNer = nil}
 
   /// listing of probs
-  var nerLabelProbs: [String] {
+  public var nerLabelProbs: [String] {
     get {return _storage._nerLabelProbs}
     set {_uniqueStorage()._nerLabelProbs = newValue}
   }
 
   /// The word's normalized NER tag
-  var normalizedNer: String {
+  public var normalizedNer: String {
     get {return _storage._normalizedNer ?? String()}
     set {_uniqueStorage()._normalizedNer = newValue}
   }
   /// Returns true if `normalizedNer` has been explicitly set.
-  var hasNormalizedNer: Bool {return _storage._normalizedNer != nil}
+  public var hasNormalizedNer: Bool {return _storage._normalizedNer != nil}
   /// Clears the value of `normalizedNer`. Subsequent reads from it will return its default value.
-  mutating func clearNormalizedNer() {_uniqueStorage()._normalizedNer = nil}
+  public mutating func clearNormalizedNer() {_uniqueStorage()._normalizedNer = nil}
 
   /// The word's lemma
-  var lemma: String {
+  public var lemma: String {
     get {return _storage._lemma ?? String()}
     set {_uniqueStorage()._lemma = newValue}
   }
   /// Returns true if `lemma` has been explicitly set.
-  var hasLemma: Bool {return _storage._lemma != nil}
+  public var hasLemma: Bool {return _storage._lemma != nil}
   /// Clears the value of `lemma`. Subsequent reads from it will return its default value.
-  mutating func clearLemma() {_uniqueStorage()._lemma = nil}
+  public mutating func clearLemma() {_uniqueStorage()._lemma = nil}
 
   /// The character offset begin, in the document
-  var beginChar: UInt32 {
+  public var beginChar: UInt32 {
     get {return _storage._beginChar ?? 0}
     set {_uniqueStorage()._beginChar = newValue}
   }
   /// Returns true if `beginChar` has been explicitly set.
-  var hasBeginChar: Bool {return _storage._beginChar != nil}
+  public var hasBeginChar: Bool {return _storage._beginChar != nil}
   /// Clears the value of `beginChar`. Subsequent reads from it will return its default value.
-  mutating func clearBeginChar() {_uniqueStorage()._beginChar = nil}
+  public mutating func clearBeginChar() {_uniqueStorage()._beginChar = nil}
 
   /// The character offset end, in the document
-  var endChar: UInt32 {
+  public var endChar: UInt32 {
     get {return _storage._endChar ?? 0}
     set {_uniqueStorage()._endChar = newValue}
   }
   /// Returns true if `endChar` has been explicitly set.
-  var hasEndChar: Bool {return _storage._endChar != nil}
+  public var hasEndChar: Bool {return _storage._endChar != nil}
   /// Clears the value of `endChar`. Subsequent reads from it will return its default value.
-  mutating func clearEndChar() {_uniqueStorage()._endChar = nil}
+  public mutating func clearEndChar() {_uniqueStorage()._endChar = nil}
 
   /// The utterance tag used in dcoref
-  var utterance: UInt32 {
+  public var utterance: UInt32 {
     get {return _storage._utterance ?? 0}
     set {_uniqueStorage()._utterance = newValue}
   }
   /// Returns true if `utterance` has been explicitly set.
-  var hasUtterance: Bool {return _storage._utterance != nil}
+  public var hasUtterance: Bool {return _storage._utterance != nil}
   /// Clears the value of `utterance`. Subsequent reads from it will return its default value.
-  mutating func clearUtterance() {_uniqueStorage()._utterance = nil}
+  public mutating func clearUtterance() {_uniqueStorage()._utterance = nil}
 
   /// The speaker speaking this word
-  var speaker: String {
+  public var speaker: String {
     get {return _storage._speaker ?? String()}
     set {_uniqueStorage()._speaker = newValue}
   }
   /// Returns true if `speaker` has been explicitly set.
-  var hasSpeaker: Bool {return _storage._speaker != nil}
+  public var hasSpeaker: Bool {return _storage._speaker != nil}
   /// Clears the value of `speaker`. Subsequent reads from it will return its default value.
-  mutating func clearSpeaker() {_uniqueStorage()._speaker = nil}
+  public mutating func clearSpeaker() {_uniqueStorage()._speaker = nil}
 
   /// The type of speaker speaking this word
-  var speakerType: String {
+  public var speakerType: String {
     get {return _storage._speakerType ?? String()}
     set {_uniqueStorage()._speakerType = newValue}
   }
   /// Returns true if `speakerType` has been explicitly set.
-  var hasSpeakerType: Bool {return _storage._speakerType != nil}
+  public var hasSpeakerType: Bool {return _storage._speakerType != nil}
   /// Clears the value of `speakerType`. Subsequent reads from it will return its default value.
-  mutating func clearSpeakerType() {_uniqueStorage()._speakerType = nil}
+  public mutating func clearSpeakerType() {_uniqueStorage()._speakerType = nil}
 
   /// The begin index of, e.g., a span
-  var beginIndex: UInt32 {
+  public var beginIndex: UInt32 {
     get {return _storage._beginIndex ?? 0}
     set {_uniqueStorage()._beginIndex = newValue}
   }
   /// Returns true if `beginIndex` has been explicitly set.
-  var hasBeginIndex: Bool {return _storage._beginIndex != nil}
+  public var hasBeginIndex: Bool {return _storage._beginIndex != nil}
   /// Clears the value of `beginIndex`. Subsequent reads from it will return its default value.
-  mutating func clearBeginIndex() {_uniqueStorage()._beginIndex = nil}
+  public mutating func clearBeginIndex() {_uniqueStorage()._beginIndex = nil}
 
   /// The begin index of, e.g., a span
-  var endIndex: UInt32 {
+  public var endIndex: UInt32 {
     get {return _storage._endIndex ?? 0}
     set {_uniqueStorage()._endIndex = newValue}
   }
   /// Returns true if `endIndex` has been explicitly set.
-  var hasEndIndex: Bool {return _storage._endIndex != nil}
+  public var hasEndIndex: Bool {return _storage._endIndex != nil}
   /// Clears the value of `endIndex`. Subsequent reads from it will return its default value.
-  mutating func clearEndIndex() {_uniqueStorage()._endIndex = nil}
+  public mutating func clearEndIndex() {_uniqueStorage()._endIndex = nil}
 
   /// The begin index of the token
-  var tokenBeginIndex: UInt32 {
+  public var tokenBeginIndex: UInt32 {
     get {return _storage._tokenBeginIndex ?? 0}
     set {_uniqueStorage()._tokenBeginIndex = newValue}
   }
   /// Returns true if `tokenBeginIndex` has been explicitly set.
-  var hasTokenBeginIndex: Bool {return _storage._tokenBeginIndex != nil}
+  public var hasTokenBeginIndex: Bool {return _storage._tokenBeginIndex != nil}
   /// Clears the value of `tokenBeginIndex`. Subsequent reads from it will return its default value.
-  mutating func clearTokenBeginIndex() {_uniqueStorage()._tokenBeginIndex = nil}
+  public mutating func clearTokenBeginIndex() {_uniqueStorage()._tokenBeginIndex = nil}
 
   /// The end index of the token
-  var tokenEndIndex: UInt32 {
+  public var tokenEndIndex: UInt32 {
     get {return _storage._tokenEndIndex ?? 0}
     set {_uniqueStorage()._tokenEndIndex = newValue}
   }
   /// Returns true if `tokenEndIndex` has been explicitly set.
-  var hasTokenEndIndex: Bool {return _storage._tokenEndIndex != nil}
+  public var hasTokenEndIndex: Bool {return _storage._tokenEndIndex != nil}
   /// Clears the value of `tokenEndIndex`. Subsequent reads from it will return its default value.
-  mutating func clearTokenEndIndex() {_uniqueStorage()._tokenEndIndex = nil}
+  public mutating func clearTokenEndIndex() {_uniqueStorage()._tokenEndIndex = nil}
 
   /// The time this word refers to
-  var timexValue: Edu_Stanford_Nlp_Pipeline_Timex {
+  public var timexValue: Edu_Stanford_Nlp_Pipeline_Timex {
     get {return _storage._timexValue ?? Edu_Stanford_Nlp_Pipeline_Timex()}
     set {_uniqueStorage()._timexValue = newValue}
   }
   /// Returns true if `timexValue` has been explicitly set.
-  var hasTimexValue: Bool {return _storage._timexValue != nil}
+  public var hasTimexValue: Bool {return _storage._timexValue != nil}
   /// Clears the value of `timexValue`. Subsequent reads from it will return its default value.
-  mutating func clearTimexValue() {_uniqueStorage()._timexValue = nil}
+  public mutating func clearTimexValue() {_uniqueStorage()._timexValue = nil}
 
   /// Used by clean xml annotator
-  var hasXmlContext_p: Bool {
+  public var hasXmlContext_p: Bool {
     get {return _storage._hasXmlContext_p ?? false}
     set {_uniqueStorage()._hasXmlContext_p = newValue}
   }
   /// Returns true if `hasXmlContext_p` has been explicitly set.
-  var hasHasXmlContext_p: Bool {return _storage._hasXmlContext_p != nil}
+  public var hasHasXmlContext_p: Bool {return _storage._hasXmlContext_p != nil}
   /// Clears the value of `hasXmlContext_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasXmlContext_p() {_uniqueStorage()._hasXmlContext_p = nil}
+  public mutating func clearHasXmlContext_p() {_uniqueStorage()._hasXmlContext_p = nil}
 
   /// Used by clean xml annotator
-  var xmlContext: [String] {
+  public var xmlContext: [String] {
     get {return _storage._xmlContext}
     set {_uniqueStorage()._xmlContext = newValue}
   }
 
   /// The [primary] cluster id for this token
-  var corefClusterID: UInt32 {
+  public var corefClusterID: UInt32 {
     get {return _storage._corefClusterID ?? 0}
     set {_uniqueStorage()._corefClusterID = newValue}
   }
   /// Returns true if `corefClusterID` has been explicitly set.
-  var hasCorefClusterID: Bool {return _storage._corefClusterID != nil}
+  public var hasCorefClusterID: Bool {return _storage._corefClusterID != nil}
   /// Clears the value of `corefClusterID`. Subsequent reads from it will return its default value.
-  mutating func clearCorefClusterID() {_uniqueStorage()._corefClusterID = nil}
+  public mutating func clearCorefClusterID() {_uniqueStorage()._corefClusterID = nil}
 
   /// A temporary annotation which is occasionally left in
-  var answer: String {
+  public var answer: String {
     get {return _storage._answer ?? String()}
     set {_uniqueStorage()._answer = newValue}
   }
   /// Returns true if `answer` has been explicitly set.
-  var hasAnswer: Bool {return _storage._answer != nil}
+  public var hasAnswer: Bool {return _storage._answer != nil}
   /// Clears the value of `answer`. Subsequent reads from it will return its default value.
-  mutating func clearAnswer() {_uniqueStorage()._answer = nil}
+  public mutating func clearAnswer() {_uniqueStorage()._answer = nil}
 
   ///  optional string projectedCategory = 25;   // The syntactic category of the maximal constituent headed by the word. Not used anywhere, so deleted.
-  var headWordIndex: UInt32 {
+  public var headWordIndex: UInt32 {
     get {return _storage._headWordIndex ?? 0}
     set {_uniqueStorage()._headWordIndex = newValue}
   }
   /// Returns true if `headWordIndex` has been explicitly set.
-  var hasHeadWordIndex: Bool {return _storage._headWordIndex != nil}
+  public var hasHeadWordIndex: Bool {return _storage._headWordIndex != nil}
   /// Clears the value of `headWordIndex`. Subsequent reads from it will return its default value.
-  mutating func clearHeadWordIndex() {_uniqueStorage()._headWordIndex = nil}
+  public mutating func clearHeadWordIndex() {_uniqueStorage()._headWordIndex = nil}
 
   /// If this is an operator, which one is it and what is its scope (as per Natural Logic)?
-  var `operator`: Edu_Stanford_Nlp_Pipeline_Operator {
+  public var `operator`: Edu_Stanford_Nlp_Pipeline_Operator {
     get {return _storage._operator ?? Edu_Stanford_Nlp_Pipeline_Operator()}
     set {_uniqueStorage()._operator = newValue}
   }
   /// Returns true if ``operator`` has been explicitly set.
-  var hasOperator: Bool {return _storage._operator != nil}
+  public var hasOperator: Bool {return _storage._operator != nil}
   /// Clears the value of ``operator``. Subsequent reads from it will return its default value.
-  mutating func clearOperator() {_uniqueStorage()._operator = nil}
+  public mutating func clearOperator() {_uniqueStorage()._operator = nil}
 
   /// The polarity of this word, according to Natural Logic
-  var polarity: Edu_Stanford_Nlp_Pipeline_Polarity {
+  public var polarity: Edu_Stanford_Nlp_Pipeline_Polarity {
     get {return _storage._polarity ?? Edu_Stanford_Nlp_Pipeline_Polarity()}
     set {_uniqueStorage()._polarity = newValue}
   }
   /// Returns true if `polarity` has been explicitly set.
-  var hasPolarity: Bool {return _storage._polarity != nil}
+  public var hasPolarity: Bool {return _storage._polarity != nil}
   /// Clears the value of `polarity`. Subsequent reads from it will return its default value.
-  mutating func clearPolarity() {_uniqueStorage()._polarity = nil}
+  public mutating func clearPolarity() {_uniqueStorage()._polarity = nil}
 
   /// The polarity of this word, either "up", "down", or "flat"
-  var polarityDir: String {
+  public var polarityDir: String {
     get {return _storage._polarityDir ?? String()}
     set {_uniqueStorage()._polarityDir = newValue}
   }
   /// Returns true if `polarityDir` has been explicitly set.
-  var hasPolarityDir: Bool {return _storage._polarityDir != nil}
+  public var hasPolarityDir: Bool {return _storage._polarityDir != nil}
   /// Clears the value of `polarityDir`. Subsequent reads from it will return its default value.
-  mutating func clearPolarityDir() {_uniqueStorage()._polarityDir = nil}
+  public mutating func clearPolarityDir() {_uniqueStorage()._polarityDir = nil}
 
   /// The span of a leaf node of a tree
-  var span: Edu_Stanford_Nlp_Pipeline_Span {
+  public var span: Edu_Stanford_Nlp_Pipeline_Span {
     get {return _storage._span ?? Edu_Stanford_Nlp_Pipeline_Span()}
     set {_uniqueStorage()._span = newValue}
   }
   /// Returns true if `span` has been explicitly set.
-  var hasSpan: Bool {return _storage._span != nil}
+  public var hasSpan: Bool {return _storage._span != nil}
   /// Clears the value of `span`. Subsequent reads from it will return its default value.
-  mutating func clearSpan() {_uniqueStorage()._span = nil}
+  public mutating func clearSpan() {_uniqueStorage()._span = nil}
 
   /// The final sentiment of the sentence
-  var sentiment: String {
+  public var sentiment: String {
     get {return _storage._sentiment ?? String()}
     set {_uniqueStorage()._sentiment = newValue}
   }
   /// Returns true if `sentiment` has been explicitly set.
-  var hasSentiment: Bool {return _storage._sentiment != nil}
+  public var hasSentiment: Bool {return _storage._sentiment != nil}
   /// Clears the value of `sentiment`. Subsequent reads from it will return its default value.
-  mutating func clearSentiment() {_uniqueStorage()._sentiment = nil}
+  public mutating func clearSentiment() {_uniqueStorage()._sentiment = nil}
 
   /// The index of the quotation this token refers to
-  var quotationIndex: Int32 {
+  public var quotationIndex: Int32 {
     get {return _storage._quotationIndex ?? 0}
     set {_uniqueStorage()._quotationIndex = newValue}
   }
   /// Returns true if `quotationIndex` has been explicitly set.
-  var hasQuotationIndex: Bool {return _storage._quotationIndex != nil}
+  public var hasQuotationIndex: Bool {return _storage._quotationIndex != nil}
   /// Clears the value of `quotationIndex`. Subsequent reads from it will return its default value.
-  mutating func clearQuotationIndex() {_uniqueStorage()._quotationIndex = nil}
+  public mutating func clearQuotationIndex() {_uniqueStorage()._quotationIndex = nil}
 
-  var conllUfeatures: Edu_Stanford_Nlp_Pipeline_MapStringString {
+  public var conllUfeatures: Edu_Stanford_Nlp_Pipeline_MapStringString {
     get {return _storage._conllUfeatures ?? Edu_Stanford_Nlp_Pipeline_MapStringString()}
     set {_uniqueStorage()._conllUfeatures = newValue}
   }
   /// Returns true if `conllUfeatures` has been explicitly set.
-  var hasConllUfeatures: Bool {return _storage._conllUfeatures != nil}
+  public var hasConllUfeatures: Bool {return _storage._conllUfeatures != nil}
   /// Clears the value of `conllUfeatures`. Subsequent reads from it will return its default value.
-  mutating func clearConllUfeatures() {_uniqueStorage()._conllUfeatures = nil}
+  public mutating func clearConllUfeatures() {_uniqueStorage()._conllUfeatures = nil}
 
   ///  The coarse POS tag (used to store the UPOS tag)
-  var coarseTag: String {
+  public var coarseTag: String {
     get {return _storage._coarseTag ?? String()}
     set {_uniqueStorage()._coarseTag = newValue}
   }
   /// Returns true if `coarseTag` has been explicitly set.
-  var hasCoarseTag: Bool {return _storage._coarseTag != nil}
+  public var hasCoarseTag: Bool {return _storage._coarseTag != nil}
   /// Clears the value of `coarseTag`. Subsequent reads from it will return its default value.
-  mutating func clearCoarseTag() {_uniqueStorage()._coarseTag = nil}
+  public mutating func clearCoarseTag() {_uniqueStorage()._coarseTag = nil}
 
-  var conllUtokenSpan: Edu_Stanford_Nlp_Pipeline_Span {
+  public var conllUtokenSpan: Edu_Stanford_Nlp_Pipeline_Span {
     get {return _storage._conllUtokenSpan ?? Edu_Stanford_Nlp_Pipeline_Span()}
     set {_uniqueStorage()._conllUtokenSpan = newValue}
   }
   /// Returns true if `conllUtokenSpan` has been explicitly set.
-  var hasConllUtokenSpan: Bool {return _storage._conllUtokenSpan != nil}
+  public var hasConllUtokenSpan: Bool {return _storage._conllUtokenSpan != nil}
   /// Clears the value of `conllUtokenSpan`. Subsequent reads from it will return its default value.
-  mutating func clearConllUtokenSpan() {_uniqueStorage()._conllUtokenSpan = nil}
+  public mutating func clearConllUtokenSpan() {_uniqueStorage()._conllUtokenSpan = nil}
 
-  var conllUmisc: String {
+  public var conllUmisc: String {
     get {return _storage._conllUmisc ?? String()}
     set {_uniqueStorage()._conllUmisc = newValue}
   }
   /// Returns true if `conllUmisc` has been explicitly set.
-  var hasConllUmisc: Bool {return _storage._conllUmisc != nil}
+  public var hasConllUmisc: Bool {return _storage._conllUmisc != nil}
   /// Clears the value of `conllUmisc`. Subsequent reads from it will return its default value.
-  mutating func clearConllUmisc() {_uniqueStorage()._conllUmisc = nil}
+  public mutating func clearConllUmisc() {_uniqueStorage()._conllUmisc = nil}
 
-  var conllUsecondaryDeps: Edu_Stanford_Nlp_Pipeline_MapStringString {
+  public var conllUsecondaryDeps: Edu_Stanford_Nlp_Pipeline_MapStringString {
     get {return _storage._conllUsecondaryDeps ?? Edu_Stanford_Nlp_Pipeline_MapStringString()}
     set {_uniqueStorage()._conllUsecondaryDeps = newValue}
   }
   /// Returns true if `conllUsecondaryDeps` has been explicitly set.
-  var hasConllUsecondaryDeps: Bool {return _storage._conllUsecondaryDeps != nil}
+  public var hasConllUsecondaryDeps: Bool {return _storage._conllUsecondaryDeps != nil}
   /// Clears the value of `conllUsecondaryDeps`. Subsequent reads from it will return its default value.
-  mutating func clearConllUsecondaryDeps() {_uniqueStorage()._conllUsecondaryDeps = nil}
+  public mutating func clearConllUsecondaryDeps() {_uniqueStorage()._conllUsecondaryDeps = nil}
 
-  var wikipediaEntity: String {
+  public var wikipediaEntity: String {
     get {return _storage._wikipediaEntity ?? String()}
     set {_uniqueStorage()._wikipediaEntity = newValue}
   }
   /// Returns true if `wikipediaEntity` has been explicitly set.
-  var hasWikipediaEntity: Bool {return _storage._wikipediaEntity != nil}
+  public var hasWikipediaEntity: Bool {return _storage._wikipediaEntity != nil}
   /// Clears the value of `wikipediaEntity`. Subsequent reads from it will return its default value.
-  mutating func clearWikipediaEntity() {_uniqueStorage()._wikipediaEntity = nil}
+  public mutating func clearWikipediaEntity() {_uniqueStorage()._wikipediaEntity = nil}
 
-  var isNewline: Bool {
+  public var isNewline: Bool {
     get {return _storage._isNewline ?? false}
     set {_uniqueStorage()._isNewline = newValue}
   }
   /// Returns true if `isNewline` has been explicitly set.
-  var hasIsNewline: Bool {return _storage._isNewline != nil}
+  public var hasIsNewline: Bool {return _storage._isNewline != nil}
   /// Clears the value of `isNewline`. Subsequent reads from it will return its default value.
-  mutating func clearIsNewline() {_uniqueStorage()._isNewline = nil}
+  public mutating func clearIsNewline() {_uniqueStorage()._isNewline = nil}
 
   /// Fields set by other annotators in CoreNLP
-  var gender: String {
+  public var gender: String {
     get {return _storage._gender ?? String()}
     set {_uniqueStorage()._gender = newValue}
   }
   /// Returns true if `gender` has been explicitly set.
-  var hasGender: Bool {return _storage._gender != nil}
+  public var hasGender: Bool {return _storage._gender != nil}
   /// Clears the value of `gender`. Subsequent reads from it will return its default value.
-  mutating func clearGender() {_uniqueStorage()._gender = nil}
+  public mutating func clearGender() {_uniqueStorage()._gender = nil}
 
   /// true case type of token
-  var trueCase: String {
+  public var trueCase: String {
     get {return _storage._trueCase ?? String()}
     set {_uniqueStorage()._trueCase = newValue}
   }
   /// Returns true if `trueCase` has been explicitly set.
-  var hasTrueCase: Bool {return _storage._trueCase != nil}
+  public var hasTrueCase: Bool {return _storage._trueCase != nil}
   /// Clears the value of `trueCase`. Subsequent reads from it will return its default value.
-  mutating func clearTrueCase() {_uniqueStorage()._trueCase = nil}
+  public mutating func clearTrueCase() {_uniqueStorage()._trueCase = nil}
 
   /// true case gloss of token
-  var trueCaseText: String {
+  public var trueCaseText: String {
     get {return _storage._trueCaseText ?? String()}
     set {_uniqueStorage()._trueCaseText = newValue}
   }
   /// Returns true if `trueCaseText` has been explicitly set.
-  var hasTrueCaseText: Bool {return _storage._trueCaseText != nil}
+  public var hasTrueCaseText: Bool {return _storage._trueCaseText != nil}
   /// Clears the value of `trueCaseText`. Subsequent reads from it will return its default value.
-  mutating func clearTrueCaseText() {_uniqueStorage()._trueCaseText = nil}
+  public mutating func clearTrueCaseText() {_uniqueStorage()._trueCaseText = nil}
 
   ///  Chinese character info
-  var chineseChar: String {
+  public var chineseChar: String {
     get {return _storage._chineseChar ?? String()}
     set {_uniqueStorage()._chineseChar = newValue}
   }
   /// Returns true if `chineseChar` has been explicitly set.
-  var hasChineseChar: Bool {return _storage._chineseChar != nil}
+  public var hasChineseChar: Bool {return _storage._chineseChar != nil}
   /// Clears the value of `chineseChar`. Subsequent reads from it will return its default value.
-  mutating func clearChineseChar() {_uniqueStorage()._chineseChar = nil}
+  public mutating func clearChineseChar() {_uniqueStorage()._chineseChar = nil}
 
-  var chineseSeg: String {
+  public var chineseSeg: String {
     get {return _storage._chineseSeg ?? String()}
     set {_uniqueStorage()._chineseSeg = newValue}
   }
   /// Returns true if `chineseSeg` has been explicitly set.
-  var hasChineseSeg: Bool {return _storage._chineseSeg != nil}
+  public var hasChineseSeg: Bool {return _storage._chineseSeg != nil}
   /// Clears the value of `chineseSeg`. Subsequent reads from it will return its default value.
-  mutating func clearChineseSeg() {_uniqueStorage()._chineseSeg = nil}
+  public mutating func clearChineseSeg() {_uniqueStorage()._chineseSeg = nil}
 
-  var chineseXmlchar: String {
+  public var chineseXmlchar: String {
     get {return _storage._chineseXmlchar ?? String()}
     set {_uniqueStorage()._chineseXmlchar = newValue}
   }
   /// Returns true if `chineseXmlchar` has been explicitly set.
-  var hasChineseXmlchar: Bool {return _storage._chineseXmlchar != nil}
+  public var hasChineseXmlchar: Bool {return _storage._chineseXmlchar != nil}
   /// Clears the value of `chineseXmlchar`. Subsequent reads from it will return its default value.
-  mutating func clearChineseXmlchar() {_uniqueStorage()._chineseXmlchar = nil}
+  public mutating func clearChineseXmlchar() {_uniqueStorage()._chineseXmlchar = nil}
 
   ///  Arabic character info
-  var arabicSeg: String {
+  public var arabicSeg: String {
     get {return _storage._arabicSeg ?? String()}
     set {_uniqueStorage()._arabicSeg = newValue}
   }
   /// Returns true if `arabicSeg` has been explicitly set.
-  var hasArabicSeg: Bool {return _storage._arabicSeg != nil}
+  public var hasArabicSeg: Bool {return _storage._arabicSeg != nil}
   /// Clears the value of `arabicSeg`. Subsequent reads from it will return its default value.
-  mutating func clearArabicSeg() {_uniqueStorage()._arabicSeg = nil}
+  public mutating func clearArabicSeg() {_uniqueStorage()._arabicSeg = nil}
 
   /// Section info
-  var sectionName: String {
+  public var sectionName: String {
     get {return _storage._sectionName ?? String()}
     set {_uniqueStorage()._sectionName = newValue}
   }
   /// Returns true if `sectionName` has been explicitly set.
-  var hasSectionName: Bool {return _storage._sectionName != nil}
+  public var hasSectionName: Bool {return _storage._sectionName != nil}
   /// Clears the value of `sectionName`. Subsequent reads from it will return its default value.
-  mutating func clearSectionName() {_uniqueStorage()._sectionName = nil}
+  public mutating func clearSectionName() {_uniqueStorage()._sectionName = nil}
 
-  var sectionAuthor: String {
+  public var sectionAuthor: String {
     get {return _storage._sectionAuthor ?? String()}
     set {_uniqueStorage()._sectionAuthor = newValue}
   }
   /// Returns true if `sectionAuthor` has been explicitly set.
-  var hasSectionAuthor: Bool {return _storage._sectionAuthor != nil}
+  public var hasSectionAuthor: Bool {return _storage._sectionAuthor != nil}
   /// Clears the value of `sectionAuthor`. Subsequent reads from it will return its default value.
-  mutating func clearSectionAuthor() {_uniqueStorage()._sectionAuthor = nil}
+  public mutating func clearSectionAuthor() {_uniqueStorage()._sectionAuthor = nil}
 
-  var sectionDate: String {
+  public var sectionDate: String {
     get {return _storage._sectionDate ?? String()}
     set {_uniqueStorage()._sectionDate = newValue}
   }
   /// Returns true if `sectionDate` has been explicitly set.
-  var hasSectionDate: Bool {return _storage._sectionDate != nil}
+  public var hasSectionDate: Bool {return _storage._sectionDate != nil}
   /// Clears the value of `sectionDate`. Subsequent reads from it will return its default value.
-  mutating func clearSectionDate() {_uniqueStorage()._sectionDate = nil}
+  public mutating func clearSectionDate() {_uniqueStorage()._sectionDate = nil}
 
-  var sectionEndLabel: String {
+  public var sectionEndLabel: String {
     get {return _storage._sectionEndLabel ?? String()}
     set {_uniqueStorage()._sectionEndLabel = newValue}
   }
   /// Returns true if `sectionEndLabel` has been explicitly set.
-  var hasSectionEndLabel: Bool {return _storage._sectionEndLabel != nil}
+  public var hasSectionEndLabel: Bool {return _storage._sectionEndLabel != nil}
   /// Clears the value of `sectionEndLabel`. Subsequent reads from it will return its default value.
-  mutating func clearSectionEndLabel() {_uniqueStorage()._sectionEndLabel = nil}
+  public mutating func clearSectionEndLabel() {_uniqueStorage()._sectionEndLabel = nil}
 
   /// French tokens have parents
-  var parent: String {
+  public var parent: String {
     get {return _storage._parent ?? String()}
     set {_uniqueStorage()._parent = newValue}
   }
   /// Returns true if `parent` has been explicitly set.
-  var hasParent: Bool {return _storage._parent != nil}
+  public var hasParent: Bool {return _storage._parent != nil}
   /// Clears the value of `parent`. Subsequent reads from it will return its default value.
-  mutating func clearParent() {_uniqueStorage()._parent = nil}
+  public mutating func clearParent() {_uniqueStorage()._parent = nil}
 
   /// mention index info
-  var corefMentionIndex: [UInt32] {
+  public var corefMentionIndex: [UInt32] {
     get {return _storage._corefMentionIndex}
     set {_uniqueStorage()._corefMentionIndex = newValue}
   }
 
-  var entityMentionIndex: UInt32 {
+  public var entityMentionIndex: UInt32 {
     get {return _storage._entityMentionIndex ?? 0}
     set {_uniqueStorage()._entityMentionIndex = newValue}
   }
   /// Returns true if `entityMentionIndex` has been explicitly set.
-  var hasEntityMentionIndex: Bool {return _storage._entityMentionIndex != nil}
+  public var hasEntityMentionIndex: Bool {return _storage._entityMentionIndex != nil}
   /// Clears the value of `entityMentionIndex`. Subsequent reads from it will return its default value.
-  mutating func clearEntityMentionIndex() {_uniqueStorage()._entityMentionIndex = nil}
+  public mutating func clearEntityMentionIndex() {_uniqueStorage()._entityMentionIndex = nil}
 
   /// mwt stuff
-  var isMwt: Bool {
+  public var isMwt: Bool {
     get {return _storage._isMwt ?? false}
     set {_uniqueStorage()._isMwt = newValue}
   }
   /// Returns true if `isMwt` has been explicitly set.
-  var hasIsMwt: Bool {return _storage._isMwt != nil}
+  public var hasIsMwt: Bool {return _storage._isMwt != nil}
   /// Clears the value of `isMwt`. Subsequent reads from it will return its default value.
-  mutating func clearIsMwt() {_uniqueStorage()._isMwt = nil}
+  public mutating func clearIsMwt() {_uniqueStorage()._isMwt = nil}
 
-  var isFirstMwt: Bool {
+  public var isFirstMwt: Bool {
     get {return _storage._isFirstMwt ?? false}
     set {_uniqueStorage()._isFirstMwt = newValue}
   }
   /// Returns true if `isFirstMwt` has been explicitly set.
-  var hasIsFirstMwt: Bool {return _storage._isFirstMwt != nil}
+  public var hasIsFirstMwt: Bool {return _storage._isFirstMwt != nil}
   /// Clears the value of `isFirstMwt`. Subsequent reads from it will return its default value.
-  mutating func clearIsFirstMwt() {_uniqueStorage()._isFirstMwt = nil}
+  public mutating func clearIsFirstMwt() {_uniqueStorage()._isFirstMwt = nil}
 
-  var mwtText: String {
+  public var mwtText: String {
     get {return _storage._mwtText ?? String()}
     set {_uniqueStorage()._mwtText = newValue}
   }
   /// Returns true if `mwtText` has been explicitly set.
-  var hasMwtText: Bool {return _storage._mwtText != nil}
+  public var hasMwtText: Bool {return _storage._mwtText != nil}
   /// Clears the value of `mwtText`. Subsequent reads from it will return its default value.
-  mutating func clearMwtText() {_uniqueStorage()._mwtText = nil}
+  public mutating func clearMwtText() {_uniqueStorage()._mwtText = nil}
 
   /// number info
-  var numericValue: UInt64 {
+  public var numericValue: UInt64 {
     get {return _storage._numericValue ?? 0}
     set {_uniqueStorage()._numericValue = newValue}
   }
   /// Returns true if `numericValue` has been explicitly set.
-  var hasNumericValue: Bool {return _storage._numericValue != nil}
+  public var hasNumericValue: Bool {return _storage._numericValue != nil}
   /// Clears the value of `numericValue`. Subsequent reads from it will return its default value.
-  mutating func clearNumericValue() {_uniqueStorage()._numericValue = nil}
+  public mutating func clearNumericValue() {_uniqueStorage()._numericValue = nil}
 
-  var numericType: String {
+  public var numericType: String {
     get {return _storage._numericType ?? String()}
     set {_uniqueStorage()._numericType = newValue}
   }
   /// Returns true if `numericType` has been explicitly set.
-  var hasNumericType: Bool {return _storage._numericType != nil}
+  public var hasNumericType: Bool {return _storage._numericType != nil}
   /// Clears the value of `numericType`. Subsequent reads from it will return its default value.
-  mutating func clearNumericType() {_uniqueStorage()._numericType = nil}
+  public mutating func clearNumericType() {_uniqueStorage()._numericType = nil}
 
-  var numericCompositeValue: UInt64 {
+  public var numericCompositeValue: UInt64 {
     get {return _storage._numericCompositeValue ?? 0}
     set {_uniqueStorage()._numericCompositeValue = newValue}
   }
   /// Returns true if `numericCompositeValue` has been explicitly set.
-  var hasNumericCompositeValue: Bool {return _storage._numericCompositeValue != nil}
+  public var hasNumericCompositeValue: Bool {return _storage._numericCompositeValue != nil}
   /// Clears the value of `numericCompositeValue`. Subsequent reads from it will return its default value.
-  mutating func clearNumericCompositeValue() {_uniqueStorage()._numericCompositeValue = nil}
+  public mutating func clearNumericCompositeValue() {_uniqueStorage()._numericCompositeValue = nil}
 
-  var numericCompositeType: String {
+  public var numericCompositeType: String {
     get {return _storage._numericCompositeType ?? String()}
     set {_uniqueStorage()._numericCompositeType = newValue}
   }
   /// Returns true if `numericCompositeType` has been explicitly set.
-  var hasNumericCompositeType: Bool {return _storage._numericCompositeType != nil}
+  public var hasNumericCompositeType: Bool {return _storage._numericCompositeType != nil}
   /// Clears the value of `numericCompositeType`. Subsequent reads from it will return its default value.
-  mutating func clearNumericCompositeType() {_uniqueStorage()._numericCompositeType = nil}
+  public mutating func clearNumericCompositeType() {_uniqueStorage()._numericCompositeType = nil}
 
-  var codepointOffsetBegin: UInt32 {
+  public var codepointOffsetBegin: UInt32 {
     get {return _storage._codepointOffsetBegin ?? 0}
     set {_uniqueStorage()._codepointOffsetBegin = newValue}
   }
   /// Returns true if `codepointOffsetBegin` has been explicitly set.
-  var hasCodepointOffsetBegin: Bool {return _storage._codepointOffsetBegin != nil}
+  public var hasCodepointOffsetBegin: Bool {return _storage._codepointOffsetBegin != nil}
   /// Clears the value of `codepointOffsetBegin`. Subsequent reads from it will return its default value.
-  mutating func clearCodepointOffsetBegin() {_uniqueStorage()._codepointOffsetBegin = nil}
+  public mutating func clearCodepointOffsetBegin() {_uniqueStorage()._codepointOffsetBegin = nil}
 
-  var codepointOffsetEnd: UInt32 {
+  public var codepointOffsetEnd: UInt32 {
     get {return _storage._codepointOffsetEnd ?? 0}
     set {_uniqueStorage()._codepointOffsetEnd = newValue}
   }
   /// Returns true if `codepointOffsetEnd` has been explicitly set.
-  var hasCodepointOffsetEnd: Bool {return _storage._codepointOffsetEnd != nil}
+  public var hasCodepointOffsetEnd: Bool {return _storage._codepointOffsetEnd != nil}
   /// Clears the value of `codepointOffsetEnd`. Subsequent reads from it will return its default value.
-  mutating func clearCodepointOffsetEnd() {_uniqueStorage()._codepointOffsetEnd = nil}
+  public mutating func clearCodepointOffsetEnd() {_uniqueStorage()._codepointOffsetEnd = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
-  var _protobuf_extensionFieldValues = SwiftProtobuf.ExtensionFieldValueSet()
+  public var _protobuf_extensionFieldValues = SwiftProtobuf.ExtensionFieldValueSet()
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 ///
 /// A quotation marker in text
-struct Edu_Stanford_Nlp_Pipeline_Quote {
+public struct Edu_Stanford_Nlp_Pipeline_Quote {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var text: String {
+  public var text: String {
     get {return _storage._text ?? String()}
     set {_uniqueStorage()._text = newValue}
   }
   /// Returns true if `text` has been explicitly set.
-  var hasText: Bool {return _storage._text != nil}
+  public var hasText: Bool {return _storage._text != nil}
   /// Clears the value of `text`. Subsequent reads from it will return its default value.
-  mutating func clearText() {_uniqueStorage()._text = nil}
+  public mutating func clearText() {_uniqueStorage()._text = nil}
 
-  var begin: UInt32 {
+  public var begin: UInt32 {
     get {return _storage._begin ?? 0}
     set {_uniqueStorage()._begin = newValue}
   }
   /// Returns true if `begin` has been explicitly set.
-  var hasBegin: Bool {return _storage._begin != nil}
+  public var hasBegin: Bool {return _storage._begin != nil}
   /// Clears the value of `begin`. Subsequent reads from it will return its default value.
-  mutating func clearBegin() {_uniqueStorage()._begin = nil}
+  public mutating func clearBegin() {_uniqueStorage()._begin = nil}
 
-  var end: UInt32 {
+  public var end: UInt32 {
     get {return _storage._end ?? 0}
     set {_uniqueStorage()._end = newValue}
   }
   /// Returns true if `end` has been explicitly set.
-  var hasEnd: Bool {return _storage._end != nil}
+  public var hasEnd: Bool {return _storage._end != nil}
   /// Clears the value of `end`. Subsequent reads from it will return its default value.
-  mutating func clearEnd() {_uniqueStorage()._end = nil}
+  public mutating func clearEnd() {_uniqueStorage()._end = nil}
 
-  var sentenceBegin: UInt32 {
+  public var sentenceBegin: UInt32 {
     get {return _storage._sentenceBegin ?? 0}
     set {_uniqueStorage()._sentenceBegin = newValue}
   }
   /// Returns true if `sentenceBegin` has been explicitly set.
-  var hasSentenceBegin: Bool {return _storage._sentenceBegin != nil}
+  public var hasSentenceBegin: Bool {return _storage._sentenceBegin != nil}
   /// Clears the value of `sentenceBegin`. Subsequent reads from it will return its default value.
-  mutating func clearSentenceBegin() {_uniqueStorage()._sentenceBegin = nil}
+  public mutating func clearSentenceBegin() {_uniqueStorage()._sentenceBegin = nil}
 
-  var sentenceEnd: UInt32 {
+  public var sentenceEnd: UInt32 {
     get {return _storage._sentenceEnd ?? 0}
     set {_uniqueStorage()._sentenceEnd = newValue}
   }
   /// Returns true if `sentenceEnd` has been explicitly set.
-  var hasSentenceEnd: Bool {return _storage._sentenceEnd != nil}
+  public var hasSentenceEnd: Bool {return _storage._sentenceEnd != nil}
   /// Clears the value of `sentenceEnd`. Subsequent reads from it will return its default value.
-  mutating func clearSentenceEnd() {_uniqueStorage()._sentenceEnd = nil}
+  public mutating func clearSentenceEnd() {_uniqueStorage()._sentenceEnd = nil}
 
-  var tokenBegin: UInt32 {
+  public var tokenBegin: UInt32 {
     get {return _storage._tokenBegin ?? 0}
     set {_uniqueStorage()._tokenBegin = newValue}
   }
   /// Returns true if `tokenBegin` has been explicitly set.
-  var hasTokenBegin: Bool {return _storage._tokenBegin != nil}
+  public var hasTokenBegin: Bool {return _storage._tokenBegin != nil}
   /// Clears the value of `tokenBegin`. Subsequent reads from it will return its default value.
-  mutating func clearTokenBegin() {_uniqueStorage()._tokenBegin = nil}
+  public mutating func clearTokenBegin() {_uniqueStorage()._tokenBegin = nil}
 
-  var tokenEnd: UInt32 {
+  public var tokenEnd: UInt32 {
     get {return _storage._tokenEnd ?? 0}
     set {_uniqueStorage()._tokenEnd = newValue}
   }
   /// Returns true if `tokenEnd` has been explicitly set.
-  var hasTokenEnd: Bool {return _storage._tokenEnd != nil}
+  public var hasTokenEnd: Bool {return _storage._tokenEnd != nil}
   /// Clears the value of `tokenEnd`. Subsequent reads from it will return its default value.
-  mutating func clearTokenEnd() {_uniqueStorage()._tokenEnd = nil}
+  public mutating func clearTokenEnd() {_uniqueStorage()._tokenEnd = nil}
 
-  var docid: String {
+  public var docid: String {
     get {return _storage._docid ?? String()}
     set {_uniqueStorage()._docid = newValue}
   }
   /// Returns true if `docid` has been explicitly set.
-  var hasDocid: Bool {return _storage._docid != nil}
+  public var hasDocid: Bool {return _storage._docid != nil}
   /// Clears the value of `docid`. Subsequent reads from it will return its default value.
-  mutating func clearDocid() {_uniqueStorage()._docid = nil}
+  public mutating func clearDocid() {_uniqueStorage()._docid = nil}
 
-  var index: UInt32 {
+  public var index: UInt32 {
     get {return _storage._index ?? 0}
     set {_uniqueStorage()._index = newValue}
   }
   /// Returns true if `index` has been explicitly set.
-  var hasIndex: Bool {return _storage._index != nil}
+  public var hasIndex: Bool {return _storage._index != nil}
   /// Clears the value of `index`. Subsequent reads from it will return its default value.
-  mutating func clearIndex() {_uniqueStorage()._index = nil}
+  public mutating func clearIndex() {_uniqueStorage()._index = nil}
 
-  var author: String {
+  public var author: String {
     get {return _storage._author ?? String()}
     set {_uniqueStorage()._author = newValue}
   }
   /// Returns true if `author` has been explicitly set.
-  var hasAuthor: Bool {return _storage._author != nil}
+  public var hasAuthor: Bool {return _storage._author != nil}
   /// Clears the value of `author`. Subsequent reads from it will return its default value.
-  mutating func clearAuthor() {_uniqueStorage()._author = nil}
+  public mutating func clearAuthor() {_uniqueStorage()._author = nil}
 
-  var mention: String {
+  public var mention: String {
     get {return _storage._mention ?? String()}
     set {_uniqueStorage()._mention = newValue}
   }
   /// Returns true if `mention` has been explicitly set.
-  var hasMention: Bool {return _storage._mention != nil}
+  public var hasMention: Bool {return _storage._mention != nil}
   /// Clears the value of `mention`. Subsequent reads from it will return its default value.
-  mutating func clearMention() {_uniqueStorage()._mention = nil}
+  public mutating func clearMention() {_uniqueStorage()._mention = nil}
 
-  var mentionBegin: UInt32 {
+  public var mentionBegin: UInt32 {
     get {return _storage._mentionBegin ?? 0}
     set {_uniqueStorage()._mentionBegin = newValue}
   }
   /// Returns true if `mentionBegin` has been explicitly set.
-  var hasMentionBegin: Bool {return _storage._mentionBegin != nil}
+  public var hasMentionBegin: Bool {return _storage._mentionBegin != nil}
   /// Clears the value of `mentionBegin`. Subsequent reads from it will return its default value.
-  mutating func clearMentionBegin() {_uniqueStorage()._mentionBegin = nil}
+  public mutating func clearMentionBegin() {_uniqueStorage()._mentionBegin = nil}
 
-  var mentionEnd: UInt32 {
+  public var mentionEnd: UInt32 {
     get {return _storage._mentionEnd ?? 0}
     set {_uniqueStorage()._mentionEnd = newValue}
   }
   /// Returns true if `mentionEnd` has been explicitly set.
-  var hasMentionEnd: Bool {return _storage._mentionEnd != nil}
+  public var hasMentionEnd: Bool {return _storage._mentionEnd != nil}
   /// Clears the value of `mentionEnd`. Subsequent reads from it will return its default value.
-  mutating func clearMentionEnd() {_uniqueStorage()._mentionEnd = nil}
+  public mutating func clearMentionEnd() {_uniqueStorage()._mentionEnd = nil}
 
-  var mentionType: String {
+  public var mentionType: String {
     get {return _storage._mentionType ?? String()}
     set {_uniqueStorage()._mentionType = newValue}
   }
   /// Returns true if `mentionType` has been explicitly set.
-  var hasMentionType: Bool {return _storage._mentionType != nil}
+  public var hasMentionType: Bool {return _storage._mentionType != nil}
   /// Clears the value of `mentionType`. Subsequent reads from it will return its default value.
-  mutating func clearMentionType() {_uniqueStorage()._mentionType = nil}
+  public mutating func clearMentionType() {_uniqueStorage()._mentionType = nil}
 
-  var mentionSieve: String {
+  public var mentionSieve: String {
     get {return _storage._mentionSieve ?? String()}
     set {_uniqueStorage()._mentionSieve = newValue}
   }
   /// Returns true if `mentionSieve` has been explicitly set.
-  var hasMentionSieve: Bool {return _storage._mentionSieve != nil}
+  public var hasMentionSieve: Bool {return _storage._mentionSieve != nil}
   /// Clears the value of `mentionSieve`. Subsequent reads from it will return its default value.
-  mutating func clearMentionSieve() {_uniqueStorage()._mentionSieve = nil}
+  public mutating func clearMentionSieve() {_uniqueStorage()._mentionSieve = nil}
 
-  var speaker: String {
+  public var speaker: String {
     get {return _storage._speaker ?? String()}
     set {_uniqueStorage()._speaker = newValue}
   }
   /// Returns true if `speaker` has been explicitly set.
-  var hasSpeaker: Bool {return _storage._speaker != nil}
+  public var hasSpeaker: Bool {return _storage._speaker != nil}
   /// Clears the value of `speaker`. Subsequent reads from it will return its default value.
-  mutating func clearSpeaker() {_uniqueStorage()._speaker = nil}
+  public mutating func clearSpeaker() {_uniqueStorage()._speaker = nil}
 
-  var speakerSieve: String {
+  public var speakerSieve: String {
     get {return _storage._speakerSieve ?? String()}
     set {_uniqueStorage()._speakerSieve = newValue}
   }
   /// Returns true if `speakerSieve` has been explicitly set.
-  var hasSpeakerSieve: Bool {return _storage._speakerSieve != nil}
+  public var hasSpeakerSieve: Bool {return _storage._speakerSieve != nil}
   /// Clears the value of `speakerSieve`. Subsequent reads from it will return its default value.
-  mutating func clearSpeakerSieve() {_uniqueStorage()._speakerSieve = nil}
+  public mutating func clearSpeakerSieve() {_uniqueStorage()._speakerSieve = nil}
 
-  var canonicalMention: String {
+  public var canonicalMention: String {
     get {return _storage._canonicalMention ?? String()}
     set {_uniqueStorage()._canonicalMention = newValue}
   }
   /// Returns true if `canonicalMention` has been explicitly set.
-  var hasCanonicalMention: Bool {return _storage._canonicalMention != nil}
+  public var hasCanonicalMention: Bool {return _storage._canonicalMention != nil}
   /// Clears the value of `canonicalMention`. Subsequent reads from it will return its default value.
-  mutating func clearCanonicalMention() {_uniqueStorage()._canonicalMention = nil}
+  public mutating func clearCanonicalMention() {_uniqueStorage()._canonicalMention = nil}
 
-  var canonicalMentionBegin: UInt32 {
+  public var canonicalMentionBegin: UInt32 {
     get {return _storage._canonicalMentionBegin ?? 0}
     set {_uniqueStorage()._canonicalMentionBegin = newValue}
   }
   /// Returns true if `canonicalMentionBegin` has been explicitly set.
-  var hasCanonicalMentionBegin: Bool {return _storage._canonicalMentionBegin != nil}
+  public var hasCanonicalMentionBegin: Bool {return _storage._canonicalMentionBegin != nil}
   /// Clears the value of `canonicalMentionBegin`. Subsequent reads from it will return its default value.
-  mutating func clearCanonicalMentionBegin() {_uniqueStorage()._canonicalMentionBegin = nil}
+  public mutating func clearCanonicalMentionBegin() {_uniqueStorage()._canonicalMentionBegin = nil}
 
-  var canonicalMentionEnd: UInt32 {
+  public var canonicalMentionEnd: UInt32 {
     get {return _storage._canonicalMentionEnd ?? 0}
     set {_uniqueStorage()._canonicalMentionEnd = newValue}
   }
   /// Returns true if `canonicalMentionEnd` has been explicitly set.
-  var hasCanonicalMentionEnd: Bool {return _storage._canonicalMentionEnd != nil}
+  public var hasCanonicalMentionEnd: Bool {return _storage._canonicalMentionEnd != nil}
   /// Clears the value of `canonicalMentionEnd`. Subsequent reads from it will return its default value.
-  mutating func clearCanonicalMentionEnd() {_uniqueStorage()._canonicalMentionEnd = nil}
+  public mutating func clearCanonicalMentionEnd() {_uniqueStorage()._canonicalMentionEnd = nil}
 
-  var attributionDependencyGraph: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var attributionDependencyGraph: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _storage._attributionDependencyGraph ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_uniqueStorage()._attributionDependencyGraph = newValue}
   }
   /// Returns true if `attributionDependencyGraph` has been explicitly set.
-  var hasAttributionDependencyGraph: Bool {return _storage._attributionDependencyGraph != nil}
+  public var hasAttributionDependencyGraph: Bool {return _storage._attributionDependencyGraph != nil}
   /// Clears the value of `attributionDependencyGraph`. Subsequent reads from it will return its default value.
-  mutating func clearAttributionDependencyGraph() {_uniqueStorage()._attributionDependencyGraph = nil}
+  public mutating func clearAttributionDependencyGraph() {_uniqueStorage()._attributionDependencyGraph = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 ///
 /// A syntactic parse tree, with scores.
-struct Edu_Stanford_Nlp_Pipeline_ParseTree {
+public struct Edu_Stanford_Nlp_Pipeline_ParseTree {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var child: [Edu_Stanford_Nlp_Pipeline_ParseTree] = []
+  public var child: [Edu_Stanford_Nlp_Pipeline_ParseTree] = []
 
-  var value: String {
+  public var value: String {
     get {return _value ?? String()}
     set {_value = newValue}
   }
   /// Returns true if `value` has been explicitly set.
-  var hasValue: Bool {return self._value != nil}
+  public var hasValue: Bool {return self._value != nil}
   /// Clears the value of `value`. Subsequent reads from it will return its default value.
-  mutating func clearValue() {self._value = nil}
+  public mutating func clearValue() {self._value = nil}
 
-  var yieldBeginIndex: UInt32 {
+  public var yieldBeginIndex: UInt32 {
     get {return _yieldBeginIndex ?? 0}
     set {_yieldBeginIndex = newValue}
   }
   /// Returns true if `yieldBeginIndex` has been explicitly set.
-  var hasYieldBeginIndex: Bool {return self._yieldBeginIndex != nil}
+  public var hasYieldBeginIndex: Bool {return self._yieldBeginIndex != nil}
   /// Clears the value of `yieldBeginIndex`. Subsequent reads from it will return its default value.
-  mutating func clearYieldBeginIndex() {self._yieldBeginIndex = nil}
+  public mutating func clearYieldBeginIndex() {self._yieldBeginIndex = nil}
 
-  var yieldEndIndex: UInt32 {
+  public var yieldEndIndex: UInt32 {
     get {return _yieldEndIndex ?? 0}
     set {_yieldEndIndex = newValue}
   }
   /// Returns true if `yieldEndIndex` has been explicitly set.
-  var hasYieldEndIndex: Bool {return self._yieldEndIndex != nil}
+  public var hasYieldEndIndex: Bool {return self._yieldEndIndex != nil}
   /// Clears the value of `yieldEndIndex`. Subsequent reads from it will return its default value.
-  mutating func clearYieldEndIndex() {self._yieldEndIndex = nil}
+  public mutating func clearYieldEndIndex() {self._yieldEndIndex = nil}
 
-  var score: Double {
+  public var score: Double {
     get {return _score ?? 0}
     set {_score = newValue}
   }
   /// Returns true if `score` has been explicitly set.
-  var hasScore: Bool {return self._score != nil}
+  public var hasScore: Bool {return self._score != nil}
   /// Clears the value of `score`. Subsequent reads from it will return its default value.
-  mutating func clearScore() {self._score = nil}
+  public mutating func clearScore() {self._score = nil}
 
-  var sentiment: Edu_Stanford_Nlp_Pipeline_Sentiment {
+  public var sentiment: Edu_Stanford_Nlp_Pipeline_Sentiment {
     get {return _sentiment ?? .strongNegative}
     set {_sentiment = newValue}
   }
   /// Returns true if `sentiment` has been explicitly set.
-  var hasSentiment: Bool {return self._sentiment != nil}
+  public var hasSentiment: Bool {return self._sentiment != nil}
   /// Clears the value of `sentiment`. Subsequent reads from it will return its default value.
-  mutating func clearSentiment() {self._sentiment = nil}
+  public mutating func clearSentiment() {self._sentiment = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _value: String? = nil
   fileprivate var _yieldBeginIndex: UInt32? = nil
@@ -1633,131 +1633,131 @@ struct Edu_Stanford_Nlp_Pipeline_ParseTree {
 
 ///
 /// A dependency graph representation.
-struct Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+public struct Edu_Stanford_Nlp_Pipeline_DependencyGraph {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var node: [Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node] = []
+  public var node: [Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node] = []
 
-  var edge: [Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge] = []
+  public var edge: [Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge] = []
 
-  var root: [UInt32] = []
+  public var root: [UInt32] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct Node {
+  public struct Node {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var sentenceIndex: UInt32 {
+    public var sentenceIndex: UInt32 {
       get {return _sentenceIndex ?? 0}
       set {_sentenceIndex = newValue}
     }
     /// Returns true if `sentenceIndex` has been explicitly set.
-    var hasSentenceIndex: Bool {return self._sentenceIndex != nil}
+    public var hasSentenceIndex: Bool {return self._sentenceIndex != nil}
     /// Clears the value of `sentenceIndex`. Subsequent reads from it will return its default value.
-    mutating func clearSentenceIndex() {self._sentenceIndex = nil}
+    public mutating func clearSentenceIndex() {self._sentenceIndex = nil}
 
-    var index: UInt32 {
+    public var index: UInt32 {
       get {return _index ?? 0}
       set {_index = newValue}
     }
     /// Returns true if `index` has been explicitly set.
-    var hasIndex: Bool {return self._index != nil}
+    public var hasIndex: Bool {return self._index != nil}
     /// Clears the value of `index`. Subsequent reads from it will return its default value.
-    mutating func clearIndex() {self._index = nil}
+    public mutating func clearIndex() {self._index = nil}
 
-    var copyAnnotation: UInt32 {
+    public var copyAnnotation: UInt32 {
       get {return _copyAnnotation ?? 0}
       set {_copyAnnotation = newValue}
     }
     /// Returns true if `copyAnnotation` has been explicitly set.
-    var hasCopyAnnotation: Bool {return self._copyAnnotation != nil}
+    public var hasCopyAnnotation: Bool {return self._copyAnnotation != nil}
     /// Clears the value of `copyAnnotation`. Subsequent reads from it will return its default value.
-    mutating func clearCopyAnnotation() {self._copyAnnotation = nil}
+    public mutating func clearCopyAnnotation() {self._copyAnnotation = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _sentenceIndex: UInt32? = nil
     fileprivate var _index: UInt32? = nil
     fileprivate var _copyAnnotation: UInt32? = nil
   }
 
-  struct Edge {
+  public struct Edge {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var source: UInt32 {
+    public var source: UInt32 {
       get {return _source ?? 0}
       set {_source = newValue}
     }
     /// Returns true if `source` has been explicitly set.
-    var hasSource: Bool {return self._source != nil}
+    public var hasSource: Bool {return self._source != nil}
     /// Clears the value of `source`. Subsequent reads from it will return its default value.
-    mutating func clearSource() {self._source = nil}
+    public mutating func clearSource() {self._source = nil}
 
-    var target: UInt32 {
+    public var target: UInt32 {
       get {return _target ?? 0}
       set {_target = newValue}
     }
     /// Returns true if `target` has been explicitly set.
-    var hasTarget: Bool {return self._target != nil}
+    public var hasTarget: Bool {return self._target != nil}
     /// Clears the value of `target`. Subsequent reads from it will return its default value.
-    mutating func clearTarget() {self._target = nil}
+    public mutating func clearTarget() {self._target = nil}
 
-    var dep: String {
+    public var dep: String {
       get {return _dep ?? String()}
       set {_dep = newValue}
     }
     /// Returns true if `dep` has been explicitly set.
-    var hasDep: Bool {return self._dep != nil}
+    public var hasDep: Bool {return self._dep != nil}
     /// Clears the value of `dep`. Subsequent reads from it will return its default value.
-    mutating func clearDep() {self._dep = nil}
+    public mutating func clearDep() {self._dep = nil}
 
-    var isExtra: Bool {
+    public var isExtra: Bool {
       get {return _isExtra ?? false}
       set {_isExtra = newValue}
     }
     /// Returns true if `isExtra` has been explicitly set.
-    var hasIsExtra: Bool {return self._isExtra != nil}
+    public var hasIsExtra: Bool {return self._isExtra != nil}
     /// Clears the value of `isExtra`. Subsequent reads from it will return its default value.
-    mutating func clearIsExtra() {self._isExtra = nil}
+    public mutating func clearIsExtra() {self._isExtra = nil}
 
-    var sourceCopy: UInt32 {
+    public var sourceCopy: UInt32 {
       get {return _sourceCopy ?? 0}
       set {_sourceCopy = newValue}
     }
     /// Returns true if `sourceCopy` has been explicitly set.
-    var hasSourceCopy: Bool {return self._sourceCopy != nil}
+    public var hasSourceCopy: Bool {return self._sourceCopy != nil}
     /// Clears the value of `sourceCopy`. Subsequent reads from it will return its default value.
-    mutating func clearSourceCopy() {self._sourceCopy = nil}
+    public mutating func clearSourceCopy() {self._sourceCopy = nil}
 
-    var targetCopy: UInt32 {
+    public var targetCopy: UInt32 {
       get {return _targetCopy ?? 0}
       set {_targetCopy = newValue}
     }
     /// Returns true if `targetCopy` has been explicitly set.
-    var hasTargetCopy: Bool {return self._targetCopy != nil}
+    public var hasTargetCopy: Bool {return self._targetCopy != nil}
     /// Clears the value of `targetCopy`. Subsequent reads from it will return its default value.
-    mutating func clearTargetCopy() {self._targetCopy = nil}
+    public mutating func clearTargetCopy() {self._targetCopy = nil}
 
-    var language: Edu_Stanford_Nlp_Pipeline_Language {
+    public var language: Edu_Stanford_Nlp_Pipeline_Language {
       get {return _language ?? .unknown}
       set {_language = newValue}
     }
     /// Returns true if `language` has been explicitly set.
-    var hasLanguage: Bool {return self._language != nil}
+    public var hasLanguage: Bool {return self._language != nil}
     /// Clears the value of `language`. Subsequent reads from it will return its default value.
-    mutating func clearLanguage() {self._language = nil}
+    public mutating func clearLanguage() {self._language = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _source: UInt32? = nil
     fileprivate var _target: UInt32? = nil
@@ -1768,138 +1768,138 @@ struct Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     fileprivate var _language: Edu_Stanford_Nlp_Pipeline_Language? = nil
   }
 
-  init() {}
+  public init() {}
 }
 
 ///
 /// A coreference chain.
 /// These fields are not *really* optional. CoreNLP will crash without them.
-struct Edu_Stanford_Nlp_Pipeline_CorefChain {
+public struct Edu_Stanford_Nlp_Pipeline_CorefChain {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var chainID: Int32 {
+  public var chainID: Int32 {
     get {return _chainID ?? 0}
     set {_chainID = newValue}
   }
   /// Returns true if `chainID` has been explicitly set.
-  var hasChainID: Bool {return self._chainID != nil}
+  public var hasChainID: Bool {return self._chainID != nil}
   /// Clears the value of `chainID`. Subsequent reads from it will return its default value.
-  mutating func clearChainID() {self._chainID = nil}
+  public mutating func clearChainID() {self._chainID = nil}
 
-  var mention: [Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention] = []
+  public var mention: [Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention] = []
 
-  var representative: UInt32 {
+  public var representative: UInt32 {
     get {return _representative ?? 0}
     set {_representative = newValue}
   }
   /// Returns true if `representative` has been explicitly set.
-  var hasRepresentative: Bool {return self._representative != nil}
+  public var hasRepresentative: Bool {return self._representative != nil}
   /// Clears the value of `representative`. Subsequent reads from it will return its default value.
-  mutating func clearRepresentative() {self._representative = nil}
+  public mutating func clearRepresentative() {self._representative = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct CorefMention {
+  public struct CorefMention {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var mentionID: Int32 {
+    public var mentionID: Int32 {
       get {return _mentionID ?? 0}
       set {_mentionID = newValue}
     }
     /// Returns true if `mentionID` has been explicitly set.
-    var hasMentionID: Bool {return self._mentionID != nil}
+    public var hasMentionID: Bool {return self._mentionID != nil}
     /// Clears the value of `mentionID`. Subsequent reads from it will return its default value.
-    mutating func clearMentionID() {self._mentionID = nil}
+    public mutating func clearMentionID() {self._mentionID = nil}
 
-    var mentionType: String {
+    public var mentionType: String {
       get {return _mentionType ?? String()}
       set {_mentionType = newValue}
     }
     /// Returns true if `mentionType` has been explicitly set.
-    var hasMentionType: Bool {return self._mentionType != nil}
+    public var hasMentionType: Bool {return self._mentionType != nil}
     /// Clears the value of `mentionType`. Subsequent reads from it will return its default value.
-    mutating func clearMentionType() {self._mentionType = nil}
+    public mutating func clearMentionType() {self._mentionType = nil}
 
-    var number: String {
+    public var number: String {
       get {return _number ?? String()}
       set {_number = newValue}
     }
     /// Returns true if `number` has been explicitly set.
-    var hasNumber: Bool {return self._number != nil}
+    public var hasNumber: Bool {return self._number != nil}
     /// Clears the value of `number`. Subsequent reads from it will return its default value.
-    mutating func clearNumber() {self._number = nil}
+    public mutating func clearNumber() {self._number = nil}
 
-    var gender: String {
+    public var gender: String {
       get {return _gender ?? String()}
       set {_gender = newValue}
     }
     /// Returns true if `gender` has been explicitly set.
-    var hasGender: Bool {return self._gender != nil}
+    public var hasGender: Bool {return self._gender != nil}
     /// Clears the value of `gender`. Subsequent reads from it will return its default value.
-    mutating func clearGender() {self._gender = nil}
+    public mutating func clearGender() {self._gender = nil}
 
-    var animacy: String {
+    public var animacy: String {
       get {return _animacy ?? String()}
       set {_animacy = newValue}
     }
     /// Returns true if `animacy` has been explicitly set.
-    var hasAnimacy: Bool {return self._animacy != nil}
+    public var hasAnimacy: Bool {return self._animacy != nil}
     /// Clears the value of `animacy`. Subsequent reads from it will return its default value.
-    mutating func clearAnimacy() {self._animacy = nil}
+    public mutating func clearAnimacy() {self._animacy = nil}
 
-    var beginIndex: UInt32 {
+    public var beginIndex: UInt32 {
       get {return _beginIndex ?? 0}
       set {_beginIndex = newValue}
     }
     /// Returns true if `beginIndex` has been explicitly set.
-    var hasBeginIndex: Bool {return self._beginIndex != nil}
+    public var hasBeginIndex: Bool {return self._beginIndex != nil}
     /// Clears the value of `beginIndex`. Subsequent reads from it will return its default value.
-    mutating func clearBeginIndex() {self._beginIndex = nil}
+    public mutating func clearBeginIndex() {self._beginIndex = nil}
 
-    var endIndex: UInt32 {
+    public var endIndex: UInt32 {
       get {return _endIndex ?? 0}
       set {_endIndex = newValue}
     }
     /// Returns true if `endIndex` has been explicitly set.
-    var hasEndIndex: Bool {return self._endIndex != nil}
+    public var hasEndIndex: Bool {return self._endIndex != nil}
     /// Clears the value of `endIndex`. Subsequent reads from it will return its default value.
-    mutating func clearEndIndex() {self._endIndex = nil}
+    public mutating func clearEndIndex() {self._endIndex = nil}
 
-    var headIndex: UInt32 {
+    public var headIndex: UInt32 {
       get {return _headIndex ?? 0}
       set {_headIndex = newValue}
     }
     /// Returns true if `headIndex` has been explicitly set.
-    var hasHeadIndex: Bool {return self._headIndex != nil}
+    public var hasHeadIndex: Bool {return self._headIndex != nil}
     /// Clears the value of `headIndex`. Subsequent reads from it will return its default value.
-    mutating func clearHeadIndex() {self._headIndex = nil}
+    public mutating func clearHeadIndex() {self._headIndex = nil}
 
-    var sentenceIndex: UInt32 {
+    public var sentenceIndex: UInt32 {
       get {return _sentenceIndex ?? 0}
       set {_sentenceIndex = newValue}
     }
     /// Returns true if `sentenceIndex` has been explicitly set.
-    var hasSentenceIndex: Bool {return self._sentenceIndex != nil}
+    public var hasSentenceIndex: Bool {return self._sentenceIndex != nil}
     /// Clears the value of `sentenceIndex`. Subsequent reads from it will return its default value.
-    mutating func clearSentenceIndex() {self._sentenceIndex = nil}
+    public mutating func clearSentenceIndex() {self._sentenceIndex = nil}
 
     /// the second element of position
-    var position: UInt32 {
+    public var position: UInt32 {
       get {return _position ?? 0}
       set {_position = newValue}
     }
     /// Returns true if `position` has been explicitly set.
-    var hasPosition: Bool {return self._position != nil}
+    public var hasPosition: Bool {return self._position != nil}
     /// Clears the value of `position`. Subsequent reads from it will return its default value.
-    mutating func clearPosition() {self._position = nil}
+    public mutating func clearPosition() {self._position = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _mentionID: Int32? = nil
     fileprivate var _mentionType: String? = nil
@@ -1913,401 +1913,401 @@ struct Edu_Stanford_Nlp_Pipeline_CorefChain {
     fileprivate var _position: UInt32? = nil
   }
 
-  init() {}
+  public init() {}
 
   fileprivate var _chainID: Int32? = nil
   fileprivate var _representative: UInt32? = nil
 }
 
-struct Edu_Stanford_Nlp_Pipeline_Mention {
+public struct Edu_Stanford_Nlp_Pipeline_Mention {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var mentionID: Int32 {
+  public var mentionID: Int32 {
     get {return _storage._mentionID ?? 0}
     set {_uniqueStorage()._mentionID = newValue}
   }
   /// Returns true if `mentionID` has been explicitly set.
-  var hasMentionID: Bool {return _storage._mentionID != nil}
+  public var hasMentionID: Bool {return _storage._mentionID != nil}
   /// Clears the value of `mentionID`. Subsequent reads from it will return its default value.
-  mutating func clearMentionID() {_uniqueStorage()._mentionID = nil}
+  public mutating func clearMentionID() {_uniqueStorage()._mentionID = nil}
 
-  var mentionType: String {
+  public var mentionType: String {
     get {return _storage._mentionType ?? String()}
     set {_uniqueStorage()._mentionType = newValue}
   }
   /// Returns true if `mentionType` has been explicitly set.
-  var hasMentionType: Bool {return _storage._mentionType != nil}
+  public var hasMentionType: Bool {return _storage._mentionType != nil}
   /// Clears the value of `mentionType`. Subsequent reads from it will return its default value.
-  mutating func clearMentionType() {_uniqueStorage()._mentionType = nil}
+  public mutating func clearMentionType() {_uniqueStorage()._mentionType = nil}
 
-  var number: String {
+  public var number: String {
     get {return _storage._number ?? String()}
     set {_uniqueStorage()._number = newValue}
   }
   /// Returns true if `number` has been explicitly set.
-  var hasNumber: Bool {return _storage._number != nil}
+  public var hasNumber: Bool {return _storage._number != nil}
   /// Clears the value of `number`. Subsequent reads from it will return its default value.
-  mutating func clearNumber() {_uniqueStorage()._number = nil}
+  public mutating func clearNumber() {_uniqueStorage()._number = nil}
 
-  var gender: String {
+  public var gender: String {
     get {return _storage._gender ?? String()}
     set {_uniqueStorage()._gender = newValue}
   }
   /// Returns true if `gender` has been explicitly set.
-  var hasGender: Bool {return _storage._gender != nil}
+  public var hasGender: Bool {return _storage._gender != nil}
   /// Clears the value of `gender`. Subsequent reads from it will return its default value.
-  mutating func clearGender() {_uniqueStorage()._gender = nil}
+  public mutating func clearGender() {_uniqueStorage()._gender = nil}
 
-  var animacy: String {
+  public var animacy: String {
     get {return _storage._animacy ?? String()}
     set {_uniqueStorage()._animacy = newValue}
   }
   /// Returns true if `animacy` has been explicitly set.
-  var hasAnimacy: Bool {return _storage._animacy != nil}
+  public var hasAnimacy: Bool {return _storage._animacy != nil}
   /// Clears the value of `animacy`. Subsequent reads from it will return its default value.
-  mutating func clearAnimacy() {_uniqueStorage()._animacy = nil}
+  public mutating func clearAnimacy() {_uniqueStorage()._animacy = nil}
 
-  var person: String {
+  public var person: String {
     get {return _storage._person ?? String()}
     set {_uniqueStorage()._person = newValue}
   }
   /// Returns true if `person` has been explicitly set.
-  var hasPerson: Bool {return _storage._person != nil}
+  public var hasPerson: Bool {return _storage._person != nil}
   /// Clears the value of `person`. Subsequent reads from it will return its default value.
-  mutating func clearPerson() {_uniqueStorage()._person = nil}
+  public mutating func clearPerson() {_uniqueStorage()._person = nil}
 
-  var startIndex: UInt32 {
+  public var startIndex: UInt32 {
     get {return _storage._startIndex ?? 0}
     set {_uniqueStorage()._startIndex = newValue}
   }
   /// Returns true if `startIndex` has been explicitly set.
-  var hasStartIndex: Bool {return _storage._startIndex != nil}
+  public var hasStartIndex: Bool {return _storage._startIndex != nil}
   /// Clears the value of `startIndex`. Subsequent reads from it will return its default value.
-  mutating func clearStartIndex() {_uniqueStorage()._startIndex = nil}
+  public mutating func clearStartIndex() {_uniqueStorage()._startIndex = nil}
 
-  var endIndex: UInt32 {
+  public var endIndex: UInt32 {
     get {return _storage._endIndex ?? 0}
     set {_uniqueStorage()._endIndex = newValue}
   }
   /// Returns true if `endIndex` has been explicitly set.
-  var hasEndIndex: Bool {return _storage._endIndex != nil}
+  public var hasEndIndex: Bool {return _storage._endIndex != nil}
   /// Clears the value of `endIndex`. Subsequent reads from it will return its default value.
-  mutating func clearEndIndex() {_uniqueStorage()._endIndex = nil}
+  public mutating func clearEndIndex() {_uniqueStorage()._endIndex = nil}
 
-  var headIndex: Int32 {
+  public var headIndex: Int32 {
     get {return _storage._headIndex ?? 0}
     set {_uniqueStorage()._headIndex = newValue}
   }
   /// Returns true if `headIndex` has been explicitly set.
-  var hasHeadIndex: Bool {return _storage._headIndex != nil}
+  public var hasHeadIndex: Bool {return _storage._headIndex != nil}
   /// Clears the value of `headIndex`. Subsequent reads from it will return its default value.
-  mutating func clearHeadIndex() {_uniqueStorage()._headIndex = nil}
+  public mutating func clearHeadIndex() {_uniqueStorage()._headIndex = nil}
 
-  var headString: String {
+  public var headString: String {
     get {return _storage._headString ?? String()}
     set {_uniqueStorage()._headString = newValue}
   }
   /// Returns true if `headString` has been explicitly set.
-  var hasHeadString: Bool {return _storage._headString != nil}
+  public var hasHeadString: Bool {return _storage._headString != nil}
   /// Clears the value of `headString`. Subsequent reads from it will return its default value.
-  mutating func clearHeadString() {_uniqueStorage()._headString = nil}
+  public mutating func clearHeadString() {_uniqueStorage()._headString = nil}
 
-  var nerString: String {
+  public var nerString: String {
     get {return _storage._nerString ?? String()}
     set {_uniqueStorage()._nerString = newValue}
   }
   /// Returns true if `nerString` has been explicitly set.
-  var hasNerString: Bool {return _storage._nerString != nil}
+  public var hasNerString: Bool {return _storage._nerString != nil}
   /// Clears the value of `nerString`. Subsequent reads from it will return its default value.
-  mutating func clearNerString() {_uniqueStorage()._nerString = nil}
+  public mutating func clearNerString() {_uniqueStorage()._nerString = nil}
 
-  var originalRef: Int32 {
+  public var originalRef: Int32 {
     get {return _storage._originalRef ?? 0}
     set {_uniqueStorage()._originalRef = newValue}
   }
   /// Returns true if `originalRef` has been explicitly set.
-  var hasOriginalRef: Bool {return _storage._originalRef != nil}
+  public var hasOriginalRef: Bool {return _storage._originalRef != nil}
   /// Clears the value of `originalRef`. Subsequent reads from it will return its default value.
-  mutating func clearOriginalRef() {_uniqueStorage()._originalRef = nil}
+  public mutating func clearOriginalRef() {_uniqueStorage()._originalRef = nil}
 
-  var goldCorefClusterID: Int32 {
+  public var goldCorefClusterID: Int32 {
     get {return _storage._goldCorefClusterID ?? 0}
     set {_uniqueStorage()._goldCorefClusterID = newValue}
   }
   /// Returns true if `goldCorefClusterID` has been explicitly set.
-  var hasGoldCorefClusterID: Bool {return _storage._goldCorefClusterID != nil}
+  public var hasGoldCorefClusterID: Bool {return _storage._goldCorefClusterID != nil}
   /// Clears the value of `goldCorefClusterID`. Subsequent reads from it will return its default value.
-  mutating func clearGoldCorefClusterID() {_uniqueStorage()._goldCorefClusterID = nil}
+  public mutating func clearGoldCorefClusterID() {_uniqueStorage()._goldCorefClusterID = nil}
 
-  var corefClusterID: Int32 {
+  public var corefClusterID: Int32 {
     get {return _storage._corefClusterID ?? 0}
     set {_uniqueStorage()._corefClusterID = newValue}
   }
   /// Returns true if `corefClusterID` has been explicitly set.
-  var hasCorefClusterID: Bool {return _storage._corefClusterID != nil}
+  public var hasCorefClusterID: Bool {return _storage._corefClusterID != nil}
   /// Clears the value of `corefClusterID`. Subsequent reads from it will return its default value.
-  mutating func clearCorefClusterID() {_uniqueStorage()._corefClusterID = nil}
+  public mutating func clearCorefClusterID() {_uniqueStorage()._corefClusterID = nil}
 
-  var mentionNum: Int32 {
+  public var mentionNum: Int32 {
     get {return _storage._mentionNum ?? 0}
     set {_uniqueStorage()._mentionNum = newValue}
   }
   /// Returns true if `mentionNum` has been explicitly set.
-  var hasMentionNum: Bool {return _storage._mentionNum != nil}
+  public var hasMentionNum: Bool {return _storage._mentionNum != nil}
   /// Clears the value of `mentionNum`. Subsequent reads from it will return its default value.
-  mutating func clearMentionNum() {_uniqueStorage()._mentionNum = nil}
+  public mutating func clearMentionNum() {_uniqueStorage()._mentionNum = nil}
 
-  var sentNum: Int32 {
+  public var sentNum: Int32 {
     get {return _storage._sentNum ?? 0}
     set {_uniqueStorage()._sentNum = newValue}
   }
   /// Returns true if `sentNum` has been explicitly set.
-  var hasSentNum: Bool {return _storage._sentNum != nil}
+  public var hasSentNum: Bool {return _storage._sentNum != nil}
   /// Clears the value of `sentNum`. Subsequent reads from it will return its default value.
-  mutating func clearSentNum() {_uniqueStorage()._sentNum = nil}
+  public mutating func clearSentNum() {_uniqueStorage()._sentNum = nil}
 
-  var utter: Int32 {
+  public var utter: Int32 {
     get {return _storage._utter ?? 0}
     set {_uniqueStorage()._utter = newValue}
   }
   /// Returns true if `utter` has been explicitly set.
-  var hasUtter: Bool {return _storage._utter != nil}
+  public var hasUtter: Bool {return _storage._utter != nil}
   /// Clears the value of `utter`. Subsequent reads from it will return its default value.
-  mutating func clearUtter() {_uniqueStorage()._utter = nil}
+  public mutating func clearUtter() {_uniqueStorage()._utter = nil}
 
-  var paragraph: Int32 {
+  public var paragraph: Int32 {
     get {return _storage._paragraph ?? 0}
     set {_uniqueStorage()._paragraph = newValue}
   }
   /// Returns true if `paragraph` has been explicitly set.
-  var hasParagraph: Bool {return _storage._paragraph != nil}
+  public var hasParagraph: Bool {return _storage._paragraph != nil}
   /// Clears the value of `paragraph`. Subsequent reads from it will return its default value.
-  mutating func clearParagraph() {_uniqueStorage()._paragraph = nil}
+  public mutating func clearParagraph() {_uniqueStorage()._paragraph = nil}
 
-  var isSubject: Bool {
+  public var isSubject: Bool {
     get {return _storage._isSubject ?? false}
     set {_uniqueStorage()._isSubject = newValue}
   }
   /// Returns true if `isSubject` has been explicitly set.
-  var hasIsSubject: Bool {return _storage._isSubject != nil}
+  public var hasIsSubject: Bool {return _storage._isSubject != nil}
   /// Clears the value of `isSubject`. Subsequent reads from it will return its default value.
-  mutating func clearIsSubject() {_uniqueStorage()._isSubject = nil}
+  public mutating func clearIsSubject() {_uniqueStorage()._isSubject = nil}
 
-  var isDirectObject: Bool {
+  public var isDirectObject: Bool {
     get {return _storage._isDirectObject ?? false}
     set {_uniqueStorage()._isDirectObject = newValue}
   }
   /// Returns true if `isDirectObject` has been explicitly set.
-  var hasIsDirectObject: Bool {return _storage._isDirectObject != nil}
+  public var hasIsDirectObject: Bool {return _storage._isDirectObject != nil}
   /// Clears the value of `isDirectObject`. Subsequent reads from it will return its default value.
-  mutating func clearIsDirectObject() {_uniqueStorage()._isDirectObject = nil}
+  public mutating func clearIsDirectObject() {_uniqueStorage()._isDirectObject = nil}
 
-  var isIndirectObject: Bool {
+  public var isIndirectObject: Bool {
     get {return _storage._isIndirectObject ?? false}
     set {_uniqueStorage()._isIndirectObject = newValue}
   }
   /// Returns true if `isIndirectObject` has been explicitly set.
-  var hasIsIndirectObject: Bool {return _storage._isIndirectObject != nil}
+  public var hasIsIndirectObject: Bool {return _storage._isIndirectObject != nil}
   /// Clears the value of `isIndirectObject`. Subsequent reads from it will return its default value.
-  mutating func clearIsIndirectObject() {_uniqueStorage()._isIndirectObject = nil}
+  public mutating func clearIsIndirectObject() {_uniqueStorage()._isIndirectObject = nil}
 
-  var isPrepositionObject: Bool {
+  public var isPrepositionObject: Bool {
     get {return _storage._isPrepositionObject ?? false}
     set {_uniqueStorage()._isPrepositionObject = newValue}
   }
   /// Returns true if `isPrepositionObject` has been explicitly set.
-  var hasIsPrepositionObject: Bool {return _storage._isPrepositionObject != nil}
+  public var hasIsPrepositionObject: Bool {return _storage._isPrepositionObject != nil}
   /// Clears the value of `isPrepositionObject`. Subsequent reads from it will return its default value.
-  mutating func clearIsPrepositionObject() {_uniqueStorage()._isPrepositionObject = nil}
+  public mutating func clearIsPrepositionObject() {_uniqueStorage()._isPrepositionObject = nil}
 
-  var hasTwin_p: Bool {
+  public var hasTwin_p: Bool {
     get {return _storage._hasTwin_p ?? false}
     set {_uniqueStorage()._hasTwin_p = newValue}
   }
   /// Returns true if `hasTwin_p` has been explicitly set.
-  var hasHasTwin_p: Bool {return _storage._hasTwin_p != nil}
+  public var hasHasTwin_p: Bool {return _storage._hasTwin_p != nil}
   /// Clears the value of `hasTwin_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasTwin_p() {_uniqueStorage()._hasTwin_p = nil}
+  public mutating func clearHasTwin_p() {_uniqueStorage()._hasTwin_p = nil}
 
-  var generic: Bool {
+  public var generic: Bool {
     get {return _storage._generic ?? false}
     set {_uniqueStorage()._generic = newValue}
   }
   /// Returns true if `generic` has been explicitly set.
-  var hasGeneric: Bool {return _storage._generic != nil}
+  public var hasGeneric: Bool {return _storage._generic != nil}
   /// Clears the value of `generic`. Subsequent reads from it will return its default value.
-  mutating func clearGeneric() {_uniqueStorage()._generic = nil}
+  public mutating func clearGeneric() {_uniqueStorage()._generic = nil}
 
-  var isSingleton: Bool {
+  public var isSingleton: Bool {
     get {return _storage._isSingleton ?? false}
     set {_uniqueStorage()._isSingleton = newValue}
   }
   /// Returns true if `isSingleton` has been explicitly set.
-  var hasIsSingleton: Bool {return _storage._isSingleton != nil}
+  public var hasIsSingleton: Bool {return _storage._isSingleton != nil}
   /// Clears the value of `isSingleton`. Subsequent reads from it will return its default value.
-  mutating func clearIsSingleton() {_uniqueStorage()._isSingleton = nil}
+  public mutating func clearIsSingleton() {_uniqueStorage()._isSingleton = nil}
 
-  var hasBasicDependency_p: Bool {
+  public var hasBasicDependency_p: Bool {
     get {return _storage._hasBasicDependency_p ?? false}
     set {_uniqueStorage()._hasBasicDependency_p = newValue}
   }
   /// Returns true if `hasBasicDependency_p` has been explicitly set.
-  var hasHasBasicDependency_p: Bool {return _storage._hasBasicDependency_p != nil}
+  public var hasHasBasicDependency_p: Bool {return _storage._hasBasicDependency_p != nil}
   /// Clears the value of `hasBasicDependency_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasBasicDependency_p() {_uniqueStorage()._hasBasicDependency_p = nil}
+  public mutating func clearHasBasicDependency_p() {_uniqueStorage()._hasBasicDependency_p = nil}
 
-  var hasEnhancedDepenedncy_p: Bool {
+  public var hasEnhancedDepenedncy_p: Bool {
     get {return _storage._hasEnhancedDepenedncy_p ?? false}
     set {_uniqueStorage()._hasEnhancedDepenedncy_p = newValue}
   }
   /// Returns true if `hasEnhancedDepenedncy_p` has been explicitly set.
-  var hasHasEnhancedDepenedncy_p: Bool {return _storage._hasEnhancedDepenedncy_p != nil}
+  public var hasHasEnhancedDepenedncy_p: Bool {return _storage._hasEnhancedDepenedncy_p != nil}
   /// Clears the value of `hasEnhancedDepenedncy_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasEnhancedDepenedncy_p() {_uniqueStorage()._hasEnhancedDepenedncy_p = nil}
+  public mutating func clearHasEnhancedDepenedncy_p() {_uniqueStorage()._hasEnhancedDepenedncy_p = nil}
 
-  var hasContextParseTree_p: Bool {
+  public var hasContextParseTree_p: Bool {
     get {return _storage._hasContextParseTree_p ?? false}
     set {_uniqueStorage()._hasContextParseTree_p = newValue}
   }
   /// Returns true if `hasContextParseTree_p` has been explicitly set.
-  var hasHasContextParseTree_p: Bool {return _storage._hasContextParseTree_p != nil}
+  public var hasHasContextParseTree_p: Bool {return _storage._hasContextParseTree_p != nil}
   /// Clears the value of `hasContextParseTree_p`. Subsequent reads from it will return its default value.
-  mutating func clearHasContextParseTree_p() {_uniqueStorage()._hasContextParseTree_p = nil}
+  public mutating func clearHasContextParseTree_p() {_uniqueStorage()._hasContextParseTree_p = nil}
 
-  var headIndexedWord: Edu_Stanford_Nlp_Pipeline_IndexedWord {
+  public var headIndexedWord: Edu_Stanford_Nlp_Pipeline_IndexedWord {
     get {return _storage._headIndexedWord ?? Edu_Stanford_Nlp_Pipeline_IndexedWord()}
     set {_uniqueStorage()._headIndexedWord = newValue}
   }
   /// Returns true if `headIndexedWord` has been explicitly set.
-  var hasHeadIndexedWord: Bool {return _storage._headIndexedWord != nil}
+  public var hasHeadIndexedWord: Bool {return _storage._headIndexedWord != nil}
   /// Clears the value of `headIndexedWord`. Subsequent reads from it will return its default value.
-  mutating func clearHeadIndexedWord() {_uniqueStorage()._headIndexedWord = nil}
+  public mutating func clearHeadIndexedWord() {_uniqueStorage()._headIndexedWord = nil}
 
-  var dependingVerb: Edu_Stanford_Nlp_Pipeline_IndexedWord {
+  public var dependingVerb: Edu_Stanford_Nlp_Pipeline_IndexedWord {
     get {return _storage._dependingVerb ?? Edu_Stanford_Nlp_Pipeline_IndexedWord()}
     set {_uniqueStorage()._dependingVerb = newValue}
   }
   /// Returns true if `dependingVerb` has been explicitly set.
-  var hasDependingVerb: Bool {return _storage._dependingVerb != nil}
+  public var hasDependingVerb: Bool {return _storage._dependingVerb != nil}
   /// Clears the value of `dependingVerb`. Subsequent reads from it will return its default value.
-  mutating func clearDependingVerb() {_uniqueStorage()._dependingVerb = nil}
+  public mutating func clearDependingVerb() {_uniqueStorage()._dependingVerb = nil}
 
-  var headWord: Edu_Stanford_Nlp_Pipeline_IndexedWord {
+  public var headWord: Edu_Stanford_Nlp_Pipeline_IndexedWord {
     get {return _storage._headWord ?? Edu_Stanford_Nlp_Pipeline_IndexedWord()}
     set {_uniqueStorage()._headWord = newValue}
   }
   /// Returns true if `headWord` has been explicitly set.
-  var hasHeadWord: Bool {return _storage._headWord != nil}
+  public var hasHeadWord: Bool {return _storage._headWord != nil}
   /// Clears the value of `headWord`. Subsequent reads from it will return its default value.
-  mutating func clearHeadWord() {_uniqueStorage()._headWord = nil}
+  public mutating func clearHeadWord() {_uniqueStorage()._headWord = nil}
 
-  var speakerInfo: Edu_Stanford_Nlp_Pipeline_SpeakerInfo {
+  public var speakerInfo: Edu_Stanford_Nlp_Pipeline_SpeakerInfo {
     get {return _storage._speakerInfo ?? Edu_Stanford_Nlp_Pipeline_SpeakerInfo()}
     set {_uniqueStorage()._speakerInfo = newValue}
   }
   /// Returns true if `speakerInfo` has been explicitly set.
-  var hasSpeakerInfo: Bool {return _storage._speakerInfo != nil}
+  public var hasSpeakerInfo: Bool {return _storage._speakerInfo != nil}
   /// Clears the value of `speakerInfo`. Subsequent reads from it will return its default value.
-  mutating func clearSpeakerInfo() {_uniqueStorage()._speakerInfo = nil}
+  public mutating func clearSpeakerInfo() {_uniqueStorage()._speakerInfo = nil}
 
-  var sentenceWords: [Edu_Stanford_Nlp_Pipeline_IndexedWord] {
+  public var sentenceWords: [Edu_Stanford_Nlp_Pipeline_IndexedWord] {
     get {return _storage._sentenceWords}
     set {_uniqueStorage()._sentenceWords = newValue}
   }
 
-  var originalSpan: [Edu_Stanford_Nlp_Pipeline_IndexedWord] {
+  public var originalSpan: [Edu_Stanford_Nlp_Pipeline_IndexedWord] {
     get {return _storage._originalSpan}
     set {_uniqueStorage()._originalSpan = newValue}
   }
 
-  var dependents: [String] {
+  public var dependents: [String] {
     get {return _storage._dependents}
     set {_uniqueStorage()._dependents = newValue}
   }
 
-  var preprocessedTerms: [String] {
+  public var preprocessedTerms: [String] {
     get {return _storage._preprocessedTerms}
     set {_uniqueStorage()._preprocessedTerms = newValue}
   }
 
-  var appositions: [Int32] {
+  public var appositions: [Int32] {
     get {return _storage._appositions}
     set {_uniqueStorage()._appositions = newValue}
   }
 
-  var predicateNominatives: [Int32] {
+  public var predicateNominatives: [Int32] {
     get {return _storage._predicateNominatives}
     set {_uniqueStorage()._predicateNominatives = newValue}
   }
 
-  var relativePronouns: [Int32] {
+  public var relativePronouns: [Int32] {
     get {return _storage._relativePronouns}
     set {_uniqueStorage()._relativePronouns = newValue}
   }
 
-  var listMembers: [Int32] {
+  public var listMembers: [Int32] {
     get {return _storage._listMembers}
     set {_uniqueStorage()._listMembers = newValue}
   }
 
-  var belongToLists: [Int32] {
+  public var belongToLists: [Int32] {
     get {return _storage._belongToLists}
     set {_uniqueStorage()._belongToLists = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct Edu_Stanford_Nlp_Pipeline_IndexedWord {
+public struct Edu_Stanford_Nlp_Pipeline_IndexedWord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sentenceNum: Int32 {
+  public var sentenceNum: Int32 {
     get {return _sentenceNum ?? 0}
     set {_sentenceNum = newValue}
   }
   /// Returns true if `sentenceNum` has been explicitly set.
-  var hasSentenceNum: Bool {return self._sentenceNum != nil}
+  public var hasSentenceNum: Bool {return self._sentenceNum != nil}
   /// Clears the value of `sentenceNum`. Subsequent reads from it will return its default value.
-  mutating func clearSentenceNum() {self._sentenceNum = nil}
+  public mutating func clearSentenceNum() {self._sentenceNum = nil}
 
-  var tokenIndex: Int32 {
+  public var tokenIndex: Int32 {
     get {return _tokenIndex ?? 0}
     set {_tokenIndex = newValue}
   }
   /// Returns true if `tokenIndex` has been explicitly set.
-  var hasTokenIndex: Bool {return self._tokenIndex != nil}
+  public var hasTokenIndex: Bool {return self._tokenIndex != nil}
   /// Clears the value of `tokenIndex`. Subsequent reads from it will return its default value.
-  mutating func clearTokenIndex() {self._tokenIndex = nil}
+  public mutating func clearTokenIndex() {self._tokenIndex = nil}
 
-  var docID: Int32 {
+  public var docID: Int32 {
     get {return _docID ?? 0}
     set {_docID = newValue}
   }
   /// Returns true if `docID` has been explicitly set.
-  var hasDocID: Bool {return self._docID != nil}
+  public var hasDocID: Bool {return self._docID != nil}
   /// Clears the value of `docID`. Subsequent reads from it will return its default value.
-  mutating func clearDocID() {self._docID = nil}
+  public mutating func clearDocID() {self._docID = nil}
 
-  var copyCount: UInt32 {
+  public var copyCount: UInt32 {
     get {return _copyCount ?? 0}
     set {_copyCount = newValue}
   }
   /// Returns true if `copyCount` has been explicitly set.
-  var hasCopyCount: Bool {return self._copyCount != nil}
+  public var hasCopyCount: Bool {return self._copyCount != nil}
   /// Clears the value of `copyCount`. Subsequent reads from it will return its default value.
-  mutating func clearCopyCount() {self._copyCount = nil}
+  public mutating func clearCopyCount() {self._copyCount = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _sentenceNum: Int32? = nil
   fileprivate var _tokenIndex: Int32? = nil
@@ -2315,57 +2315,57 @@ struct Edu_Stanford_Nlp_Pipeline_IndexedWord {
   fileprivate var _copyCount: UInt32? = nil
 }
 
-struct Edu_Stanford_Nlp_Pipeline_SpeakerInfo {
+public struct Edu_Stanford_Nlp_Pipeline_SpeakerInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var speakerName: String {
+  public var speakerName: String {
     get {return _speakerName ?? String()}
     set {_speakerName = newValue}
   }
   /// Returns true if `speakerName` has been explicitly set.
-  var hasSpeakerName: Bool {return self._speakerName != nil}
+  public var hasSpeakerName: Bool {return self._speakerName != nil}
   /// Clears the value of `speakerName`. Subsequent reads from it will return its default value.
-  mutating func clearSpeakerName() {self._speakerName = nil}
+  public mutating func clearSpeakerName() {self._speakerName = nil}
 
-  var mentions: [Int32] = []
+  public var mentions: [Int32] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _speakerName: String? = nil
 }
 
 ///
 /// A Span of text
-struct Edu_Stanford_Nlp_Pipeline_Span {
+public struct Edu_Stanford_Nlp_Pipeline_Span {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var begin: UInt32 {
+  public var begin: UInt32 {
     get {return _begin ?? 0}
     set {_begin = newValue}
   }
   /// Returns true if `begin` has been explicitly set.
-  var hasBegin: Bool {return self._begin != nil}
+  public var hasBegin: Bool {return self._begin != nil}
   /// Clears the value of `begin`. Subsequent reads from it will return its default value.
-  mutating func clearBegin() {self._begin = nil}
+  public mutating func clearBegin() {self._begin = nil}
 
-  var end: UInt32 {
+  public var end: UInt32 {
     get {return _end ?? 0}
     set {_end = newValue}
   }
   /// Returns true if `end` has been explicitly set.
-  var hasEnd: Bool {return self._end != nil}
+  public var hasEnd: Bool {return self._end != nil}
   /// Clears the value of `end`. Subsequent reads from it will return its default value.
-  mutating func clearEnd() {self._end = nil}
+  public mutating func clearEnd() {self._end = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _begin: UInt32? = nil
   fileprivate var _end: UInt32? = nil
@@ -2374,77 +2374,77 @@ struct Edu_Stanford_Nlp_Pipeline_Span {
 ///
 /// A Timex object, representing a temporal expression (TIMe EXpression)
 /// These fields are not *really* optional. CoreNLP will crash without them.
-struct Edu_Stanford_Nlp_Pipeline_Timex {
+public struct Edu_Stanford_Nlp_Pipeline_Timex {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var value: String {
+  public var value: String {
     get {return _value ?? String()}
     set {_value = newValue}
   }
   /// Returns true if `value` has been explicitly set.
-  var hasValue: Bool {return self._value != nil}
+  public var hasValue: Bool {return self._value != nil}
   /// Clears the value of `value`. Subsequent reads from it will return its default value.
-  mutating func clearValue() {self._value = nil}
+  public mutating func clearValue() {self._value = nil}
 
-  var altValue: String {
+  public var altValue: String {
     get {return _altValue ?? String()}
     set {_altValue = newValue}
   }
   /// Returns true if `altValue` has been explicitly set.
-  var hasAltValue: Bool {return self._altValue != nil}
+  public var hasAltValue: Bool {return self._altValue != nil}
   /// Clears the value of `altValue`. Subsequent reads from it will return its default value.
-  mutating func clearAltValue() {self._altValue = nil}
+  public mutating func clearAltValue() {self._altValue = nil}
 
-  var text: String {
+  public var text: String {
     get {return _text ?? String()}
     set {_text = newValue}
   }
   /// Returns true if `text` has been explicitly set.
-  var hasText: Bool {return self._text != nil}
+  public var hasText: Bool {return self._text != nil}
   /// Clears the value of `text`. Subsequent reads from it will return its default value.
-  mutating func clearText() {self._text = nil}
+  public mutating func clearText() {self._text = nil}
 
-  var type: String {
+  public var type: String {
     get {return _type ?? String()}
     set {_type = newValue}
   }
   /// Returns true if `type` has been explicitly set.
-  var hasType: Bool {return self._type != nil}
+  public var hasType: Bool {return self._type != nil}
   /// Clears the value of `type`. Subsequent reads from it will return its default value.
-  mutating func clearType() {self._type = nil}
+  public mutating func clearType() {self._type = nil}
 
-  var tid: String {
+  public var tid: String {
     get {return _tid ?? String()}
     set {_tid = newValue}
   }
   /// Returns true if `tid` has been explicitly set.
-  var hasTid: Bool {return self._tid != nil}
+  public var hasTid: Bool {return self._tid != nil}
   /// Clears the value of `tid`. Subsequent reads from it will return its default value.
-  mutating func clearTid() {self._tid = nil}
+  public mutating func clearTid() {self._tid = nil}
 
-  var beginPoint: UInt32 {
+  public var beginPoint: UInt32 {
     get {return _beginPoint ?? 0}
     set {_beginPoint = newValue}
   }
   /// Returns true if `beginPoint` has been explicitly set.
-  var hasBeginPoint: Bool {return self._beginPoint != nil}
+  public var hasBeginPoint: Bool {return self._beginPoint != nil}
   /// Clears the value of `beginPoint`. Subsequent reads from it will return its default value.
-  mutating func clearBeginPoint() {self._beginPoint = nil}
+  public mutating func clearBeginPoint() {self._beginPoint = nil}
 
-  var endPoint: UInt32 {
+  public var endPoint: UInt32 {
     get {return _endPoint ?? 0}
     set {_endPoint = newValue}
   }
   /// Returns true if `endPoint` has been explicitly set.
-  var hasEndPoint: Bool {return self._endPoint != nil}
+  public var hasEndPoint: Bool {return self._endPoint != nil}
   /// Clears the value of `endPoint`. Subsequent reads from it will return its default value.
-  mutating func clearEndPoint() {self._endPoint = nil}
+  public mutating func clearEndPoint() {self._endPoint = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _value: String? = nil
   fileprivate var _altValue: String? = nil
@@ -2459,116 +2459,116 @@ struct Edu_Stanford_Nlp_Pipeline_Timex {
 /// A representation of an entity in a relation.
 /// This corresponds to the EntityMention, and more broadly the
 /// ExtractionObject classes.
-struct Edu_Stanford_Nlp_Pipeline_Entity {
+public struct Edu_Stanford_Nlp_Pipeline_Entity {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var headStart: UInt32 {
+  public var headStart: UInt32 {
     get {return _headStart ?? 0}
     set {_headStart = newValue}
   }
   /// Returns true if `headStart` has been explicitly set.
-  var hasHeadStart: Bool {return self._headStart != nil}
+  public var hasHeadStart: Bool {return self._headStart != nil}
   /// Clears the value of `headStart`. Subsequent reads from it will return its default value.
-  mutating func clearHeadStart() {self._headStart = nil}
+  public mutating func clearHeadStart() {self._headStart = nil}
 
-  var headEnd: UInt32 {
+  public var headEnd: UInt32 {
     get {return _headEnd ?? 0}
     set {_headEnd = newValue}
   }
   /// Returns true if `headEnd` has been explicitly set.
-  var hasHeadEnd: Bool {return self._headEnd != nil}
+  public var hasHeadEnd: Bool {return self._headEnd != nil}
   /// Clears the value of `headEnd`. Subsequent reads from it will return its default value.
-  mutating func clearHeadEnd() {self._headEnd = nil}
+  public mutating func clearHeadEnd() {self._headEnd = nil}
 
-  var mentionType: String {
+  public var mentionType: String {
     get {return _mentionType ?? String()}
     set {_mentionType = newValue}
   }
   /// Returns true if `mentionType` has been explicitly set.
-  var hasMentionType: Bool {return self._mentionType != nil}
+  public var hasMentionType: Bool {return self._mentionType != nil}
   /// Clears the value of `mentionType`. Subsequent reads from it will return its default value.
-  mutating func clearMentionType() {self._mentionType = nil}
+  public mutating func clearMentionType() {self._mentionType = nil}
 
-  var normalizedName: String {
+  public var normalizedName: String {
     get {return _normalizedName ?? String()}
     set {_normalizedName = newValue}
   }
   /// Returns true if `normalizedName` has been explicitly set.
-  var hasNormalizedName: Bool {return self._normalizedName != nil}
+  public var hasNormalizedName: Bool {return self._normalizedName != nil}
   /// Clears the value of `normalizedName`. Subsequent reads from it will return its default value.
-  mutating func clearNormalizedName() {self._normalizedName = nil}
+  public mutating func clearNormalizedName() {self._normalizedName = nil}
 
-  var headTokenIndex: UInt32 {
+  public var headTokenIndex: UInt32 {
     get {return _headTokenIndex ?? 0}
     set {_headTokenIndex = newValue}
   }
   /// Returns true if `headTokenIndex` has been explicitly set.
-  var hasHeadTokenIndex: Bool {return self._headTokenIndex != nil}
+  public var hasHeadTokenIndex: Bool {return self._headTokenIndex != nil}
   /// Clears the value of `headTokenIndex`. Subsequent reads from it will return its default value.
-  mutating func clearHeadTokenIndex() {self._headTokenIndex = nil}
+  public mutating func clearHeadTokenIndex() {self._headTokenIndex = nil}
 
-  var corefID: String {
+  public var corefID: String {
     get {return _corefID ?? String()}
     set {_corefID = newValue}
   }
   /// Returns true if `corefID` has been explicitly set.
-  var hasCorefID: Bool {return self._corefID != nil}
+  public var hasCorefID: Bool {return self._corefID != nil}
   /// Clears the value of `corefID`. Subsequent reads from it will return its default value.
-  mutating func clearCorefID() {self._corefID = nil}
+  public mutating func clearCorefID() {self._corefID = nil}
 
   /// inherited from ExtractionObject
-  var objectID: String {
+  public var objectID: String {
     get {return _objectID ?? String()}
     set {_objectID = newValue}
   }
   /// Returns true if `objectID` has been explicitly set.
-  var hasObjectID: Bool {return self._objectID != nil}
+  public var hasObjectID: Bool {return self._objectID != nil}
   /// Clears the value of `objectID`. Subsequent reads from it will return its default value.
-  mutating func clearObjectID() {self._objectID = nil}
+  public mutating func clearObjectID() {self._objectID = nil}
 
-  var extentStart: UInt32 {
+  public var extentStart: UInt32 {
     get {return _extentStart ?? 0}
     set {_extentStart = newValue}
   }
   /// Returns true if `extentStart` has been explicitly set.
-  var hasExtentStart: Bool {return self._extentStart != nil}
+  public var hasExtentStart: Bool {return self._extentStart != nil}
   /// Clears the value of `extentStart`. Subsequent reads from it will return its default value.
-  mutating func clearExtentStart() {self._extentStart = nil}
+  public mutating func clearExtentStart() {self._extentStart = nil}
 
-  var extentEnd: UInt32 {
+  public var extentEnd: UInt32 {
     get {return _extentEnd ?? 0}
     set {_extentEnd = newValue}
   }
   /// Returns true if `extentEnd` has been explicitly set.
-  var hasExtentEnd: Bool {return self._extentEnd != nil}
+  public var hasExtentEnd: Bool {return self._extentEnd != nil}
   /// Clears the value of `extentEnd`. Subsequent reads from it will return its default value.
-  mutating func clearExtentEnd() {self._extentEnd = nil}
+  public mutating func clearExtentEnd() {self._extentEnd = nil}
 
-  var type: String {
+  public var type: String {
     get {return _type ?? String()}
     set {_type = newValue}
   }
   /// Returns true if `type` has been explicitly set.
-  var hasType: Bool {return self._type != nil}
+  public var hasType: Bool {return self._type != nil}
   /// Clears the value of `type`. Subsequent reads from it will return its default value.
-  mutating func clearType() {self._type = nil}
+  public mutating func clearType() {self._type = nil}
 
   /// Implicit
   ///       uint32 sentence       @see implicit in sentence
-  var subtype: String {
+  public var subtype: String {
     get {return _subtype ?? String()}
     set {_subtype = newValue}
   }
   /// Returns true if `subtype` has been explicitly set.
-  var hasSubtype: Bool {return self._subtype != nil}
+  public var hasSubtype: Bool {return self._subtype != nil}
   /// Clears the value of `subtype`. Subsequent reads from it will return its default value.
-  mutating func clearSubtype() {self._subtype = nil}
+  public mutating func clearSubtype() {self._subtype = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _headStart: UInt32? = nil
   fileprivate var _headEnd: UInt32? = nil
@@ -2585,75 +2585,75 @@ struct Edu_Stanford_Nlp_Pipeline_Entity {
 
 ///
 /// A representation of a relation, mirroring RelationMention
-struct Edu_Stanford_Nlp_Pipeline_Relation {
+public struct Edu_Stanford_Nlp_Pipeline_Relation {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var argName: [String] = []
+  public var argName: [String] = []
 
-  var arg: [Edu_Stanford_Nlp_Pipeline_Entity] = []
+  public var arg: [Edu_Stanford_Nlp_Pipeline_Entity] = []
 
-  var signature: String {
+  public var signature: String {
     get {return _signature ?? String()}
     set {_signature = newValue}
   }
   /// Returns true if `signature` has been explicitly set.
-  var hasSignature: Bool {return self._signature != nil}
+  public var hasSignature: Bool {return self._signature != nil}
   /// Clears the value of `signature`. Subsequent reads from it will return its default value.
-  mutating func clearSignature() {self._signature = nil}
+  public mutating func clearSignature() {self._signature = nil}
 
   /// inherited from ExtractionObject
-  var objectID: String {
+  public var objectID: String {
     get {return _objectID ?? String()}
     set {_objectID = newValue}
   }
   /// Returns true if `objectID` has been explicitly set.
-  var hasObjectID: Bool {return self._objectID != nil}
+  public var hasObjectID: Bool {return self._objectID != nil}
   /// Clears the value of `objectID`. Subsequent reads from it will return its default value.
-  mutating func clearObjectID() {self._objectID = nil}
+  public mutating func clearObjectID() {self._objectID = nil}
 
-  var extentStart: UInt32 {
+  public var extentStart: UInt32 {
     get {return _extentStart ?? 0}
     set {_extentStart = newValue}
   }
   /// Returns true if `extentStart` has been explicitly set.
-  var hasExtentStart: Bool {return self._extentStart != nil}
+  public var hasExtentStart: Bool {return self._extentStart != nil}
   /// Clears the value of `extentStart`. Subsequent reads from it will return its default value.
-  mutating func clearExtentStart() {self._extentStart = nil}
+  public mutating func clearExtentStart() {self._extentStart = nil}
 
-  var extentEnd: UInt32 {
+  public var extentEnd: UInt32 {
     get {return _extentEnd ?? 0}
     set {_extentEnd = newValue}
   }
   /// Returns true if `extentEnd` has been explicitly set.
-  var hasExtentEnd: Bool {return self._extentEnd != nil}
+  public var hasExtentEnd: Bool {return self._extentEnd != nil}
   /// Clears the value of `extentEnd`. Subsequent reads from it will return its default value.
-  mutating func clearExtentEnd() {self._extentEnd = nil}
+  public mutating func clearExtentEnd() {self._extentEnd = nil}
 
-  var type: String {
+  public var type: String {
     get {return _type ?? String()}
     set {_type = newValue}
   }
   /// Returns true if `type` has been explicitly set.
-  var hasType: Bool {return self._type != nil}
+  public var hasType: Bool {return self._type != nil}
   /// Clears the value of `type`. Subsequent reads from it will return its default value.
-  mutating func clearType() {self._type = nil}
+  public mutating func clearType() {self._type = nil}
 
   /// Implicit
   ///       uint32 sentence       @see implicit in sentence
-  var subtype: String {
+  public var subtype: String {
     get {return _subtype ?? String()}
     set {_subtype = newValue}
   }
   /// Returns true if `subtype` has been explicitly set.
-  var hasSubtype: Bool {return self._subtype != nil}
+  public var hasSubtype: Bool {return self._subtype != nil}
   /// Clears the value of `subtype`. Subsequent reads from it will return its default value.
-  mutating func clearSubtype() {self._subtype = nil}
+  public mutating func clearSubtype() {self._subtype = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _signature: String? = nil
   fileprivate var _objectID: String? = nil
@@ -2665,77 +2665,77 @@ struct Edu_Stanford_Nlp_Pipeline_Relation {
 
 ///
 /// A Natural Logic operator
-struct Edu_Stanford_Nlp_Pipeline_Operator {
+public struct Edu_Stanford_Nlp_Pipeline_Operator {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var name: String {
+  public var name: String {
     get {return _name ?? String()}
     set {_name = newValue}
   }
   /// Returns true if `name` has been explicitly set.
-  var hasName: Bool {return self._name != nil}
+  public var hasName: Bool {return self._name != nil}
   /// Clears the value of `name`. Subsequent reads from it will return its default value.
-  mutating func clearName() {self._name = nil}
+  public mutating func clearName() {self._name = nil}
 
-  var quantifierSpanBegin: Int32 {
+  public var quantifierSpanBegin: Int32 {
     get {return _quantifierSpanBegin ?? 0}
     set {_quantifierSpanBegin = newValue}
   }
   /// Returns true if `quantifierSpanBegin` has been explicitly set.
-  var hasQuantifierSpanBegin: Bool {return self._quantifierSpanBegin != nil}
+  public var hasQuantifierSpanBegin: Bool {return self._quantifierSpanBegin != nil}
   /// Clears the value of `quantifierSpanBegin`. Subsequent reads from it will return its default value.
-  mutating func clearQuantifierSpanBegin() {self._quantifierSpanBegin = nil}
+  public mutating func clearQuantifierSpanBegin() {self._quantifierSpanBegin = nil}
 
-  var quantifierSpanEnd: Int32 {
+  public var quantifierSpanEnd: Int32 {
     get {return _quantifierSpanEnd ?? 0}
     set {_quantifierSpanEnd = newValue}
   }
   /// Returns true if `quantifierSpanEnd` has been explicitly set.
-  var hasQuantifierSpanEnd: Bool {return self._quantifierSpanEnd != nil}
+  public var hasQuantifierSpanEnd: Bool {return self._quantifierSpanEnd != nil}
   /// Clears the value of `quantifierSpanEnd`. Subsequent reads from it will return its default value.
-  mutating func clearQuantifierSpanEnd() {self._quantifierSpanEnd = nil}
+  public mutating func clearQuantifierSpanEnd() {self._quantifierSpanEnd = nil}
 
-  var subjectSpanBegin: Int32 {
+  public var subjectSpanBegin: Int32 {
     get {return _subjectSpanBegin ?? 0}
     set {_subjectSpanBegin = newValue}
   }
   /// Returns true if `subjectSpanBegin` has been explicitly set.
-  var hasSubjectSpanBegin: Bool {return self._subjectSpanBegin != nil}
+  public var hasSubjectSpanBegin: Bool {return self._subjectSpanBegin != nil}
   /// Clears the value of `subjectSpanBegin`. Subsequent reads from it will return its default value.
-  mutating func clearSubjectSpanBegin() {self._subjectSpanBegin = nil}
+  public mutating func clearSubjectSpanBegin() {self._subjectSpanBegin = nil}
 
-  var subjectSpanEnd: Int32 {
+  public var subjectSpanEnd: Int32 {
     get {return _subjectSpanEnd ?? 0}
     set {_subjectSpanEnd = newValue}
   }
   /// Returns true if `subjectSpanEnd` has been explicitly set.
-  var hasSubjectSpanEnd: Bool {return self._subjectSpanEnd != nil}
+  public var hasSubjectSpanEnd: Bool {return self._subjectSpanEnd != nil}
   /// Clears the value of `subjectSpanEnd`. Subsequent reads from it will return its default value.
-  mutating func clearSubjectSpanEnd() {self._subjectSpanEnd = nil}
+  public mutating func clearSubjectSpanEnd() {self._subjectSpanEnd = nil}
 
-  var objectSpanBegin: Int32 {
+  public var objectSpanBegin: Int32 {
     get {return _objectSpanBegin ?? 0}
     set {_objectSpanBegin = newValue}
   }
   /// Returns true if `objectSpanBegin` has been explicitly set.
-  var hasObjectSpanBegin: Bool {return self._objectSpanBegin != nil}
+  public var hasObjectSpanBegin: Bool {return self._objectSpanBegin != nil}
   /// Clears the value of `objectSpanBegin`. Subsequent reads from it will return its default value.
-  mutating func clearObjectSpanBegin() {self._objectSpanBegin = nil}
+  public mutating func clearObjectSpanBegin() {self._objectSpanBegin = nil}
 
-  var objectSpanEnd: Int32 {
+  public var objectSpanEnd: Int32 {
     get {return _objectSpanEnd ?? 0}
     set {_objectSpanEnd = newValue}
   }
   /// Returns true if `objectSpanEnd` has been explicitly set.
-  var hasObjectSpanEnd: Bool {return self._objectSpanEnd != nil}
+  public var hasObjectSpanEnd: Bool {return self._objectSpanEnd != nil}
   /// Clears the value of `objectSpanEnd`. Subsequent reads from it will return its default value.
-  mutating func clearObjectSpanEnd() {self._objectSpanEnd = nil}
+  public mutating func clearObjectSpanEnd() {self._objectSpanEnd = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _name: String? = nil
   fileprivate var _quantifierSpanBegin: Int32? = nil
@@ -2748,77 +2748,77 @@ struct Edu_Stanford_Nlp_Pipeline_Operator {
 
 ///
 /// The polarity of a word, according to Natural Logic
-struct Edu_Stanford_Nlp_Pipeline_Polarity {
+public struct Edu_Stanford_Nlp_Pipeline_Polarity {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var projectEquivalence: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
+  public var projectEquivalence: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
     get {return _projectEquivalence ?? .equivalence}
     set {_projectEquivalence = newValue}
   }
   /// Returns true if `projectEquivalence` has been explicitly set.
-  var hasProjectEquivalence: Bool {return self._projectEquivalence != nil}
+  public var hasProjectEquivalence: Bool {return self._projectEquivalence != nil}
   /// Clears the value of `projectEquivalence`. Subsequent reads from it will return its default value.
-  mutating func clearProjectEquivalence() {self._projectEquivalence = nil}
+  public mutating func clearProjectEquivalence() {self._projectEquivalence = nil}
 
-  var projectForwardEntailment: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
+  public var projectForwardEntailment: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
     get {return _projectForwardEntailment ?? .equivalence}
     set {_projectForwardEntailment = newValue}
   }
   /// Returns true if `projectForwardEntailment` has been explicitly set.
-  var hasProjectForwardEntailment: Bool {return self._projectForwardEntailment != nil}
+  public var hasProjectForwardEntailment: Bool {return self._projectForwardEntailment != nil}
   /// Clears the value of `projectForwardEntailment`. Subsequent reads from it will return its default value.
-  mutating func clearProjectForwardEntailment() {self._projectForwardEntailment = nil}
+  public mutating func clearProjectForwardEntailment() {self._projectForwardEntailment = nil}
 
-  var projectReverseEntailment: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
+  public var projectReverseEntailment: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
     get {return _projectReverseEntailment ?? .equivalence}
     set {_projectReverseEntailment = newValue}
   }
   /// Returns true if `projectReverseEntailment` has been explicitly set.
-  var hasProjectReverseEntailment: Bool {return self._projectReverseEntailment != nil}
+  public var hasProjectReverseEntailment: Bool {return self._projectReverseEntailment != nil}
   /// Clears the value of `projectReverseEntailment`. Subsequent reads from it will return its default value.
-  mutating func clearProjectReverseEntailment() {self._projectReverseEntailment = nil}
+  public mutating func clearProjectReverseEntailment() {self._projectReverseEntailment = nil}
 
-  var projectNegation: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
+  public var projectNegation: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
     get {return _projectNegation ?? .equivalence}
     set {_projectNegation = newValue}
   }
   /// Returns true if `projectNegation` has been explicitly set.
-  var hasProjectNegation: Bool {return self._projectNegation != nil}
+  public var hasProjectNegation: Bool {return self._projectNegation != nil}
   /// Clears the value of `projectNegation`. Subsequent reads from it will return its default value.
-  mutating func clearProjectNegation() {self._projectNegation = nil}
+  public mutating func clearProjectNegation() {self._projectNegation = nil}
 
-  var projectAlternation: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
+  public var projectAlternation: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
     get {return _projectAlternation ?? .equivalence}
     set {_projectAlternation = newValue}
   }
   /// Returns true if `projectAlternation` has been explicitly set.
-  var hasProjectAlternation: Bool {return self._projectAlternation != nil}
+  public var hasProjectAlternation: Bool {return self._projectAlternation != nil}
   /// Clears the value of `projectAlternation`. Subsequent reads from it will return its default value.
-  mutating func clearProjectAlternation() {self._projectAlternation = nil}
+  public mutating func clearProjectAlternation() {self._projectAlternation = nil}
 
-  var projectCover: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
+  public var projectCover: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
     get {return _projectCover ?? .equivalence}
     set {_projectCover = newValue}
   }
   /// Returns true if `projectCover` has been explicitly set.
-  var hasProjectCover: Bool {return self._projectCover != nil}
+  public var hasProjectCover: Bool {return self._projectCover != nil}
   /// Clears the value of `projectCover`. Subsequent reads from it will return its default value.
-  mutating func clearProjectCover() {self._projectCover = nil}
+  public mutating func clearProjectCover() {self._projectCover = nil}
 
-  var projectIndependence: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
+  public var projectIndependence: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation {
     get {return _projectIndependence ?? .equivalence}
     set {_projectIndependence = newValue}
   }
   /// Returns true if `projectIndependence` has been explicitly set.
-  var hasProjectIndependence: Bool {return self._projectIndependence != nil}
+  public var hasProjectIndependence: Bool {return self._projectIndependence != nil}
   /// Clears the value of `projectIndependence`. Subsequent reads from it will return its default value.
-  mutating func clearProjectIndependence() {self._projectIndependence = nil}
+  public mutating func clearProjectIndependence() {self._projectIndependence = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _projectEquivalence: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation? = nil
   fileprivate var _projectForwardEntailment: Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation? = nil
@@ -2831,122 +2831,122 @@ struct Edu_Stanford_Nlp_Pipeline_Polarity {
 
 ///
 /// An NER mention in the text
-struct Edu_Stanford_Nlp_Pipeline_NERMention {
+public struct Edu_Stanford_Nlp_Pipeline_NERMention {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sentenceIndex: UInt32 {
+  public var sentenceIndex: UInt32 {
     get {return _storage._sentenceIndex ?? 0}
     set {_uniqueStorage()._sentenceIndex = newValue}
   }
   /// Returns true if `sentenceIndex` has been explicitly set.
-  var hasSentenceIndex: Bool {return _storage._sentenceIndex != nil}
+  public var hasSentenceIndex: Bool {return _storage._sentenceIndex != nil}
   /// Clears the value of `sentenceIndex`. Subsequent reads from it will return its default value.
-  mutating func clearSentenceIndex() {_uniqueStorage()._sentenceIndex = nil}
+  public mutating func clearSentenceIndex() {_uniqueStorage()._sentenceIndex = nil}
 
-  var tokenStartInSentenceInclusive: UInt32 {
+  public var tokenStartInSentenceInclusive: UInt32 {
     get {return _storage._tokenStartInSentenceInclusive ?? 0}
     set {_uniqueStorage()._tokenStartInSentenceInclusive = newValue}
   }
   /// Returns true if `tokenStartInSentenceInclusive` has been explicitly set.
-  var hasTokenStartInSentenceInclusive: Bool {return _storage._tokenStartInSentenceInclusive != nil}
+  public var hasTokenStartInSentenceInclusive: Bool {return _storage._tokenStartInSentenceInclusive != nil}
   /// Clears the value of `tokenStartInSentenceInclusive`. Subsequent reads from it will return its default value.
-  mutating func clearTokenStartInSentenceInclusive() {_uniqueStorage()._tokenStartInSentenceInclusive = nil}
+  public mutating func clearTokenStartInSentenceInclusive() {_uniqueStorage()._tokenStartInSentenceInclusive = nil}
 
-  var tokenEndInSentenceExclusive: UInt32 {
+  public var tokenEndInSentenceExclusive: UInt32 {
     get {return _storage._tokenEndInSentenceExclusive ?? 0}
     set {_uniqueStorage()._tokenEndInSentenceExclusive = newValue}
   }
   /// Returns true if `tokenEndInSentenceExclusive` has been explicitly set.
-  var hasTokenEndInSentenceExclusive: Bool {return _storage._tokenEndInSentenceExclusive != nil}
+  public var hasTokenEndInSentenceExclusive: Bool {return _storage._tokenEndInSentenceExclusive != nil}
   /// Clears the value of `tokenEndInSentenceExclusive`. Subsequent reads from it will return its default value.
-  mutating func clearTokenEndInSentenceExclusive() {_uniqueStorage()._tokenEndInSentenceExclusive = nil}
+  public mutating func clearTokenEndInSentenceExclusive() {_uniqueStorage()._tokenEndInSentenceExclusive = nil}
 
-  var ner: String {
+  public var ner: String {
     get {return _storage._ner ?? String()}
     set {_uniqueStorage()._ner = newValue}
   }
   /// Returns true if `ner` has been explicitly set.
-  var hasNer: Bool {return _storage._ner != nil}
+  public var hasNer: Bool {return _storage._ner != nil}
   /// Clears the value of `ner`. Subsequent reads from it will return its default value.
-  mutating func clearNer() {_uniqueStorage()._ner = nil}
+  public mutating func clearNer() {_uniqueStorage()._ner = nil}
 
-  var normalizedNer: String {
+  public var normalizedNer: String {
     get {return _storage._normalizedNer ?? String()}
     set {_uniqueStorage()._normalizedNer = newValue}
   }
   /// Returns true if `normalizedNer` has been explicitly set.
-  var hasNormalizedNer: Bool {return _storage._normalizedNer != nil}
+  public var hasNormalizedNer: Bool {return _storage._normalizedNer != nil}
   /// Clears the value of `normalizedNer`. Subsequent reads from it will return its default value.
-  mutating func clearNormalizedNer() {_uniqueStorage()._normalizedNer = nil}
+  public mutating func clearNormalizedNer() {_uniqueStorage()._normalizedNer = nil}
 
-  var entityType: String {
+  public var entityType: String {
     get {return _storage._entityType ?? String()}
     set {_uniqueStorage()._entityType = newValue}
   }
   /// Returns true if `entityType` has been explicitly set.
-  var hasEntityType: Bool {return _storage._entityType != nil}
+  public var hasEntityType: Bool {return _storage._entityType != nil}
   /// Clears the value of `entityType`. Subsequent reads from it will return its default value.
-  mutating func clearEntityType() {_uniqueStorage()._entityType = nil}
+  public mutating func clearEntityType() {_uniqueStorage()._entityType = nil}
 
-  var timex: Edu_Stanford_Nlp_Pipeline_Timex {
+  public var timex: Edu_Stanford_Nlp_Pipeline_Timex {
     get {return _storage._timex ?? Edu_Stanford_Nlp_Pipeline_Timex()}
     set {_uniqueStorage()._timex = newValue}
   }
   /// Returns true if `timex` has been explicitly set.
-  var hasTimex: Bool {return _storage._timex != nil}
+  public var hasTimex: Bool {return _storage._timex != nil}
   /// Clears the value of `timex`. Subsequent reads from it will return its default value.
-  mutating func clearTimex() {_uniqueStorage()._timex = nil}
+  public mutating func clearTimex() {_uniqueStorage()._timex = nil}
 
-  var wikipediaEntity: String {
+  public var wikipediaEntity: String {
     get {return _storage._wikipediaEntity ?? String()}
     set {_uniqueStorage()._wikipediaEntity = newValue}
   }
   /// Returns true if `wikipediaEntity` has been explicitly set.
-  var hasWikipediaEntity: Bool {return _storage._wikipediaEntity != nil}
+  public var hasWikipediaEntity: Bool {return _storage._wikipediaEntity != nil}
   /// Clears the value of `wikipediaEntity`. Subsequent reads from it will return its default value.
-  mutating func clearWikipediaEntity() {_uniqueStorage()._wikipediaEntity = nil}
+  public mutating func clearWikipediaEntity() {_uniqueStorage()._wikipediaEntity = nil}
 
-  var gender: String {
+  public var gender: String {
     get {return _storage._gender ?? String()}
     set {_uniqueStorage()._gender = newValue}
   }
   /// Returns true if `gender` has been explicitly set.
-  var hasGender: Bool {return _storage._gender != nil}
+  public var hasGender: Bool {return _storage._gender != nil}
   /// Clears the value of `gender`. Subsequent reads from it will return its default value.
-  mutating func clearGender() {_uniqueStorage()._gender = nil}
+  public mutating func clearGender() {_uniqueStorage()._gender = nil}
 
-  var entityMentionIndex: UInt32 {
+  public var entityMentionIndex: UInt32 {
     get {return _storage._entityMentionIndex ?? 0}
     set {_uniqueStorage()._entityMentionIndex = newValue}
   }
   /// Returns true if `entityMentionIndex` has been explicitly set.
-  var hasEntityMentionIndex: Bool {return _storage._entityMentionIndex != nil}
+  public var hasEntityMentionIndex: Bool {return _storage._entityMentionIndex != nil}
   /// Clears the value of `entityMentionIndex`. Subsequent reads from it will return its default value.
-  mutating func clearEntityMentionIndex() {_uniqueStorage()._entityMentionIndex = nil}
+  public mutating func clearEntityMentionIndex() {_uniqueStorage()._entityMentionIndex = nil}
 
-  var canonicalEntityMentionIndex: UInt32 {
+  public var canonicalEntityMentionIndex: UInt32 {
     get {return _storage._canonicalEntityMentionIndex ?? 0}
     set {_uniqueStorage()._canonicalEntityMentionIndex = newValue}
   }
   /// Returns true if `canonicalEntityMentionIndex` has been explicitly set.
-  var hasCanonicalEntityMentionIndex: Bool {return _storage._canonicalEntityMentionIndex != nil}
+  public var hasCanonicalEntityMentionIndex: Bool {return _storage._canonicalEntityMentionIndex != nil}
   /// Clears the value of `canonicalEntityMentionIndex`. Subsequent reads from it will return its default value.
-  mutating func clearCanonicalEntityMentionIndex() {_uniqueStorage()._canonicalEntityMentionIndex = nil}
+  public mutating func clearCanonicalEntityMentionIndex() {_uniqueStorage()._canonicalEntityMentionIndex = nil}
 
-  var entityMentionText: String {
+  public var entityMentionText: String {
     get {return _storage._entityMentionText ?? String()}
     set {_uniqueStorage()._entityMentionText = newValue}
   }
   /// Returns true if `entityMentionText` has been explicitly set.
-  var hasEntityMentionText: Bool {return _storage._entityMentionText != nil}
+  public var hasEntityMentionText: Bool {return _storage._entityMentionText != nil}
   /// Clears the value of `entityMentionText`. Subsequent reads from it will return its default value.
-  mutating func clearEntityMentionText() {_uniqueStorage()._entityMentionText = nil}
+  public mutating func clearEntityMentionText() {_uniqueStorage()._entityMentionText = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
@@ -2954,43 +2954,43 @@ struct Edu_Stanford_Nlp_Pipeline_NERMention {
 ///
 /// An entailed sentence fragment.
 /// Created by the openie annotator.
-struct Edu_Stanford_Nlp_Pipeline_SentenceFragment {
+public struct Edu_Stanford_Nlp_Pipeline_SentenceFragment {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var tokenIndex: [UInt32] = []
+  public var tokenIndex: [UInt32] = []
 
-  var root: UInt32 {
+  public var root: UInt32 {
     get {return _root ?? 0}
     set {_root = newValue}
   }
   /// Returns true if `root` has been explicitly set.
-  var hasRoot: Bool {return self._root != nil}
+  public var hasRoot: Bool {return self._root != nil}
   /// Clears the value of `root`. Subsequent reads from it will return its default value.
-  mutating func clearRoot() {self._root = nil}
+  public mutating func clearRoot() {self._root = nil}
 
-  var assumedTruth: Bool {
+  public var assumedTruth: Bool {
     get {return _assumedTruth ?? false}
     set {_assumedTruth = newValue}
   }
   /// Returns true if `assumedTruth` has been explicitly set.
-  var hasAssumedTruth: Bool {return self._assumedTruth != nil}
+  public var hasAssumedTruth: Bool {return self._assumedTruth != nil}
   /// Clears the value of `assumedTruth`. Subsequent reads from it will return its default value.
-  mutating func clearAssumedTruth() {self._assumedTruth = nil}
+  public mutating func clearAssumedTruth() {self._assumedTruth = nil}
 
-  var score: Double {
+  public var score: Double {
     get {return _score ?? 0}
     set {_score = newValue}
   }
   /// Returns true if `score` has been explicitly set.
-  var hasScore: Bool {return self._score != nil}
+  public var hasScore: Bool {return self._score != nil}
   /// Clears the value of `score`. Subsequent reads from it will return its default value.
-  mutating func clearScore() {self._score = nil}
+  public mutating func clearScore() {self._score = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _root: UInt32? = nil
   fileprivate var _assumedTruth: Bool? = nil
@@ -3000,32 +3000,32 @@ struct Edu_Stanford_Nlp_Pipeline_SentenceFragment {
 ///
 /// The index of a token in a document, including the sentence
 /// index and the offset.
-struct Edu_Stanford_Nlp_Pipeline_TokenLocation {
+public struct Edu_Stanford_Nlp_Pipeline_TokenLocation {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sentenceIndex: UInt32 {
+  public var sentenceIndex: UInt32 {
     get {return _sentenceIndex ?? 0}
     set {_sentenceIndex = newValue}
   }
   /// Returns true if `sentenceIndex` has been explicitly set.
-  var hasSentenceIndex: Bool {return self._sentenceIndex != nil}
+  public var hasSentenceIndex: Bool {return self._sentenceIndex != nil}
   /// Clears the value of `sentenceIndex`. Subsequent reads from it will return its default value.
-  mutating func clearSentenceIndex() {self._sentenceIndex = nil}
+  public mutating func clearSentenceIndex() {self._sentenceIndex = nil}
 
-  var tokenIndex: UInt32 {
+  public var tokenIndex: UInt32 {
     get {return _tokenIndex ?? 0}
     set {_tokenIndex = newValue}
   }
   /// Returns true if `tokenIndex` has been explicitly set.
-  var hasTokenIndex: Bool {return self._tokenIndex != nil}
+  public var hasTokenIndex: Bool {return self._tokenIndex != nil}
   /// Clears the value of `tokenIndex`. Subsequent reads from it will return its default value.
-  mutating func clearTokenIndex() {self._tokenIndex = nil}
+  public mutating func clearTokenIndex() {self._tokenIndex = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _sentenceIndex: UInt32? = nil
   fileprivate var _tokenIndex: UInt32? = nil
@@ -3034,113 +3034,113 @@ struct Edu_Stanford_Nlp_Pipeline_TokenLocation {
 ///
 /// An OpenIE relation triple.
 /// Created by the openie annotator.
-struct Edu_Stanford_Nlp_Pipeline_RelationTriple {
+public struct Edu_Stanford_Nlp_Pipeline_RelationTriple {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// The surface form of the subject
-  var subject: String {
+  public var subject: String {
     get {return _subject ?? String()}
     set {_subject = newValue}
   }
   /// Returns true if `subject` has been explicitly set.
-  var hasSubject: Bool {return self._subject != nil}
+  public var hasSubject: Bool {return self._subject != nil}
   /// Clears the value of `subject`. Subsequent reads from it will return its default value.
-  mutating func clearSubject() {self._subject = nil}
+  public mutating func clearSubject() {self._subject = nil}
 
   /// The surface form of the relation (required)
-  var relation: String {
+  public var relation: String {
     get {return _relation ?? String()}
     set {_relation = newValue}
   }
   /// Returns true if `relation` has been explicitly set.
-  var hasRelation: Bool {return self._relation != nil}
+  public var hasRelation: Bool {return self._relation != nil}
   /// Clears the value of `relation`. Subsequent reads from it will return its default value.
-  mutating func clearRelation() {self._relation = nil}
+  public mutating func clearRelation() {self._relation = nil}
 
   /// The surface form of the object
-  var object: String {
+  public var object: String {
     get {return _object ?? String()}
     set {_object = newValue}
   }
   /// Returns true if `object` has been explicitly set.
-  var hasObject: Bool {return self._object != nil}
+  public var hasObject: Bool {return self._object != nil}
   /// Clears the value of `object`. Subsequent reads from it will return its default value.
-  mutating func clearObject() {self._object = nil}
+  public mutating func clearObject() {self._object = nil}
 
   /// The [optional] confidence of the extraction
-  var confidence: Double {
+  public var confidence: Double {
     get {return _confidence ?? 0}
     set {_confidence = newValue}
   }
   /// Returns true if `confidence` has been explicitly set.
-  var hasConfidence: Bool {return self._confidence != nil}
+  public var hasConfidence: Bool {return self._confidence != nil}
   /// Clears the value of `confidence`. Subsequent reads from it will return its default value.
-  mutating func clearConfidence() {self._confidence = nil}
+  public mutating func clearConfidence() {self._confidence = nil}
 
   /// The tokens comprising the subject of the triple
-  var subjectTokens: [Edu_Stanford_Nlp_Pipeline_TokenLocation] = []
+  public var subjectTokens: [Edu_Stanford_Nlp_Pipeline_TokenLocation] = []
 
   /// The tokens comprising the relation of the triple
-  var relationTokens: [Edu_Stanford_Nlp_Pipeline_TokenLocation] = []
+  public var relationTokens: [Edu_Stanford_Nlp_Pipeline_TokenLocation] = []
 
   /// The tokens comprising the object of the triple
-  var objectTokens: [Edu_Stanford_Nlp_Pipeline_TokenLocation] = []
+  public var objectTokens: [Edu_Stanford_Nlp_Pipeline_TokenLocation] = []
 
   /// The dependency graph fragment for this triple
-  var tree: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+  public var tree: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
     get {return _tree ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
     set {_tree = newValue}
   }
   /// Returns true if `tree` has been explicitly set.
-  var hasTree: Bool {return self._tree != nil}
+  public var hasTree: Bool {return self._tree != nil}
   /// Clears the value of `tree`. Subsequent reads from it will return its default value.
-  mutating func clearTree() {self._tree = nil}
+  public mutating func clearTree() {self._tree = nil}
 
   /// If true, this expresses an implicit tmod relation
-  var istmod: Bool {
+  public var istmod: Bool {
     get {return _istmod ?? false}
     set {_istmod = newValue}
   }
   /// Returns true if `istmod` has been explicitly set.
-  var hasIstmod: Bool {return self._istmod != nil}
+  public var hasIstmod: Bool {return self._istmod != nil}
   /// Clears the value of `istmod`. Subsequent reads from it will return its default value.
-  mutating func clearIstmod() {self._istmod = nil}
+  public mutating func clearIstmod() {self._istmod = nil}
 
   /// If true, this relation string is missing a 'be' prefix
-  var prefixBe: Bool {
+  public var prefixBe: Bool {
     get {return _prefixBe ?? false}
     set {_prefixBe = newValue}
   }
   /// Returns true if `prefixBe` has been explicitly set.
-  var hasPrefixBe: Bool {return self._prefixBe != nil}
+  public var hasPrefixBe: Bool {return self._prefixBe != nil}
   /// Clears the value of `prefixBe`. Subsequent reads from it will return its default value.
-  mutating func clearPrefixBe() {self._prefixBe = nil}
+  public mutating func clearPrefixBe() {self._prefixBe = nil}
 
   /// If true, this relation string is missing a 'be' suffix
-  var suffixBe: Bool {
+  public var suffixBe: Bool {
     get {return _suffixBe ?? false}
     set {_suffixBe = newValue}
   }
   /// Returns true if `suffixBe` has been explicitly set.
-  var hasSuffixBe: Bool {return self._suffixBe != nil}
+  public var hasSuffixBe: Bool {return self._suffixBe != nil}
   /// Clears the value of `suffixBe`. Subsequent reads from it will return its default value.
-  mutating func clearSuffixBe() {self._suffixBe = nil}
+  public mutating func clearSuffixBe() {self._suffixBe = nil}
 
   /// If true, this relation string is missing a 'of' prefix
-  var suffixOf: Bool {
+  public var suffixOf: Bool {
     get {return _suffixOf ?? false}
     set {_suffixOf = newValue}
   }
   /// Returns true if `suffixOf` has been explicitly set.
-  var hasSuffixOf: Bool {return self._suffixOf != nil}
+  public var hasSuffixOf: Bool {return self._suffixOf != nil}
   /// Clears the value of `suffixOf`. Subsequent reads from it will return its default value.
-  mutating func clearSuffixOf() {self._suffixOf = nil}
+  public mutating func clearSuffixOf() {self._suffixOf = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _subject: String? = nil
   fileprivate var _relation: String? = nil
@@ -3156,112 +3156,112 @@ struct Edu_Stanford_Nlp_Pipeline_RelationTriple {
 ///
 /// A map from strings to strings.
 /// Used, minimally, in the CoNLLU featurizer
-struct Edu_Stanford_Nlp_Pipeline_MapStringString {
+public struct Edu_Stanford_Nlp_Pipeline_MapStringString {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var key: [String] = []
+  public var key: [String] = []
 
-  var value: [String] = []
+  public var value: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 ///
 /// A map from integers to strings.
 /// Used, minimally, in the CoNLLU featurizer
-struct Edu_Stanford_Nlp_Pipeline_MapIntString {
+public struct Edu_Stanford_Nlp_Pipeline_MapIntString {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var key: [UInt32] = []
+  public var key: [UInt32] = []
 
-  var value: [String] = []
+  public var value: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Edu_Stanford_Nlp_Pipeline_Section {
+public struct Edu_Stanford_Nlp_Pipeline_Section {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var charBegin: UInt32 {
+  public var charBegin: UInt32 {
     get {return _charBegin ?? 0}
     set {_charBegin = newValue}
   }
   /// Returns true if `charBegin` has been explicitly set.
-  var hasCharBegin: Bool {return self._charBegin != nil}
+  public var hasCharBegin: Bool {return self._charBegin != nil}
   /// Clears the value of `charBegin`. Subsequent reads from it will return its default value.
-  mutating func clearCharBegin() {self._charBegin = nil}
+  public mutating func clearCharBegin() {self._charBegin = nil}
 
-  var charEnd: UInt32 {
+  public var charEnd: UInt32 {
     get {return _charEnd ?? 0}
     set {_charEnd = newValue}
   }
   /// Returns true if `charEnd` has been explicitly set.
-  var hasCharEnd: Bool {return self._charEnd != nil}
+  public var hasCharEnd: Bool {return self._charEnd != nil}
   /// Clears the value of `charEnd`. Subsequent reads from it will return its default value.
-  mutating func clearCharEnd() {self._charEnd = nil}
+  public mutating func clearCharEnd() {self._charEnd = nil}
 
-  var author: String {
+  public var author: String {
     get {return _author ?? String()}
     set {_author = newValue}
   }
   /// Returns true if `author` has been explicitly set.
-  var hasAuthor: Bool {return self._author != nil}
+  public var hasAuthor: Bool {return self._author != nil}
   /// Clears the value of `author`. Subsequent reads from it will return its default value.
-  mutating func clearAuthor() {self._author = nil}
+  public mutating func clearAuthor() {self._author = nil}
 
-  var sentenceIndexes: [UInt32] = []
+  public var sentenceIndexes: [UInt32] = []
 
-  var datetime: String {
+  public var datetime: String {
     get {return _datetime ?? String()}
     set {_datetime = newValue}
   }
   /// Returns true if `datetime` has been explicitly set.
-  var hasDatetime: Bool {return self._datetime != nil}
+  public var hasDatetime: Bool {return self._datetime != nil}
   /// Clears the value of `datetime`. Subsequent reads from it will return its default value.
-  mutating func clearDatetime() {self._datetime = nil}
+  public mutating func clearDatetime() {self._datetime = nil}
 
-  var quotes: [Edu_Stanford_Nlp_Pipeline_Quote] = []
+  public var quotes: [Edu_Stanford_Nlp_Pipeline_Quote] = []
 
-  var authorCharBegin: UInt32 {
+  public var authorCharBegin: UInt32 {
     get {return _authorCharBegin ?? 0}
     set {_authorCharBegin = newValue}
   }
   /// Returns true if `authorCharBegin` has been explicitly set.
-  var hasAuthorCharBegin: Bool {return self._authorCharBegin != nil}
+  public var hasAuthorCharBegin: Bool {return self._authorCharBegin != nil}
   /// Clears the value of `authorCharBegin`. Subsequent reads from it will return its default value.
-  mutating func clearAuthorCharBegin() {self._authorCharBegin = nil}
+  public mutating func clearAuthorCharBegin() {self._authorCharBegin = nil}
 
-  var authorCharEnd: UInt32 {
+  public var authorCharEnd: UInt32 {
     get {return _authorCharEnd ?? 0}
     set {_authorCharEnd = newValue}
   }
   /// Returns true if `authorCharEnd` has been explicitly set.
-  var hasAuthorCharEnd: Bool {return self._authorCharEnd != nil}
+  public var hasAuthorCharEnd: Bool {return self._authorCharEnd != nil}
   /// Clears the value of `authorCharEnd`. Subsequent reads from it will return its default value.
-  mutating func clearAuthorCharEnd() {self._authorCharEnd = nil}
+  public mutating func clearAuthorCharEnd() {self._authorCharEnd = nil}
 
-  var xmlTag: Edu_Stanford_Nlp_Pipeline_Token {
+  public var xmlTag: Edu_Stanford_Nlp_Pipeline_Token {
     get {return _xmlTag ?? Edu_Stanford_Nlp_Pipeline_Token()}
     set {_xmlTag = newValue}
   }
   /// Returns true if `xmlTag` has been explicitly set.
-  var hasXmlTag: Bool {return self._xmlTag != nil}
+  public var hasXmlTag: Bool {return self._xmlTag != nil}
   /// Clears the value of `xmlTag`. Subsequent reads from it will return its default value.
-  mutating func clearXmlTag() {self._xmlTag = nil}
+  public mutating func clearXmlTag() {self._xmlTag = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _charBegin: UInt32? = nil
   fileprivate var _charEnd: UInt32? = nil
@@ -3278,191 +3278,191 @@ struct Edu_Stanford_Nlp_Pipeline_Section {
 /// An alternative would have been to use the existing Document or
 /// Sentence classes, but the problem with that is it would be
 /// ambiguous which dependency object to use.
-struct Edu_Stanford_Nlp_Pipeline_SemgrexRequest {
+public struct Edu_Stanford_Nlp_Pipeline_SemgrexRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var semgrex: [String] = []
+  public var semgrex: [String] = []
 
-  var query: [Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies] = []
+  public var query: [Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct Dependencies {
+  public struct Dependencies {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var token: [Edu_Stanford_Nlp_Pipeline_Token] = []
+    public var token: [Edu_Stanford_Nlp_Pipeline_Token] = []
 
-    var graph: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
+    public var graph: Edu_Stanford_Nlp_Pipeline_DependencyGraph {
       get {return _graph ?? Edu_Stanford_Nlp_Pipeline_DependencyGraph()}
       set {_graph = newValue}
     }
     /// Returns true if `graph` has been explicitly set.
-    var hasGraph: Bool {return self._graph != nil}
+    public var hasGraph: Bool {return self._graph != nil}
     /// Clears the value of `graph`. Subsequent reads from it will return its default value.
-    mutating func clearGraph() {self._graph = nil}
+    public mutating func clearGraph() {self._graph = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _graph: Edu_Stanford_Nlp_Pipeline_DependencyGraph? = nil
   }
 
-  init() {}
+  public init() {}
 }
 
 /// The response from running a semgrex
 /// If you pass in M semgrex expressions and N dependency graphs,
 /// this returns MxN nested results.  Each SemgrexResult can match
 /// multiple times in one graph
-struct Edu_Stanford_Nlp_Pipeline_SemgrexResponse {
+public struct Edu_Stanford_Nlp_Pipeline_SemgrexResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var result: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult] = []
+  public var result: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct NamedNode {
+  public struct NamedNode {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var name: String {
+    public var name: String {
       get {return _name ?? String()}
       set {_name = newValue}
     }
     /// Returns true if `name` has been explicitly set.
-    var hasName: Bool {return self._name != nil}
+    public var hasName: Bool {return self._name != nil}
     /// Clears the value of `name`. Subsequent reads from it will return its default value.
-    mutating func clearName() {self._name = nil}
+    public mutating func clearName() {self._name = nil}
 
-    var matchIndex: Int32 {
+    public var matchIndex: Int32 {
       get {return _matchIndex ?? 0}
       set {_matchIndex = newValue}
     }
     /// Returns true if `matchIndex` has been explicitly set.
-    var hasMatchIndex: Bool {return self._matchIndex != nil}
+    public var hasMatchIndex: Bool {return self._matchIndex != nil}
     /// Clears the value of `matchIndex`. Subsequent reads from it will return its default value.
-    mutating func clearMatchIndex() {self._matchIndex = nil}
+    public mutating func clearMatchIndex() {self._matchIndex = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _name: String? = nil
     fileprivate var _matchIndex: Int32? = nil
   }
 
-  struct NamedRelation {
+  public struct NamedRelation {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var name: String {
+    public var name: String {
       get {return _name ?? String()}
       set {_name = newValue}
     }
     /// Returns true if `name` has been explicitly set.
-    var hasName: Bool {return self._name != nil}
+    public var hasName: Bool {return self._name != nil}
     /// Clears the value of `name`. Subsequent reads from it will return its default value.
-    mutating func clearName() {self._name = nil}
+    public mutating func clearName() {self._name = nil}
 
-    var reln: String {
+    public var reln: String {
       get {return _reln ?? String()}
       set {_reln = newValue}
     }
     /// Returns true if `reln` has been explicitly set.
-    var hasReln: Bool {return self._reln != nil}
+    public var hasReln: Bool {return self._reln != nil}
     /// Clears the value of `reln`. Subsequent reads from it will return its default value.
-    mutating func clearReln() {self._reln = nil}
+    public mutating func clearReln() {self._reln = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _name: String? = nil
     fileprivate var _reln: String? = nil
   }
 
-  struct Match {
+  public struct Match {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var matchIndex: Int32 {
+    public var matchIndex: Int32 {
       get {return _matchIndex ?? 0}
       set {_matchIndex = newValue}
     }
     /// Returns true if `matchIndex` has been explicitly set.
-    var hasMatchIndex: Bool {return self._matchIndex != nil}
+    public var hasMatchIndex: Bool {return self._matchIndex != nil}
     /// Clears the value of `matchIndex`. Subsequent reads from it will return its default value.
-    mutating func clearMatchIndex() {self._matchIndex = nil}
+    public mutating func clearMatchIndex() {self._matchIndex = nil}
 
-    var node: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode] = []
+    public var node: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode] = []
 
-    var reln: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation] = []
+    public var reln: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation] = []
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _matchIndex: Int32? = nil
   }
 
-  struct SemgrexResult {
+  public struct SemgrexResult {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var match: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match] = []
+    public var match: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match] = []
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  struct GraphResult {
+  public struct GraphResult {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var result: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult] = []
+    public var result: [Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult] = []
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 }
 
 /// It's possible to send in a whole document, but we
 /// only care about the Sentences and Tokens
-struct Edu_Stanford_Nlp_Pipeline_TokensRegexRequest {
+public struct Edu_Stanford_Nlp_Pipeline_TokensRegexRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var doc: Edu_Stanford_Nlp_Pipeline_Document {
+  public var doc: Edu_Stanford_Nlp_Pipeline_Document {
     get {return _doc ?? Edu_Stanford_Nlp_Pipeline_Document()}
     set {_doc = newValue}
   }
   /// Returns true if `doc` has been explicitly set.
-  var hasDoc: Bool {return self._doc != nil}
+  public var hasDoc: Bool {return self._doc != nil}
   /// Clears the value of `doc`. Subsequent reads from it will return its default value.
-  mutating func clearDoc() {self._doc = nil}
+  public mutating func clearDoc() {self._doc = nil}
 
-  var pattern: [String] = []
+  public var pattern: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _doc: Edu_Stanford_Nlp_Pipeline_Document? = nil
 }
@@ -3471,102 +3471,102 @@ struct Edu_Stanford_Nlp_Pipeline_TokensRegexRequest {
 /// repeated PatternMatch, one for each pattern
 /// each PatternMatch has a repeated Match,
 ///   which tells you which sentence matched and where
-struct Edu_Stanford_Nlp_Pipeline_TokensRegexResponse {
+public struct Edu_Stanford_Nlp_Pipeline_TokensRegexResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var match: [Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch] = []
+  public var match: [Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  struct MatchLocation {
+  public struct MatchLocation {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var text: String {
+    public var text: String {
       get {return _text ?? String()}
       set {_text = newValue}
     }
     /// Returns true if `text` has been explicitly set.
-    var hasText: Bool {return self._text != nil}
+    public var hasText: Bool {return self._text != nil}
     /// Clears the value of `text`. Subsequent reads from it will return its default value.
-    mutating func clearText() {self._text = nil}
+    public mutating func clearText() {self._text = nil}
 
-    var begin: Int32 {
+    public var begin: Int32 {
       get {return _begin ?? 0}
       set {_begin = newValue}
     }
     /// Returns true if `begin` has been explicitly set.
-    var hasBegin: Bool {return self._begin != nil}
+    public var hasBegin: Bool {return self._begin != nil}
     /// Clears the value of `begin`. Subsequent reads from it will return its default value.
-    mutating func clearBegin() {self._begin = nil}
+    public mutating func clearBegin() {self._begin = nil}
 
-    var end: Int32 {
+    public var end: Int32 {
       get {return _end ?? 0}
       set {_end = newValue}
     }
     /// Returns true if `end` has been explicitly set.
-    var hasEnd: Bool {return self._end != nil}
+    public var hasEnd: Bool {return self._end != nil}
     /// Clears the value of `end`. Subsequent reads from it will return its default value.
-    mutating func clearEnd() {self._end = nil}
+    public mutating func clearEnd() {self._end = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _text: String? = nil
     fileprivate var _begin: Int32? = nil
     fileprivate var _end: Int32? = nil
   }
 
-  struct Match {
+  public struct Match {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var sentence: Int32 {
+    public var sentence: Int32 {
       get {return _sentence ?? 0}
       set {_sentence = newValue}
     }
     /// Returns true if `sentence` has been explicitly set.
-    var hasSentence: Bool {return self._sentence != nil}
+    public var hasSentence: Bool {return self._sentence != nil}
     /// Clears the value of `sentence`. Subsequent reads from it will return its default value.
-    mutating func clearSentence() {self._sentence = nil}
+    public mutating func clearSentence() {self._sentence = nil}
 
-    var match: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation {
+    public var match: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation {
       get {return _match ?? Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation()}
       set {_match = newValue}
     }
     /// Returns true if `match` has been explicitly set.
-    var hasMatch: Bool {return self._match != nil}
+    public var hasMatch: Bool {return self._match != nil}
     /// Clears the value of `match`. Subsequent reads from it will return its default value.
-    mutating func clearMatch() {self._match = nil}
+    public mutating func clearMatch() {self._match = nil}
 
-    var group: [Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation] = []
+    public var group: [Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation] = []
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _sentence: Int32? = nil
     fileprivate var _match: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation? = nil
   }
 
-  struct PatternMatch {
+  public struct PatternMatch {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var match: [Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match] = []
+    public var match: [Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match] = []
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -3574,7 +3574,7 @@ struct Edu_Stanford_Nlp_Pipeline_TokensRegexResponse {
 fileprivate let _protobuf_package = "edu.stanford.nlp.pipeline"
 
 extension Edu_Stanford_Nlp_Pipeline_Language: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "Unknown"),
     1: .same(proto: "Any"),
     2: .same(proto: "Arabic"),
@@ -3590,7 +3590,7 @@ extension Edu_Stanford_Nlp_Pipeline_Language: SwiftProtobuf._ProtoNameProviding 
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Sentiment: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "STRONG_NEGATIVE"),
     1: .same(proto: "WEAK_NEGATIVE"),
     2: .same(proto: "NEUTRAL"),
@@ -3600,7 +3600,7 @@ extension Edu_Stanford_Nlp_Pipeline_Sentiment: SwiftProtobuf._ProtoNameProviding
 }
 
 extension Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "EQUIVALENCE"),
     1: .same(proto: "FORWARD_ENTAILMENT"),
     2: .same(proto: "REVERSE_ENTAILMENT"),
@@ -3612,8 +3612,8 @@ extension Edu_Stanford_Nlp_Pipeline_NaturalLogicRelation: SwiftProtobuf._ProtoNa
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Document: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Document"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Document"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "text"),
     2: .same(proto: "sentence"),
     3: .same(proto: "corefChain"),
@@ -3702,7 +3702,7 @@ extension Edu_Stanford_Nlp_Pipeline_Document: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -3736,7 +3736,7 @@ extension Edu_Stanford_Nlp_Pipeline_Document: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._text {
         try visitor.visitSingularStringField(value: v, fieldNumber: 1)
@@ -3797,7 +3797,7 @@ extension Edu_Stanford_Nlp_Pipeline_Document: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Document, rhs: Edu_Stanford_Nlp_Pipeline_Document) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Document, rhs: Edu_Stanford_Nlp_Pipeline_Document) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -3831,8 +3831,8 @@ extension Edu_Stanford_Nlp_Pipeline_Document: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Sentence: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Sentence"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Sentence"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "token"),
     2: .same(proto: "tokenOffsetBegin"),
     3: .same(proto: "tokenOffsetEnd"),
@@ -4014,7 +4014,7 @@ extension Edu_Stanford_Nlp_Pipeline_Sentence: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -4077,7 +4077,7 @@ extension Edu_Stanford_Nlp_Pipeline_Sentence: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if !_storage._token.isEmpty {
         try visitor.visitRepeatedMessageField(value: _storage._token, fieldNumber: 1)
@@ -4225,7 +4225,7 @@ extension Edu_Stanford_Nlp_Pipeline_Sentence: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Sentence, rhs: Edu_Stanford_Nlp_Pipeline_Sentence) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Sentence, rhs: Edu_Stanford_Nlp_Pipeline_Sentence) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -4288,8 +4288,8 @@ extension Edu_Stanford_Nlp_Pipeline_Sentence: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Token: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Token"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Token"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "word"),
     2: .same(proto: "pos"),
     3: .same(proto: "value"),
@@ -4512,7 +4512,7 @@ extension Edu_Stanford_Nlp_Pipeline_Token: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -4592,7 +4592,7 @@ extension Edu_Stanford_Nlp_Pipeline_Token: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._word {
         try visitor.visitSingularStringField(value: v, fieldNumber: 1)
@@ -4791,7 +4791,7 @@ extension Edu_Stanford_Nlp_Pipeline_Token: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Token, rhs: Edu_Stanford_Nlp_Pipeline_Token) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Token, rhs: Edu_Stanford_Nlp_Pipeline_Token) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -4871,8 +4871,8 @@ extension Edu_Stanford_Nlp_Pipeline_Token: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Quote: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Quote"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Quote"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "text"),
     2: .same(proto: "begin"),
     3: .same(proto: "end"),
@@ -4962,7 +4962,7 @@ extension Edu_Stanford_Nlp_Pipeline_Quote: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -4997,7 +4997,7 @@ extension Edu_Stanford_Nlp_Pipeline_Quote: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._text {
         try visitor.visitSingularStringField(value: v, fieldNumber: 1)
@@ -5066,7 +5066,7 @@ extension Edu_Stanford_Nlp_Pipeline_Quote: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Quote, rhs: Edu_Stanford_Nlp_Pipeline_Quote) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Quote, rhs: Edu_Stanford_Nlp_Pipeline_Quote) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -5102,8 +5102,8 @@ extension Edu_Stanford_Nlp_Pipeline_Quote: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Edu_Stanford_Nlp_Pipeline_ParseTree: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ParseTree"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ParseTree"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "child"),
     2: .same(proto: "value"),
     3: .same(proto: "yieldBeginIndex"),
@@ -5112,7 +5112,7 @@ extension Edu_Stanford_Nlp_Pipeline_ParseTree: SwiftProtobuf.Message, SwiftProto
     6: .same(proto: "sentiment"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5129,7 +5129,7 @@ extension Edu_Stanford_Nlp_Pipeline_ParseTree: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.child.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.child, fieldNumber: 1)
     }
@@ -5151,7 +5151,7 @@ extension Edu_Stanford_Nlp_Pipeline_ParseTree: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_ParseTree, rhs: Edu_Stanford_Nlp_Pipeline_ParseTree) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_ParseTree, rhs: Edu_Stanford_Nlp_Pipeline_ParseTree) -> Bool {
     if lhs.child != rhs.child {return false}
     if lhs._value != rhs._value {return false}
     if lhs._yieldBeginIndex != rhs._yieldBeginIndex {return false}
@@ -5164,8 +5164,8 @@ extension Edu_Stanford_Nlp_Pipeline_ParseTree: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Edu_Stanford_Nlp_Pipeline_DependencyGraph: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DependencyGraph"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DependencyGraph"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "node"),
     2: .same(proto: "edge"),
     3: .same(proto: "root"),
@@ -5177,7 +5177,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph: SwiftProtobuf.Message, Swif
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5191,7 +5191,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.node.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.node, fieldNumber: 1)
     }
@@ -5204,7 +5204,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph, rhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph, rhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph) -> Bool {
     if lhs.node != rhs.node {return false}
     if lhs.edge != rhs.edge {return false}
     if lhs.root != rhs.root {return false}
@@ -5214,8 +5214,8 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph: SwiftProtobuf.Message, Swif
 }
 
 extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_DependencyGraph.protoMessageName + ".Node"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_DependencyGraph.protoMessageName + ".Node"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "sentenceIndex"),
     2: .same(proto: "index"),
     3: .same(proto: "copyAnnotation"),
@@ -5227,7 +5227,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node: SwiftProtobuf.Message,
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5241,7 +5241,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._sentenceIndex {
       try visitor.visitSingularUInt32Field(value: v, fieldNumber: 1)
     }
@@ -5254,7 +5254,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node, rhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node, rhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node) -> Bool {
     if lhs._sentenceIndex != rhs._sentenceIndex {return false}
     if lhs._index != rhs._index {return false}
     if lhs._copyAnnotation != rhs._copyAnnotation {return false}
@@ -5264,8 +5264,8 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Node: SwiftProtobuf.Message,
 }
 
 extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_DependencyGraph.protoMessageName + ".Edge"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_DependencyGraph.protoMessageName + ".Edge"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "source"),
     2: .same(proto: "target"),
     3: .same(proto: "dep"),
@@ -5281,7 +5281,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge: SwiftProtobuf.Message,
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5299,7 +5299,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._source {
       try visitor.visitSingularUInt32Field(value: v, fieldNumber: 1)
     }
@@ -5324,7 +5324,7 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge, rhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge, rhs: Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge) -> Bool {
     if lhs._source != rhs._source {return false}
     if lhs._target != rhs._target {return false}
     if lhs._dep != rhs._dep {return false}
@@ -5338,8 +5338,8 @@ extension Edu_Stanford_Nlp_Pipeline_DependencyGraph.Edge: SwiftProtobuf.Message,
 }
 
 extension Edu_Stanford_Nlp_Pipeline_CorefChain: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CorefChain"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CorefChain"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "chainID"),
     2: .same(proto: "mention"),
     3: .same(proto: "representative"),
@@ -5351,7 +5351,7 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain: SwiftProtobuf.Message, SwiftProt
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5365,7 +5365,7 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._chainID {
       try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
     }
@@ -5378,7 +5378,7 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_CorefChain, rhs: Edu_Stanford_Nlp_Pipeline_CorefChain) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_CorefChain, rhs: Edu_Stanford_Nlp_Pipeline_CorefChain) -> Bool {
     if lhs._chainID != rhs._chainID {return false}
     if lhs.mention != rhs.mention {return false}
     if lhs._representative != rhs._representative {return false}
@@ -5388,8 +5388,8 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_CorefChain.protoMessageName + ".CorefMention"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_CorefChain.protoMessageName + ".CorefMention"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "mentionID"),
     2: .same(proto: "mentionType"),
     3: .same(proto: "number"),
@@ -5402,7 +5402,7 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention: SwiftProtobuf.Messa
     11: .same(proto: "position"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5423,7 +5423,7 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._mentionID {
       try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
     }
@@ -5457,7 +5457,7 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention: SwiftProtobuf.Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention, rhs: Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention, rhs: Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention) -> Bool {
     if lhs._mentionID != rhs._mentionID {return false}
     if lhs._mentionType != rhs._mentionType {return false}
     if lhs._number != rhs._number {return false}
@@ -5474,8 +5474,8 @@ extension Edu_Stanford_Nlp_Pipeline_CorefChain.CorefMention: SwiftProtobuf.Messa
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Mention: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Mention"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Mention"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "mentionID"),
     2: .same(proto: "mentionType"),
     3: .same(proto: "number"),
@@ -5618,7 +5618,7 @@ extension Edu_Stanford_Nlp_Pipeline_Mention: SwiftProtobuf.Message, SwiftProtobu
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -5673,7 +5673,7 @@ extension Edu_Stanford_Nlp_Pipeline_Mention: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._mentionID {
         try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
@@ -5802,7 +5802,7 @@ extension Edu_Stanford_Nlp_Pipeline_Mention: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Mention, rhs: Edu_Stanford_Nlp_Pipeline_Mention) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Mention, rhs: Edu_Stanford_Nlp_Pipeline_Mention) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -5858,15 +5858,15 @@ extension Edu_Stanford_Nlp_Pipeline_Mention: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Edu_Stanford_Nlp_Pipeline_IndexedWord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".IndexedWord"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".IndexedWord"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "sentenceNum"),
     2: .same(proto: "tokenIndex"),
     3: .same(proto: "docID"),
     4: .same(proto: "copyCount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5881,7 +5881,7 @@ extension Edu_Stanford_Nlp_Pipeline_IndexedWord: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._sentenceNum {
       try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
     }
@@ -5897,7 +5897,7 @@ extension Edu_Stanford_Nlp_Pipeline_IndexedWord: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_IndexedWord, rhs: Edu_Stanford_Nlp_Pipeline_IndexedWord) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_IndexedWord, rhs: Edu_Stanford_Nlp_Pipeline_IndexedWord) -> Bool {
     if lhs._sentenceNum != rhs._sentenceNum {return false}
     if lhs._tokenIndex != rhs._tokenIndex {return false}
     if lhs._docID != rhs._docID {return false}
@@ -5908,13 +5908,13 @@ extension Edu_Stanford_Nlp_Pipeline_IndexedWord: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SpeakerInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SpeakerInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SpeakerInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "speakerName"),
     2: .same(proto: "mentions"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5927,7 +5927,7 @@ extension Edu_Stanford_Nlp_Pipeline_SpeakerInfo: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._speakerName {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -5937,7 +5937,7 @@ extension Edu_Stanford_Nlp_Pipeline_SpeakerInfo: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SpeakerInfo, rhs: Edu_Stanford_Nlp_Pipeline_SpeakerInfo) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SpeakerInfo, rhs: Edu_Stanford_Nlp_Pipeline_SpeakerInfo) -> Bool {
     if lhs._speakerName != rhs._speakerName {return false}
     if lhs.mentions != rhs.mentions {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -5946,8 +5946,8 @@ extension Edu_Stanford_Nlp_Pipeline_SpeakerInfo: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Span: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Span"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Span"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "begin"),
     2: .same(proto: "end"),
   ]
@@ -5958,7 +5958,7 @@ extension Edu_Stanford_Nlp_Pipeline_Span: SwiftProtobuf.Message, SwiftProtobuf._
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -5971,7 +5971,7 @@ extension Edu_Stanford_Nlp_Pipeline_Span: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._begin {
       try visitor.visitSingularUInt32Field(value: v, fieldNumber: 1)
     }
@@ -5981,7 +5981,7 @@ extension Edu_Stanford_Nlp_Pipeline_Span: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Span, rhs: Edu_Stanford_Nlp_Pipeline_Span) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Span, rhs: Edu_Stanford_Nlp_Pipeline_Span) -> Bool {
     if lhs._begin != rhs._begin {return false}
     if lhs._end != rhs._end {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -5990,8 +5990,8 @@ extension Edu_Stanford_Nlp_Pipeline_Span: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Timex: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Timex"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Timex"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "value"),
     2: .same(proto: "altValue"),
     3: .same(proto: "text"),
@@ -6001,7 +6001,7 @@ extension Edu_Stanford_Nlp_Pipeline_Timex: SwiftProtobuf.Message, SwiftProtobuf.
     7: .same(proto: "endPoint"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6019,7 +6019,7 @@ extension Edu_Stanford_Nlp_Pipeline_Timex: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._value {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -6044,7 +6044,7 @@ extension Edu_Stanford_Nlp_Pipeline_Timex: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Timex, rhs: Edu_Stanford_Nlp_Pipeline_Timex) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Timex, rhs: Edu_Stanford_Nlp_Pipeline_Timex) -> Bool {
     if lhs._value != rhs._value {return false}
     if lhs._altValue != rhs._altValue {return false}
     if lhs._text != rhs._text {return false}
@@ -6058,8 +6058,8 @@ extension Edu_Stanford_Nlp_Pipeline_Timex: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Entity: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Entity"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Entity"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     6: .same(proto: "headStart"),
     7: .same(proto: "headEnd"),
     8: .same(proto: "mentionType"),
@@ -6073,7 +6073,7 @@ extension Edu_Stanford_Nlp_Pipeline_Entity: SwiftProtobuf.Message, SwiftProtobuf
     5: .same(proto: "subtype"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6095,7 +6095,7 @@ extension Edu_Stanford_Nlp_Pipeline_Entity: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._objectID {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -6132,7 +6132,7 @@ extension Edu_Stanford_Nlp_Pipeline_Entity: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Entity, rhs: Edu_Stanford_Nlp_Pipeline_Entity) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Entity, rhs: Edu_Stanford_Nlp_Pipeline_Entity) -> Bool {
     if lhs._headStart != rhs._headStart {return false}
     if lhs._headEnd != rhs._headEnd {return false}
     if lhs._mentionType != rhs._mentionType {return false}
@@ -6150,8 +6150,8 @@ extension Edu_Stanford_Nlp_Pipeline_Entity: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Relation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Relation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Relation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     6: .same(proto: "argName"),
     7: .same(proto: "arg"),
     8: .same(proto: "signature"),
@@ -6162,7 +6162,7 @@ extension Edu_Stanford_Nlp_Pipeline_Relation: SwiftProtobuf.Message, SwiftProtob
     5: .same(proto: "subtype"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6181,7 +6181,7 @@ extension Edu_Stanford_Nlp_Pipeline_Relation: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._objectID {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -6209,7 +6209,7 @@ extension Edu_Stanford_Nlp_Pipeline_Relation: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Relation, rhs: Edu_Stanford_Nlp_Pipeline_Relation) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Relation, rhs: Edu_Stanford_Nlp_Pipeline_Relation) -> Bool {
     if lhs.argName != rhs.argName {return false}
     if lhs.arg != rhs.arg {return false}
     if lhs._signature != rhs._signature {return false}
@@ -6224,8 +6224,8 @@ extension Edu_Stanford_Nlp_Pipeline_Relation: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Operator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Operator"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Operator"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .same(proto: "quantifierSpanBegin"),
     3: .same(proto: "quantifierSpanEnd"),
@@ -6246,7 +6246,7 @@ extension Edu_Stanford_Nlp_Pipeline_Operator: SwiftProtobuf.Message, SwiftProtob
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6264,7 +6264,7 @@ extension Edu_Stanford_Nlp_Pipeline_Operator: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._name {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -6289,7 +6289,7 @@ extension Edu_Stanford_Nlp_Pipeline_Operator: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Operator, rhs: Edu_Stanford_Nlp_Pipeline_Operator) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Operator, rhs: Edu_Stanford_Nlp_Pipeline_Operator) -> Bool {
     if lhs._name != rhs._name {return false}
     if lhs._quantifierSpanBegin != rhs._quantifierSpanBegin {return false}
     if lhs._quantifierSpanEnd != rhs._quantifierSpanEnd {return false}
@@ -6303,8 +6303,8 @@ extension Edu_Stanford_Nlp_Pipeline_Operator: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Polarity: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Polarity"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Polarity"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "projectEquivalence"),
     2: .same(proto: "projectForwardEntailment"),
     3: .same(proto: "projectReverseEntailment"),
@@ -6325,7 +6325,7 @@ extension Edu_Stanford_Nlp_Pipeline_Polarity: SwiftProtobuf.Message, SwiftProtob
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6343,7 +6343,7 @@ extension Edu_Stanford_Nlp_Pipeline_Polarity: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._projectEquivalence {
       try visitor.visitSingularEnumField(value: v, fieldNumber: 1)
     }
@@ -6368,7 +6368,7 @@ extension Edu_Stanford_Nlp_Pipeline_Polarity: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Polarity, rhs: Edu_Stanford_Nlp_Pipeline_Polarity) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Polarity, rhs: Edu_Stanford_Nlp_Pipeline_Polarity) -> Bool {
     if lhs._projectEquivalence != rhs._projectEquivalence {return false}
     if lhs._projectForwardEntailment != rhs._projectForwardEntailment {return false}
     if lhs._projectReverseEntailment != rhs._projectReverseEntailment {return false}
@@ -6382,8 +6382,8 @@ extension Edu_Stanford_Nlp_Pipeline_Polarity: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Edu_Stanford_Nlp_Pipeline_NERMention: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".NERMention"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".NERMention"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "sentenceIndex"),
     2: .same(proto: "tokenStartInSentenceInclusive"),
     3: .same(proto: "tokenEndInSentenceExclusive"),
@@ -6448,7 +6448,7 @@ extension Edu_Stanford_Nlp_Pipeline_NERMention: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -6474,7 +6474,7 @@ extension Edu_Stanford_Nlp_Pipeline_NERMention: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       if let v = _storage._sentenceIndex {
         try visitor.visitSingularUInt32Field(value: v, fieldNumber: 1)
@@ -6516,7 +6516,7 @@ extension Edu_Stanford_Nlp_Pipeline_NERMention: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_NERMention, rhs: Edu_Stanford_Nlp_Pipeline_NERMention) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_NERMention, rhs: Edu_Stanford_Nlp_Pipeline_NERMention) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -6543,15 +6543,15 @@ extension Edu_Stanford_Nlp_Pipeline_NERMention: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SentenceFragment: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SentenceFragment"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SentenceFragment"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "tokenIndex"),
     2: .same(proto: "root"),
     3: .same(proto: "assumedTruth"),
     4: .same(proto: "score"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6566,7 +6566,7 @@ extension Edu_Stanford_Nlp_Pipeline_SentenceFragment: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.tokenIndex.isEmpty {
       try visitor.visitRepeatedUInt32Field(value: self.tokenIndex, fieldNumber: 1)
     }
@@ -6582,7 +6582,7 @@ extension Edu_Stanford_Nlp_Pipeline_SentenceFragment: SwiftProtobuf.Message, Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SentenceFragment, rhs: Edu_Stanford_Nlp_Pipeline_SentenceFragment) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SentenceFragment, rhs: Edu_Stanford_Nlp_Pipeline_SentenceFragment) -> Bool {
     if lhs.tokenIndex != rhs.tokenIndex {return false}
     if lhs._root != rhs._root {return false}
     if lhs._assumedTruth != rhs._assumedTruth {return false}
@@ -6593,13 +6593,13 @@ extension Edu_Stanford_Nlp_Pipeline_SentenceFragment: SwiftProtobuf.Message, Swi
 }
 
 extension Edu_Stanford_Nlp_Pipeline_TokenLocation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TokenLocation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TokenLocation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "sentenceIndex"),
     2: .same(proto: "tokenIndex"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6612,7 +6612,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokenLocation: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._sentenceIndex {
       try visitor.visitSingularUInt32Field(value: v, fieldNumber: 1)
     }
@@ -6622,7 +6622,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokenLocation: SwiftProtobuf.Message, SwiftP
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokenLocation, rhs: Edu_Stanford_Nlp_Pipeline_TokenLocation) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokenLocation, rhs: Edu_Stanford_Nlp_Pipeline_TokenLocation) -> Bool {
     if lhs._sentenceIndex != rhs._sentenceIndex {return false}
     if lhs._tokenIndex != rhs._tokenIndex {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -6631,8 +6631,8 @@ extension Edu_Stanford_Nlp_Pipeline_TokenLocation: SwiftProtobuf.Message, SwiftP
 }
 
 extension Edu_Stanford_Nlp_Pipeline_RelationTriple: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RelationTriple"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RelationTriple"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "subject"),
     2: .same(proto: "relation"),
     3: .same(proto: "object"),
@@ -6652,7 +6652,7 @@ extension Edu_Stanford_Nlp_Pipeline_RelationTriple: SwiftProtobuf.Message, Swift
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6675,7 +6675,7 @@ extension Edu_Stanford_Nlp_Pipeline_RelationTriple: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._subject {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -6715,7 +6715,7 @@ extension Edu_Stanford_Nlp_Pipeline_RelationTriple: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_RelationTriple, rhs: Edu_Stanford_Nlp_Pipeline_RelationTriple) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_RelationTriple, rhs: Edu_Stanford_Nlp_Pipeline_RelationTriple) -> Bool {
     if lhs._subject != rhs._subject {return false}
     if lhs._relation != rhs._relation {return false}
     if lhs._object != rhs._object {return false}
@@ -6734,13 +6734,13 @@ extension Edu_Stanford_Nlp_Pipeline_RelationTriple: SwiftProtobuf.Message, Swift
 }
 
 extension Edu_Stanford_Nlp_Pipeline_MapStringString: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MapStringString"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MapStringString"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
     2: .same(proto: "value"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6753,7 +6753,7 @@ extension Edu_Stanford_Nlp_Pipeline_MapStringString: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitRepeatedStringField(value: self.key, fieldNumber: 1)
     }
@@ -6763,7 +6763,7 @@ extension Edu_Stanford_Nlp_Pipeline_MapStringString: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_MapStringString, rhs: Edu_Stanford_Nlp_Pipeline_MapStringString) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_MapStringString, rhs: Edu_Stanford_Nlp_Pipeline_MapStringString) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.value != rhs.value {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -6772,13 +6772,13 @@ extension Edu_Stanford_Nlp_Pipeline_MapStringString: SwiftProtobuf.Message, Swif
 }
 
 extension Edu_Stanford_Nlp_Pipeline_MapIntString: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MapIntString"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MapIntString"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
     2: .same(proto: "value"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6791,7 +6791,7 @@ extension Edu_Stanford_Nlp_Pipeline_MapIntString: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitRepeatedUInt32Field(value: self.key, fieldNumber: 1)
     }
@@ -6801,7 +6801,7 @@ extension Edu_Stanford_Nlp_Pipeline_MapIntString: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_MapIntString, rhs: Edu_Stanford_Nlp_Pipeline_MapIntString) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_MapIntString, rhs: Edu_Stanford_Nlp_Pipeline_MapIntString) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.value != rhs.value {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -6810,8 +6810,8 @@ extension Edu_Stanford_Nlp_Pipeline_MapIntString: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Edu_Stanford_Nlp_Pipeline_Section: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Section"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Section"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "charBegin"),
     2: .same(proto: "charEnd"),
     3: .same(proto: "author"),
@@ -6832,7 +6832,7 @@ extension Edu_Stanford_Nlp_Pipeline_Section: SwiftProtobuf.Message, SwiftProtobu
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6852,7 +6852,7 @@ extension Edu_Stanford_Nlp_Pipeline_Section: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._charBegin {
       try visitor.visitSingularUInt32Field(value: v, fieldNumber: 1)
     }
@@ -6883,7 +6883,7 @@ extension Edu_Stanford_Nlp_Pipeline_Section: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Section, rhs: Edu_Stanford_Nlp_Pipeline_Section) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_Section, rhs: Edu_Stanford_Nlp_Pipeline_Section) -> Bool {
     if lhs._charBegin != rhs._charBegin {return false}
     if lhs._charEnd != rhs._charEnd {return false}
     if lhs._author != rhs._author {return false}
@@ -6899,8 +6899,8 @@ extension Edu_Stanford_Nlp_Pipeline_Section: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SemgrexRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SemgrexRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "semgrex"),
     2: .same(proto: "query"),
   ]
@@ -6910,7 +6910,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest: SwiftProtobuf.Message, Swift
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6923,7 +6923,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.semgrex.isEmpty {
       try visitor.visitRepeatedStringField(value: self.semgrex, fieldNumber: 1)
     }
@@ -6933,7 +6933,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest) -> Bool {
     if lhs.semgrex != rhs.semgrex {return false}
     if lhs.query != rhs.query {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -6942,8 +6942,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest: SwiftProtobuf.Message, Swift
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexRequest.protoMessageName + ".Dependencies"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexRequest.protoMessageName + ".Dependencies"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "token"),
     2: .same(proto: "graph"),
   ]
@@ -6955,7 +6955,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies: SwiftProtobuf.M
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -6968,7 +6968,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies: SwiftProtobuf.M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.token.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.token, fieldNumber: 1)
     }
@@ -6978,7 +6978,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies: SwiftProtobuf.M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies) -> Bool {
     if lhs.token != rhs.token {return false}
     if lhs._graph != rhs._graph {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -6987,8 +6987,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexRequest.Dependencies: SwiftProtobuf.M
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SemgrexResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SemgrexResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "result"),
   ]
 
@@ -6997,7 +6997,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse: SwiftProtobuf.Message, Swif
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7009,14 +7009,14 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.result.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.result, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse) -> Bool {
     if lhs.result != rhs.result {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -7024,8 +7024,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse: SwiftProtobuf.Message, Swif
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".NamedNode"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".NamedNode"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .same(proto: "matchIndex"),
   ]
@@ -7036,7 +7036,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode: SwiftProtobuf.Mes
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7049,7 +7049,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode: SwiftProtobuf.Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._name {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -7059,7 +7059,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode: SwiftProtobuf.Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode) -> Bool {
     if lhs._name != rhs._name {return false}
     if lhs._matchIndex != rhs._matchIndex {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -7068,8 +7068,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedNode: SwiftProtobuf.Mes
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".NamedRelation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".NamedRelation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .same(proto: "reln"),
   ]
@@ -7080,7 +7080,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation: SwiftProtobuf
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7093,7 +7093,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._name {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -7103,7 +7103,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation: SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation) -> Bool {
     if lhs._name != rhs._name {return false}
     if lhs._reln != rhs._reln {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -7112,8 +7112,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.NamedRelation: SwiftProtobuf
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".Match"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".Match"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "matchIndex"),
     2: .same(proto: "node"),
     3: .same(proto: "reln"),
@@ -7126,7 +7126,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match: SwiftProtobuf.Message
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7140,7 +7140,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match: SwiftProtobuf.Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._matchIndex {
       try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
     }
@@ -7153,7 +7153,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match: SwiftProtobuf.Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match) -> Bool {
     if lhs._matchIndex != rhs._matchIndex {return false}
     if lhs.node != rhs.node {return false}
     if lhs.reln != rhs.reln {return false}
@@ -7163,8 +7163,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.Match: SwiftProtobuf.Message
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".SemgrexResult"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".SemgrexResult"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "match"),
   ]
 
@@ -7173,7 +7173,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult: SwiftProtobuf
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7185,14 +7185,14 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.match.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.match, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult) -> Bool {
     if lhs.match != rhs.match {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -7200,8 +7200,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.SemgrexResult: SwiftProtobuf
 }
 
 extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".GraphResult"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_SemgrexResponse.protoMessageName + ".GraphResult"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "result"),
   ]
 
@@ -7210,7 +7210,7 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult: SwiftProtobuf.M
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7222,14 +7222,14 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult: SwiftProtobuf.M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.result.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.result, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult, rhs: Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult) -> Bool {
     if lhs.result != rhs.result {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -7237,8 +7237,8 @@ extension Edu_Stanford_Nlp_Pipeline_SemgrexResponse.GraphResult: SwiftProtobuf.M
 }
 
 extension Edu_Stanford_Nlp_Pipeline_TokensRegexRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TokensRegexRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TokensRegexRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "doc"),
     2: .same(proto: "pattern"),
   ]
@@ -7249,7 +7249,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexRequest: SwiftProtobuf.Message, S
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7262,7 +7262,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexRequest: SwiftProtobuf.Message, S
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._doc {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
     }
@@ -7272,7 +7272,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexRequest: SwiftProtobuf.Message, S
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexRequest, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexRequest) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexRequest, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexRequest) -> Bool {
     if lhs._doc != rhs._doc {return false}
     if lhs.pattern != rhs.pattern {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -7281,8 +7281,8 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexRequest: SwiftProtobuf.Message, S
 }
 
 extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TokensRegexResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TokensRegexResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "match"),
   ]
 
@@ -7291,7 +7291,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse: SwiftProtobuf.Message, 
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7303,14 +7303,14 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.match.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.match, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse) -> Bool {
     if lhs.match != rhs.match {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -7318,14 +7318,14 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse: SwiftProtobuf.Message, 
 }
 
 extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.protoMessageName + ".MatchLocation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.protoMessageName + ".MatchLocation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "text"),
     2: .same(proto: "begin"),
     3: .same(proto: "end"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7339,7 +7339,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation: SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._text {
       try visitor.visitSingularStringField(value: v, fieldNumber: 1)
     }
@@ -7352,7 +7352,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation: SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation) -> Bool {
     if lhs._text != rhs._text {return false}
     if lhs._begin != rhs._begin {return false}
     if lhs._end != rhs._end {return false}
@@ -7362,8 +7362,8 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.MatchLocation: SwiftProt
 }
 
 extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.protoMessageName + ".Match"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.protoMessageName + ".Match"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "sentence"),
     2: .same(proto: "match"),
     3: .same(proto: "group"),
@@ -7375,7 +7375,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match: SwiftProtobuf.Mes
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7389,7 +7389,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match: SwiftProtobuf.Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if let v = self._sentence {
       try visitor.visitSingularInt32Field(value: v, fieldNumber: 1)
     }
@@ -7402,7 +7402,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match: SwiftProtobuf.Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match) -> Bool {
     if lhs._sentence != rhs._sentence {return false}
     if lhs._match != rhs._match {return false}
     if lhs.group != rhs.group {return false}
@@ -7412,8 +7412,8 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.Match: SwiftProtobuf.Mes
 }
 
 extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.protoMessageName + ".PatternMatch"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.protoMessageName + ".PatternMatch"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "match"),
   ]
 
@@ -7422,7 +7422,7 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch: SwiftProto
     return true
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -7434,14 +7434,14 @@ extension Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch: SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.match.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.match, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch) -> Bool {
+  public static func ==(lhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch, rhs: Edu_Stanford_Nlp_Pipeline_TokensRegexResponse.PatternMatch) -> Bool {
     if lhs.match != rhs.match {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
