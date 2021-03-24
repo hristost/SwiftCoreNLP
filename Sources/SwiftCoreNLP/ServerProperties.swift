@@ -1,13 +1,13 @@
 public extension CoreNLPServer {
 
     struct Properties: Encodable {
-        enum Annotator: String, Encodable {
+        public enum Annotator: String, Encodable {
             case tokenize, ssplit, pos, parse
         }
-        enum Format: String, Encodable {
+        public enum Format: String, Encodable {
             case json, xml, text, serialized
         }
-        enum Serializer: String, Encodable {
+        public enum Serializer: String, Encodable {
             /// Writes the output to a protocol buffer, as defined in the definition file
             /// `edu.stanford.nlp.pipeline.CoreNLP.proto`
             case protoBuf = "edu.stanford.nlp.pipeline.ProtobufAnnotationSerializer"
@@ -20,20 +20,38 @@ public extension CoreNLPServer {
             case custom = "edu.stanford.nlp.pipeline.CustomAnnotationSerializer"
 
         }
-        @StringArray var annotators: [Annotator]? = nil
-        var outputFormat: Format? = nil
-        var inputFormat: Format? = nil
-        var serializer: Serializer? = nil
+        @StringArray public var annotators: [Annotator]? = nil
+        public var outputFormat: Format? = nil
+        public var inputFormat: Format? = nil
+        public var serializer: Serializer? = nil
+
+        public init(
+            annotators: [Annotator]? = nil,
+            outputFormat: Format? = nil,
+            inputFormat: Format? = nil,
+            serializer: Serializer? = nil
+        ) {
+            self.annotators = annotators
+            self.outputFormat = outputFormat
+            self.inputFormat = inputFormat
+            self.serializer = serializer
+        }
+
     }
 }
 
-@propertyWrapper struct StringArray<T: RawRepresentable>: Encodable where T.RawValue == String {
+@propertyWrapper public struct StringArray<T: RawRepresentable>: Encodable
+where T.RawValue == String {
 
-    var wrappedValue: [T]?
-    func encode(to encoder: Encoder) throws {
+    public var wrappedValue: [T]?
+    public func encode(to encoder: Encoder) throws {
         guard let vals = self.wrappedValue else { return }
         let str = vals.map { $0.rawValue }.joined(separator: ",")
         try str.encode(to: encoder)
+    }
+
+    public init(wrappedValue: [T]?) {
+        self.wrappedValue = wrappedValue
     }
 
 }

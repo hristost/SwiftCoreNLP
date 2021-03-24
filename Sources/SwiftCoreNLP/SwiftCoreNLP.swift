@@ -90,7 +90,7 @@ public class CoreNLPServer {
     ///     - properties: properties to be passed to the NLP server, such as which annotators to use
     ///     - callback: closure called when the query is processed. If succesful, returns a
     ///     Edu_Stanford_Nlp_Pipeline_Document as defined in the protobuf specification for CoreNLP.
-    func annotate(
+    public func annotate(
         _ text: String,
         properties: Properties,
         callback: @escaping (Result<Edu_Stanford_Nlp_Pipeline_Document, AnnotationError>) -> Void
